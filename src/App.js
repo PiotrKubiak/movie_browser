@@ -1,4 +1,5 @@
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
+import MoviePeople from "./features/MoviePeople";
 import MoviesList from "./features/MoviesList";
 import { StyledInput, StyledList, StyledNav, StyledNavLink, StyledSearch } from "./styled";
 
@@ -17,7 +18,9 @@ function App() {
         <Route path="/movies">
           <MoviesList />
         </Route>
-        <Route path="/people"></Route>
+        <Route path="/people">
+          <MoviePeople />
+        </Route>
         <Redirect to="/movies" />
       </Switch>
     </HashRouter>
