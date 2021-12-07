@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ReactComponent as StarIcon} from "./star.svg";
 
 export const Container = styled.div`
     max-width: 324px;
@@ -55,4 +56,9 @@ export const Rating = styled.div`
     margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
+`;
+
+export const Star = styled(StarIcon)`
+    color: ${({ theme }) => theme.color.candlelight};
+    margin-right: 12px;
 `;
