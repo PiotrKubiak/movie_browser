@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledSection = styled.div`
     margin: auto;
     max-width: 1368px;
+    max-height: 1391px;
 `;
 
 export const StyledHeader = styled.h1`
