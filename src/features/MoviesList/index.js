@@ -7,6 +7,13 @@ const MoviesList = () => {
             <StyledHeader>Popular movies</StyledHeader>
             <StyledTiles>
                 <Tile />
+                <Tile />
+                <Tile />
+                <Tile />
+                <Tile />
+                <Tile />
+                <Tile />
+                <Tile />
             </StyledTiles>
         </StyledSection>
     )
