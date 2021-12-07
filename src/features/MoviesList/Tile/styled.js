@@ -1,10 +1,8 @@
 import styled from "styled-components";
-import { ReactComponent as StarIcon} from "./star.svg";
+import { ReactComponent as StarIcon } from "./star.svg";
 
 export const Container = styled.div`
     max-width: 324px;
-    /* max-height: 650px; */
-    height: 650px;
     background-color: ${({ theme }) => theme.color.white};
     box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
     border-radius: 5px;
@@ -54,11 +52,27 @@ export const Tag = styled.li`
 export const Rating = styled.div`
     padding: 0 16px;
     margin-top: 40px;
-    display: flex;
+    display: inline-flex;
+    align-items: center;
     flex-wrap: wrap;
 `;
 
 export const Star = styled(StarIcon)`
     color: ${({ theme }) => theme.color.candlelight};
-    margin-right: 12px;
+    align-content: center;
+`;
+
+export const Rate = styled.p`
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-left: 12px;
+    color: ${({ theme }) => theme.color.woodsmoke};
+`;
+
+export const Votes = styled.p`
+    font-size: 16px;
+    line-height: 1.5;
+    margin-left: 12px;
+    color: ${({ theme }) => theme.color.waterloo};
 `;

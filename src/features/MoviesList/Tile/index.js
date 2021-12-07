@@ -1,4 +1,4 @@
-import { Container, Description, Image, Rating, Star, Tag, Tags, Title, Year } from "./styled";
+import { Container, Description, Image, Rate, Rating, Star, Tag, Tags, Title, Votes, Year } from "./styled";
 import poster from "../../images/poster.png";
 
 const Tile = () => {
@@ -16,6 +16,8 @@ const Tile = () => {
             </Description>
             <Rating>
                 <Star/>
+                <Rate>7.8</Rate>
+                <Votes>35 Votes</Votes>
             </Rating>
         </Container>
     )
