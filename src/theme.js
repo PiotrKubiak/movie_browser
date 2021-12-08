@@ -14,4 +14,3 @@ export const theme = {
     mobileMax: 767,
   },
 };
-// test branch Pawel
