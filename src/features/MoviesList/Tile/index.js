@@ -13,7 +13,6 @@ const Tile = () => {
                     <Tag>Adventure</Tag>
                     <Tag>Drama</Tag>
                 </Tags>
-
                 <Rating>
                     <Star />
                     <Rate>7.8</Rate>
