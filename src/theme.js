@@ -7,8 +7,11 @@ export const theme = {
     waterloo: "#7E839A",
     woodsmoke: "#18181B",
     black: "#000000",
+    blue: "#0044CC",
+    pattensBlue: "#D6E4FF",
   },
   breakpoint: {
     mobileMax: 767,
   },
 };
+// test branch Pawel
