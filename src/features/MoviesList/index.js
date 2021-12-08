@@ -16,7 +16,7 @@ const MoviesList = () => {
                 <Tile />
                 <Tile />
             </StyledTiles>
-       <Pagination />
+            <Pagination />
         </StyledSection>
   
   );
