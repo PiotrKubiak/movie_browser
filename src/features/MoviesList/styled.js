@@ -7,7 +7,6 @@ export const StyledSection = styled.div`
 `;
 
 export const StyledHeader = styled.h1`
-
     margin: 56px 0px 24px 0px ;
     font-size: 18px;
     font-weight: 600;
@@ -34,5 +33,3 @@ export const StyledTiles = styled.section`
         grid-gap: 16px;
     }
 `;
-
-
