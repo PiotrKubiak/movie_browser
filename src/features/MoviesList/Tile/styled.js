@@ -61,10 +61,10 @@ export const Tags = styled.ul`
     padding-left: 0;
     display: flex;
     flex-wrap: wrap;
-    margin: -8px;   
+    margin: -8px -8px -8px -4px;   
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        margin: -4px;  
+        margin: -4px -4px -4px -2px;  
     }
 `;
 
@@ -85,7 +85,7 @@ export const Tag = styled.li`
 `;
 
 export const Rating = styled.div`
-    padding: 0 16px;
+    padding: 0;
     margin-top: 40px;
     display: inline-flex;
     align-items: center;
