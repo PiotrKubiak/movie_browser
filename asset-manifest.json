@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/movie_browser/static/js/main.bfa19b85.chunk.js",
-    "main.js.map": "/movie_browser/static/js/main.bfa19b85.chunk.js.map",
+    "main.js": "/movie_browser/static/js/main.e6bda909.chunk.js",
+    "main.js.map": "/movie_browser/static/js/main.e6bda909.chunk.js.map",
     "runtime-main.js": "/movie_browser/static/js/runtime-main.6c9792c6.js",
     "runtime-main.js.map": "/movie_browser/static/js/runtime-main.6c9792c6.js.map",
     "static/js/2.53c23984.chunk.js": "/movie_browser/static/js/2.53c23984.chunk.js",
@@ -10,12 +10,14 @@
     "static/js/3.4040dc7c.chunk.js.map": "/movie_browser/static/js/3.4040dc7c.chunk.js.map",
     "index.html": "/movie_browser/index.html",
     "static/js/2.53c23984.chunk.js.LICENSE.txt": "/movie_browser/static/js/2.53c23984.chunk.js.LICENSE.txt",
+    "static/media/poster.3eb5ce59.png": "/movie_browser/static/media/poster.3eb5ce59.png",
+    "static/media/star.89cc1be2.svg": "/movie_browser/static/media/star.89cc1be2.svg",
     "static/media/vectorLeft.99798cae.svg": "/movie_browser/static/media/vectorLeft.99798cae.svg",
     "static/media/vectorRight.c22fe6c9.svg": "/movie_browser/static/media/vectorRight.c22fe6c9.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.6c9792c6.js",
     "static/js/2.53c23984.chunk.js",
-    "static/js/main.bfa19b85.chunk.js"
+    "static/js/main.e6bda909.chunk.js"
   ]
 }
