@@ -13,12 +13,13 @@ const Tile = () => {
                     <Tag>Adventure</Tag>
                     <Tag>Drama</Tag>
                 </Tags>
+
+                <Rating>
+                    <Star />
+                    <Rate>7.8</Rate>
+                    <Votes>35 Votes</Votes>
+                </Rating>
             </Description>
-            <Rating>
-                <Star/>
-                <Rate>7.8</Rate>
-                <Votes>35 Votes</Votes>
-            </Rating>
         </Container>
     )
 }
