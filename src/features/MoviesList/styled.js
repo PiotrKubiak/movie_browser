@@ -15,7 +15,11 @@ export const StyledHeader = styled.h1`
     line-height: 120%;
 `;
 
-export const StyledTiles = styled.p`
+export const StyledTiles = styled.section`
     margin: 0px;
-    background-color: ${({theme}) => theme.color.white}
+    display: grid;
+    grid-template-columns: repeat(4, auto) ;
+    grid-gap: 24px;
 `;
+
+
