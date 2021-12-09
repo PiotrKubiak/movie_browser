@@ -1,5 +1,5 @@
 import { Container, Description, Image, Rate, Rating, Star, Tag, Tags, Title, Votes, Year } from "./styled";
-import poster from "../../images/poster.png";
+import poster from "../../../images/poster.png";
 
 const Tile = () => {
     return (
