@@ -12,6 +12,6 @@ export const theme = {
   },
   breakpoint: {
     mobileMax: 767,
+    navMax: 1050,
   },
 };
-// test branch Pawel
