@@ -1,9 +1,11 @@
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
+import apiKeys from "./features/ApiKey";
 import MoviePeople from "./features/MoviePeople";
 import MoviesList from "./features/MoviesList";
 import { StyledInput, StyledList, StyledNav, StyledNavLink, StyledSearch } from "./styled";
 
 function App() {
+apiKeys();
   return (
     <HashRouter>
       <StyledNav>
