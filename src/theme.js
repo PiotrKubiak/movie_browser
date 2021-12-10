@@ -11,7 +11,9 @@ export const theme = {
     pattensBlue: "#D6E4FF",
   },
   breakpoint: {
-    mobileMax: 767,
+    mobileMin: "480px",
+    mobileMax: "767px",
+    tableMax: "992px",
   },
 };
 // test branch Pawel

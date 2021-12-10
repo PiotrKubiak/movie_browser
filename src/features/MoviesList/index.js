@@ -1,5 +1,6 @@
 import { StyledHeader, StyledSection, StyledTiles } from "./styled";
 import { Pagination } from "../../common/Pagination";
+import { Loader } from "../../common/Loader";
 
 const MoviesList = () => {
   return (
@@ -16,6 +17,7 @@ const MoviesList = () => {
         with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum.
       </StyledTiles>
+      <Loader />
       <Pagination />
     </StyledSection>
   );
