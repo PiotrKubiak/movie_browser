@@ -1,7 +1,6 @@
 import { StyledHeader, StyledSection, StyledTiles } from "./styled";
-import Tile  from "./Tile";
+import Tile from "./Tile";
 import { Pagination } from "../../../common/Pagination";
-import { getMovies } from "./movieBrowserApi.js";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { fetchMovies, selectMovies, selectMoviesStatus } from "../../movieBrowserSlice";
@@ -12,34 +11,40 @@ const MoviesList = () => {
     const dispatch = useDispatch();
 
     const moviesStatus = useSelector(selectMoviesStatus);
-    const movies = useSelector(selectMovies);
+    const moviess = useSelector(selectMovies);
+    console.log(moviess);
 
     useEffect(() => {
         dispatch(fetchMovies());
     }, [dispatch]);
 
-
-    // const movies = getMovies();
+    const Content = () => {
+        switch (moviesStatus) {
+            case "initial":
+                return null;
+            case "loading":
+                return (<p>ładowanie</p>);
+            case "error":
+                return (<p>error</p>);
+            case "success":
+                return (<Tile movies={moviess} />);
+            default:
+                throw new Error(`incorrect status: ${moviesStatus}`);
+        }
+    };
 
     return (
         <StyledSection>
             {/* <NoResult/> */}
-            
+
             <StyledHeader>Popular movies</StyledHeader>
             <StyledTiles>
-                <Tile />
-                <Tile />
-                <Tile />
-                <Tile />
-                <Tile />
-                <Tile />
-                <Tile />
-                <Tile />
+                <Content />
             </StyledTiles>
             <Pagination />
         </StyledSection>
-  
-  );
+
+    );
 };
 
 
