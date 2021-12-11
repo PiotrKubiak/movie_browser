@@ -7,5 +7,5 @@ const api_url = base_url + most_popular_url + api_key;
 
 export const getMovies = () => {
     axios.get(api_url)
-    .then(rep => console.log(rep.data.results));
+    .then(rep => rep.data.results);
 };
