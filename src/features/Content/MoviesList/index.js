@@ -1,10 +1,13 @@
 import { StyledHeader, StyledSection, StyledTiles } from "./styled";
 import Tile  from "./Tile";
-import { Pagination } from "../../common/Pagination";
+import { Pagination } from "../../../common/Pagination";
+import NoResult from "../../../common/NoResult";
 
 const MoviesList = () => {
     return (
         <StyledSection>
+            {/* <NoResult/> */}
+            
             <StyledHeader>Popular movies</StyledHeader>
             <StyledTiles>
                 <Tile />

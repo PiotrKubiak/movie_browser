@@ -1,7 +1,18 @@
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
-import MoviePeople from "./features/MoviePeople";
-import MoviesList from "./features/MoviesList";
-import { ButtonsGroup, Camera, Container, StyledInput, StyledItem, StyledList, StyledNav, StyledNavLink, StyledSearch, Title } from "./styled";
+import MoviePeople from "./features/Content/MoviePeople";
+import MoviesList from "./features/Content/MoviesList";
+import {
+  ButtonsGroup,
+  Camera,
+  Container,
+  StyledInput,
+  StyledItem,
+  StyledList,
+  StyledNav,
+  StyledNavLink,
+  StyledSearch,
+  Title,
+} from "./styled";
 
 function App() {
   return (
@@ -10,13 +21,22 @@ function App() {
         <Container>
           <StyledList>
             <ButtonsGroup>
-              <StyledItem><Title> <Camera/> Movies Browser</Title></StyledItem>
-              <StyledItem><StyledNavLink to="/movies">MOVIES</StyledNavLink></StyledItem>
-              <StyledItem><StyledNavLink to="/people">PEOPLE</StyledNavLink></StyledItem>
+              <StyledItem>
+                <Title>
+                  {" "}
+                  <Camera /> Movies Browser
+                </Title>
+              </StyledItem>
+              <StyledItem>
+                <StyledNavLink to="/movies">MOVIES</StyledNavLink>
+              </StyledItem>
+              <StyledItem>
+                <StyledNavLink to="/people">PEOPLE</StyledNavLink>
+              </StyledItem>
             </ButtonsGroup>
             <StyledItem>
               <StyledSearch>
-                <StyledInput placeholder="🔍︎ Search for movies..."/>
+                <StyledInput placeholder="🔍︎ Search for movies..." />
               </StyledSearch>
             </StyledItem>
           </StyledList>
