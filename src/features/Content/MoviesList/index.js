@@ -1,7 +1,7 @@
 import { StyledHeader, StyledSection, StyledTiles } from "./styled";
 import Tile  from "./Tile";
 import { Pagination } from "../../../common/Pagination";
-import NoResult from "../NoResult";
+import NoResult from "../../../common/NoResult";
 
 const MoviesList = () => {
     return (
