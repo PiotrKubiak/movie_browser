@@ -12,7 +12,7 @@ export const Spinner = styled(loading)`
   width: 91px;
   height: 91px;
   animation-name: rotate;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 
@@ -22,9 +22,6 @@ export const Spinner = styled(loading)`
   }
 
   @keyframes rotate {
-    /* from {
-      transform: unset;
-    } */
     to {
       transform: rotate(360deg);
     }
