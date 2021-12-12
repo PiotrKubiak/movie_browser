@@ -19,7 +19,7 @@ const MoviesPeople = () => {
     return (
         <StyledSection>
             {/* <NoResult/> */}
-            <StyledHeader>Popular movies</StyledHeader>
+            <StyledHeader>Popular people</StyledHeader>
             <StyledTiles>
                 <Content moviesStatus={moviesStatus} movies={movies} />
             </StyledTiles>
