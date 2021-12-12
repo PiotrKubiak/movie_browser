@@ -3,13 +3,13 @@ import { Pagination } from "../../../common/Pagination";
 // import NoResult from "../../../common/NoResult";
 
 import { useDispatch, useSelector } from "react-redux";
-import { fetchPeople, selectMovies, selectMovieStatus } from "../moviesBrowserSlice";
+import { fetchPeople, selectMovies, selectMovieBrowserStatus } from "../moviesBrowserSlice";
 import { useEffect } from "react";
 import { Content } from "./content";
 
 const MoviesPeople = () => {
     const dispatch = useDispatch();
-    const moviesStatus = useSelector(selectMovieStatus);
+    const movieBrowserStatus = useSelector(selectMovieBrowserStatus);
     const movies = useSelector(selectMovies);
 
     useEffect(() => {
@@ -21,7 +21,7 @@ const MoviesPeople = () => {
             {/* <NoResult/> */}
             <StyledHeader>Popular people</StyledHeader>
             <StyledTiles>
-                <Content moviesStatus={moviesStatus} movies={movies} />
+                <Content movieBrowserStatus={movieBrowserStatus} movies={movies} />
             </StyledTiles>
             <Pagination />
         </StyledSection>
