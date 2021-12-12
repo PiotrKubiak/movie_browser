@@ -1,8 +1,8 @@
 import { StyledHeader, StyledSection, StyledTiles } from "./styled";
 import Tile from "./Tile";
-import NoResult from "../../../common/NoResult";
-import { Pagination } from "../../common/Pagination";
-import Error from "../Content/Error";
+// import NoResult from "../../../common/NoResult";
+import { Pagination } from "../../../common/Pagination";
+// import Error from "../Content/Error";
 
 const MoviesList = () => {
   return (
