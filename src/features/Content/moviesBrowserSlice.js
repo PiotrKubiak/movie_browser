@@ -3,33 +3,33 @@ import { createSlice } from '@reduxjs/toolkit';
 const moviesBrowserSlice = createSlice({
   name: "moviesBrowser",
   initialState: {
-    movies: null,
+    data: null,
     status: "initial",
   },
   reducers: {
     fetchMovies: () => ({
       status: "loading",
-      movies: null,
+      data: null,
     }),
-    fetchMoviesSuccess: (_, { payload: movies }) => ({
+    fetchMoviesSuccess: (_, { payload: data }) => ({
       status: "success",
-      movies,
+      data,
     }),
     fetchMoviesError: () => ({
       status: "error",
-      movies: null,
+      data: null,
     }),
     fetchPeople: () => ({
       status: "loading",
-      movies: null,
+      data: null,
     }),
-    fetchPeopleSuccess: (_, { payload: movies }) => ({
+    fetchPeopleSuccess: (_, { payload: data }) => ({
       status: "success",
-      movies,
+      data,
     }),
     fetchPeopleError: () => ({
       status: "error",
-      movies: null,
+      data: null,
     }),
   },
 });
@@ -45,8 +45,7 @@ export const {
 
 const selectMoviesBrowserState = state => state.moviesBrowser;
 
-export const selectMovies = state => selectMoviesBrowserState(state).movies;
-export const selectPeople = state => selectMoviesBrowserState(state).people;
+export const selectMovies = state => selectMoviesBrowserState(state).data;
 export const selectMovieStatus = state => selectMoviesBrowserState(state).status;
 
 export default moviesBrowserSlice.reducer;
