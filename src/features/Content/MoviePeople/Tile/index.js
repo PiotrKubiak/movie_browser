@@ -2,11 +2,11 @@ import { Container, Description, Image, Title } from "./styled";
 import { img_base_url } from "../../moviesBrowserApi";
 
 
-const Tile = ({ movies }) => {
+const Tile = ({ movieBrowser }) => {
 
     return (
         <>
-            {movies.map(({ id, name, profile_path }) => (
+            {movieBrowser.map(({ id, name, profile_path }) => (
                 <Container key={id}>
                     <Image src={img_base_url + profile_path} alt={name} />
                     <Description>

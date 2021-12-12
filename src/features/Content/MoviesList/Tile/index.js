@@ -2,11 +2,11 @@ import { Container, Description, Image, Rate, Rating, Star, Tag, Tags, Title, Vo
 import { img_base_url } from "../../moviesBrowserApi";
 
 
-const Tile = ({ movies }) => {
+const Tile = ({ movieBrowser }) => {
 
     return (
         <>
-            {movies.map(({ id, poster_path, original_title, release_date, genre_ids, vote_average, vote_count }) => (
+            {movieBrowser.map(({ id, poster_path, original_title, release_date, genre_ids, vote_average, vote_count }) => (
                 <Container key={id}>
                     <Image src={img_base_url + poster_path} alt={original_title} />
                     <Description>

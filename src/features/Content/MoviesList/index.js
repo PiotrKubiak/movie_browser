@@ -10,7 +10,7 @@ import { Content } from "./content";
 const MoviesList = () => {
     const dispatch = useDispatch();
     const movieBrowserStatus = useSelector(selectMovieBrowserStatus);
-    const movies = useSelector(selectMovies);
+    const movieBrowser = useSelector(selectMovies);
 
     useEffect(() => {
         dispatch(fetchMovies());
@@ -21,7 +21,7 @@ const MoviesList = () => {
             {/* <NoResult/> */}
             <StyledHeader>Popular movies</StyledHeader>
             <StyledTiles>
-                <Content movieBrowserStatus={movieBrowserStatus} movies={movies} />
+                <Content movieBrowserStatus={movieBrowserStatus} movieBrowser={movieBrowser} />
             </StyledTiles>
             <Pagination />
         </StyledSection>
