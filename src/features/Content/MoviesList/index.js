@@ -3,11 +3,9 @@ import { Pagination } from "../../../common/Pagination";
 // import NoResult from "../../../common/NoResult";
 
 import { useDispatch, useSelector } from "react-redux";
-import { fetchMovies, selectMovies, selectMovieStatus } from "./moviesBrowserSlice";
+import { fetchMovies, selectMovies, selectMovieStatus } from "../moviesBrowserSlice";
 import { useEffect } from "react";
 import { Content } from "./content";
-
-
 
 const MoviesList = () => {
     const dispatch = useDispatch();
@@ -21,7 +19,6 @@ const MoviesList = () => {
     return (
         <StyledSection>
             {/* <NoResult/> */}
-
             <StyledHeader>Popular movies</StyledHeader>
             <StyledTiles>
                 <Content moviesStatus={moviesStatus} movies={movies} />

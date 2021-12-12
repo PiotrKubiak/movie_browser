@@ -1,14 +1,31 @@
 import { StyledHeader, StyledSection, StyledTiles } from "./styled";
+import { Pagination } from "../../../common/Pagination";
+// import NoResult from "../../../common/NoResult";
 
-const MoviePeople = () => {
+import { useDispatch, useSelector } from "react-redux";
+import { fetchPeople, selectMovies, selectMovieStatus } from "../moviesBrowserSlice";
+import { useEffect } from "react";
+import { Content } from "./content";
+
+const MoviesPeople = () => {
+    const dispatch = useDispatch();
+    const moviesStatus = useSelector(selectMovieStatus);
+    const movies = useSelector(selectMovies);
+
+    useEffect(() => {
+        dispatch(fetchPeople());
+    }, [dispatch]);
+
     return (
         <StyledSection>
-            <StyledHeader>Popular people</StyledHeader>
+            {/* <NoResult/> */}
+            <StyledHeader>Popular movies</StyledHeader>
             <StyledTiles>
-                Heeeej
+                <Content moviesStatus={moviesStatus} movies={movies} />
             </StyledTiles>
+            <Pagination />
         </StyledSection>
-    )
+    );
 };
 
-export default MoviePeople;
+export default MoviesPeople;
