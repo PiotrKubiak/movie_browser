@@ -6,7 +6,7 @@ const Tile = ({ movies }) => {
 
     return (
         <>
-            {movies && movies.map(({ id, poster_path, original_title, release_date, genre_ids, vote_average, vote_count }) => (
+            {movies.map(({ id, poster_path, original_title, release_date, genre_ids, vote_average, vote_count }) => (
                 <Container key={id}>
                     <Image src={img_base_url + poster_path} alt={original_title} />
                     <Description>
