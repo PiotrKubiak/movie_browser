@@ -1,4 +1,4 @@
-import { Container, Description, Image, Rate, Rating, Star, Tag, Tags, Title, Votes, Year } from "./styled";
+import { Container, Description, Image, Rate, Rating, Star, Tag, Tags, Title, Votes, Year } from "../../styledTile";
 import { img_base_url } from "../../moviesBrowserApi";
 
 

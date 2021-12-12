@@ -1,4 +1,4 @@
-import { Container, Description, Image, Title } from "./styled";
+import { Container, Description, Image, Title } from "../../styledTile";
 import { img_base_url } from "../../moviesBrowserApi";
 
 

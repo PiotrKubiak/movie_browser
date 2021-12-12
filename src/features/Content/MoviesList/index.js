@@ -1,4 +1,4 @@
-import { StyledHeader, StyledSection, StyledTiles } from "./styled";
+import { StyledHeader, StyledSection, StyledTiles } from "../styledMovies";
 import { Pagination } from "../../../common/Pagination";
 // import NoResult from "../../../common/NoResult";
 
