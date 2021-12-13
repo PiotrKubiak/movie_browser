@@ -10,6 +10,7 @@ export const Content = ({ movieBrowserStatus, movieBrowser }) => {
       return <Loader />;
     case "error":
       return <Error />;
+      return <p> błąd</p>;
     case "success":
       return <Tile movieBrowser={movieBrowser} />;
     default:
