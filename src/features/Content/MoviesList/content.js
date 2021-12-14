@@ -1,7 +1,7 @@
 import Tile from "./Tile";
 import { Loader } from "../../../common/Loader";
 
-export const Content = ({ moviesStatus, movies }) => {
+export const Content = ({ moviesStatus, movies, genres }) => {
   switch (moviesStatus) {
     case "initial":
       return null;
@@ -11,7 +11,7 @@ export const Content = ({ moviesStatus, movies }) => {
       // return (<Error />);
       return <p> błąd</p>;
     case "success":
-      return <Tile movies={movies} />;
+      return <Tile movies={movies} genres={genres}/>;
     default:
       throw new Error(`incorrect status: ${moviesStatus}`);
   }
