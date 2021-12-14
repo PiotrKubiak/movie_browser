@@ -3,7 +3,7 @@ import { ReactComponent as loading } from "./images/spinner.svg";
 
 export const SpinnerSection = styled.div`
   max-width: 1200px;
-  margin: auto;
+  margin: 120px auto 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
