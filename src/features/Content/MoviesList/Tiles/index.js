@@ -1,11 +1,12 @@
 import { Container, Description, Image, Rate, Rating, Star, Tag, Tags, Title, Votes, Year } from "../../styledTile";
 import { img_base_url } from "../../moviesBrowserApi";
+import { StyledTiles } from "../../styledMovies";
 
 
-const Tile = ({ movieBrowser }) => {
+const Tiles = ({ movieBrowser }) => {
 
     return (
-        <>
+        <StyledTiles>
             {movieBrowser.map(({ id, poster_path, original_title, release_date, genre_ids, vote_average, vote_count }) => (
                 <Container key={id}>
                     <Image src={img_base_url + poster_path} alt={original_title} />
@@ -23,9 +24,9 @@ const Tile = ({ movieBrowser }) => {
                         </Rating>
                     </Description>
                 </Container>
-            ))};
-        </>
+            ))}
+        </StyledTiles>
     );
 };
 
-export default Tile;
+export default Tiles;
