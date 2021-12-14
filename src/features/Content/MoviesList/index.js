@@ -7,6 +7,8 @@ import { fetchMovies, selectMovies, selectMovieStatus } from "./moviesBrowserSli
 import { useEffect } from "react";
 import { Content } from "./content";
 
+import { fetchGenres, selectGenres, selectGenresStatus } from "./genresSlice";
+
 
 
 const MoviesList = () => {
@@ -18,13 +20,21 @@ const MoviesList = () => {
         dispatch(fetchMovies());
     }, [dispatch]);
 
+    const dispatch2 = useDispatch();
+    const genresStatus = useSelector(selectGenresStatus);
+    const genres = useSelector(selectGenres);
+
+    useEffect(() => {
+        dispatch2(fetchGenres());
+    }, [dispatch2]);
+
     return (
         <StyledSection>
             {/* <NoResult/> */}
 
             <StyledHeader>Popular movies</StyledHeader>
             <StyledTiles>
-                <Content moviesStatus={moviesStatus} movies={movies} />
+                <Content moviesStatus={moviesStatus} movies={movies} genres={genres}/>
             </StyledTiles>
             <Pagination />
         </StyledSection>
