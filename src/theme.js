@@ -13,6 +13,6 @@ export const theme = {
   },
   breakpoint: {
     mobileMax: 767,
-    navMax: 1050,
+    navMax: 1055,
   },
 };
