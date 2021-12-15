@@ -2,11 +2,13 @@ import styled from "styled-components";
 import { ReactComponent as StarIcon } from "../../images/star.svg";
 
 export const Container = styled.div`
-    max-width: 324px;
+    width: 324px;
     background-color: ${({ theme }) => theme.color.white};
     box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
     border-radius: 5px;
     padding: 16px;
+
+    margin: 0 12px 24px 12px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         max-width: 288px;
