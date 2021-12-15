@@ -49,9 +49,9 @@ export const Title = styled.header`
     font-weight: 500;
     font-size: 24px;
     line-height: 1.66;
-    padding-right: 88px;
+    padding-right: 80px;
     letter-spacing: -1.5px;
-
+    
     display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
@@ -65,8 +65,13 @@ export const Title = styled.header`
 `;
 
 export const Camera = styled(CameraIcon)`
-    padding-right: 16px;
-    font-size: 24px;
+    margin-right: 16px;
+    width: 30px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}px) {
+        margin-right: 8px;
+        width: 20px;
+    }
 `;
 
 export const StyledNavLink = styled(NavLink)`
@@ -82,10 +87,9 @@ export const StyledNavLink = styled(NavLink)`
 
     @media(max-width: ${({ theme }) => theme.breakpoint.navMax}px) {
         font-size: 12px;
+        padding: 8px 12px;
 
         &.active{
-            border: 1px solid ${({ theme }) => theme.color.white};
-            box-sizing: border-box;
             border-radius: 29px;
         }
     }
