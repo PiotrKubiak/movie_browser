@@ -1,7 +1,5 @@
-import { Container, Description, Image, Rate, Rating, Star, Tag, Tags, Title, Votes, Year } from "../../styledTile";
+import { StyledTiles, Container, Description, Image, Rate, Rating, Star, Tag, Tags, Title, Votes, Year } from "../../styledTile";
 import { img_base_url } from "../../moviesBrowserApi";
-import { StyledTiles } from "../../styledMovies";
-
 
 const Tiles = ({ movieBrowser }) => {
 
