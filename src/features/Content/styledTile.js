@@ -1,6 +1,23 @@
 import styled from "styled-components";
 import { ReactComponent as StarIcon } from "../../images/star.svg";
 
+export const StyledTiles = styled.section`
+    /* margin: 0px; */
+    /* display: grid;
+    grid-template-columns: repeat(4, auto) ;
+    grid-gap: 24px; */
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content:center;
+    justify-content: center;
+
+    /* @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+         grid-template-columns: 1fr;
+        grid-gap: 16px; 
+    } */
+`;
+
 export const Container = styled.div`
     width: 324px;
     background-color: ${({ theme }) => theme.color.white};
