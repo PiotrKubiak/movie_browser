@@ -1,9 +1,15 @@
 import styled from "styled-components";
 
 export const StyledSection = styled.div`
+    max-width: 1336px;
     margin: auto;
-    max-width: 1368px;
-    max-height: 1391px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        max-width: 288px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export const StyledHeader = styled.h1`
@@ -12,6 +18,7 @@ export const StyledHeader = styled.h1`
     font-weight: 600;
     font-size: 36px;
     line-height: 1.2;
+    align-self: flex-start;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         margin: 24px 0px 12px 0px ;
