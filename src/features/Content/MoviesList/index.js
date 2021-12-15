@@ -18,6 +18,7 @@ const MoviesList = () => {
 
     return (
         <StyledSection>
+            
             {/* <NoResult/> */}
             <StyledHeader>Popular movies</StyledHeader>
             <Content movieBrowserStatus={movieBrowserStatus} movieBrowser={movieBrowser} />
