@@ -47,6 +47,13 @@ export const Button = styled.button`
     }
   }
 `;
+
+export const ButtonText = styled.span`
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+    display: none;
+  }
+`;
+
 export const PaginationText = styled.span`
   font-size: 16px;
   color: ${({ theme }) => theme.color.waterloo};
