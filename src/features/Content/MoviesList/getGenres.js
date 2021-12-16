@@ -3,4 +3,4 @@ export function foundName(tagId, genres) {
         const genre = genres.find(element => element.id === tagId);
         return (genre.name)
     }
-}
+};

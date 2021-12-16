@@ -1,5 +1,5 @@
-import { Container, Description, Image, Rate, Rating, Star, Tag, Tags, Title, Votes, Year } from "./styled";
-import { img_base_url } from "../moviesBrowserApi";
+import { Container, Description, Image, Rate, Rating, Star, Tag, Tags, Title, Votes, Year } from "../../styledTile";
+import { img_base_url } from "../../moviesBrowserApi";
 import { foundName } from "../getGenres";
 
 const Tile = ({ genres, movieBrowser }) => {
@@ -11,7 +11,7 @@ const Tile = ({ genres, movieBrowser }) => {
                     <Image src={img_base_url + poster_path} alt={original_title} />
                     <Description>
                         <Title> {original_title} </Title>
-                        <Year>{release_date.substring(4, -1)}</Year>
+                        {/* <Year>{release_date.substring(4, -1)}</Year> */}
                         <Tags>
                             {genre_ids.map((id, index) => {
                                 return <Tag key={index}>{foundName(id, genres)}</Tag>
