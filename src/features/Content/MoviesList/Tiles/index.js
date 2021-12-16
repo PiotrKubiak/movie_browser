@@ -1,22 +1,22 @@
-import { Container, Description, Image, Rate, Rating, Star, Tag, Tags, Title, Votes, Year } from "../../styledTile";
-import { img_base_url } from "../../moviesBrowserApi";
-import { StyledTiles } from "../../styledMovies";
+import { Container, Description, Image, Rate, Rating, Star, Tag, Tags, Title, Votes, Year } from "./styled";
+import { img_base_url } from "../moviesBrowserApi";
+import { foundName } from "../getGenres";
 
-
-const Tiles = ({ movieBrowser }) => {
+const Tile = ({ genres, movieBrowser }) => {
 
     return (
-        <StyledTiles>
-            {movieBrowser.map(({ id, poster_path, original_title, release_date, genre_ids, vote_average, vote_count }) => (
+        <>
+            {movieBrowser.map(({ id, poster_path, original_title, release_date, genre_ids = [], vote_average, vote_count }) => (
                 <Container key={id}>
                     <Image src={img_base_url + poster_path} alt={original_title} />
                     <Description>
                         <Title> {original_title} </Title>
-                        {/* <Year>{release_date.substring(4,-1)}</Year> */}
+                        <Year>{release_date.substring(4, -1)}</Year>
                         <Tags>
-                            <Tag>{genre_ids}</Tag>
+                            {genre_ids.map((id, index) => {
+                                return <Tag key={index}>{foundName(id, genres)}</Tag>
+                            })}
                         </Tags>
-
                         <Rating>
                             <Star />
                             <Rate>{vote_average}</Rate>
@@ -24,9 +24,10 @@ const Tiles = ({ movieBrowser }) => {
                         </Rating>
                     </Description>
                 </Container>
-            ))}
-        </StyledTiles>
+            ))
+            };
+        </>
     );
 };
 
-export default Tiles;
+export default Tile;
