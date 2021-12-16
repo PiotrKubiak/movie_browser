@@ -6,20 +6,20 @@ export const Pagination = ({ movieBrowserStatus }) => {
   if (movieBrowserStatus === "success") {
     return (
       <Wrapper>
-        <Button>First
+        <Button>
           <PreviousArrow />
         </Button>
-        <Button>Previous
+        <Button>
           <PreviousArrow />
         </Button>
         <PaginationText>Page</PaginationText>
         <PaginationNumber>1</PaginationNumber>
         <PaginationText>of</PaginationText>
         <PaginationNumber>500</PaginationNumber>
-        <Button>Next
+        <Button>
           <NextArrow />
         </Button>
-        <Button>Last
+        <Button>
           <NextArrow />
         </Button>
       </Wrapper>
