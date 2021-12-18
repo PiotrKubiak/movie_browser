@@ -8,17 +8,22 @@ export const Container = styled.div`
     border-radius: 5px;
     padding: 16px;
 
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-gap: 16px;
+
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         max-width: 288px;
-        display: grid;
-        grid-template-columns: auto 1fr;
-        grid-gap: 16px
+        grid-template-columns: auto 1fr; */
+        grid-template-rows: auto;
+        grid-gap: 0;        
     }
 `;
 
 export const Image = styled.img`
     max-width: 292px;
     max-height: 434px;
+    border-radius: 5px;
     
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         max-width: 114px;
@@ -26,11 +31,22 @@ export const Image = styled.img`
     }
 `;
 
-export const Description = styled.div`
-
+export const Information = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        justify-content: flex-start;
+        margin-left: 16px;
+    }
+`;
 
+export const Description = styled.div`
+    margin-bottom: 10px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        margin-bottom: 12px ;
     }
 `;
 
@@ -85,16 +101,10 @@ export const Tag = styled.li`
 `;
 
 export const Rating = styled.div`
-    padding: 0;
-    margin-top: 40px;
+
     display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        margin-top: 12px;
-        padding: 0;
-    }
 `;
 
 export const Star = styled(StarIcon)`
