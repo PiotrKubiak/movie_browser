@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { Content } from "./content";
 
 import { fetchGenres, selectGenres, selectGenresStatus } from "./genresSlice";
+import MoviePage from "../MoviePage";
 
 const MoviesList = () => {
     const dispatch = useDispatch();
@@ -38,6 +39,8 @@ const MoviesList = () => {
             </StyledTiles>
             <Pagination movieBrowserStatus={movieBrowserStatus} />
         </StyledSection>
+
+        // <MoviePage/>
     );
 };
 
