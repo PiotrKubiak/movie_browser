@@ -51,7 +51,7 @@ export const Title = styled.header`
     line-height: 1.66;
     padding-right: 80px;
     letter-spacing: -1.5px;
-    
+
     display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
