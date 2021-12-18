@@ -1,6 +1,7 @@
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import MoviePeople from "./features/Content/MoviePeople";
 import MoviesList from "./features/Content/MoviesList";
+import Tile from "./features/Content/MoviesList/Tiles/Tile";
 import {
   ButtonsGroup,
   Camera,
@@ -43,6 +44,9 @@ function App() {
         </Container>
       </StyledNav>
       <Switch>
+      <Route path="/movies/:id">
+          <Tile />
+        </Route>
         <Route path="/movies">
           <MoviesList />
         </Route>
