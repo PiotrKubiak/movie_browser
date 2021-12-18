@@ -1,6 +1,6 @@
 import styled, { isStyledComponent } from "styled-components";
-import posterBig from "../../../images/posterBig.png"
-import { ReactComponent as StarIcon } from "../../../images/star.svg";
+import posterBig from "../../../../images/posterBig.png"
+import { ReactComponent as StarIcon } from "../../../../images/star.svg";
 
 export const Container = styled.div`
     width: auto;

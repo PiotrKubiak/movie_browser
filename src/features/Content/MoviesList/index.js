@@ -27,20 +27,20 @@ const MoviesList = () => {
     }, [dispatch]);
 
     return (
-        <StyledSection>
-            {/* <NoResult/> */}
-            <StyledHeader>Popular movies</StyledHeader>
-            <StyledTiles>
-                <Content
-                    movieBrowserStatus={movieBrowserStatus}
-                    movieBrowser={movieBrowser}
-                    genres={genres}
-                />
-            </StyledTiles>
-            <Pagination movieBrowserStatus={movieBrowserStatus} />
-        </StyledSection>
+        // <StyledSection>
+        //     {/* <NoResult/> */}
+        //     <StyledHeader>Popular movies</StyledHeader>
+        //     <StyledTiles>
+        //         <Content
+        //             movieBrowserStatus={movieBrowserStatus}
+        //             movieBrowser={movieBrowser}
+        //             genres={genres}
+        //         />
+        //     </StyledTiles>
+        //     <Pagination movieBrowserStatus={movieBrowserStatus} />
+        // </StyledSection>
 
-        // <MoviePage/>
+        <MoviePage/>
     );
 };
 
