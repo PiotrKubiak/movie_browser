@@ -7,6 +7,8 @@ import { fetchMovies, selectMovies, selectMovieBrowserStatus } from "../moviesBr
 import { useEffect } from "react";
 import { Content } from "./content";
 
+import { fetchGenres, selectGenres, selectGenresStatus } from "./genresSlice";
+
 const MoviesList = () => {
     const dispatch = useDispatch();
     const movieBrowserStatus = useSelector(selectMovieBrowserStatus);
@@ -16,14 +18,25 @@ const MoviesList = () => {
         dispatch(fetchMovies());
     }, [dispatch]);
 
+    const genresStatus = useSelector(selectGenresStatus);
+    const genres = useSelector(selectGenres);
+
+    useEffect(() => {
+        dispatch(fetchGenres());
+    }, [dispatch]);
+
     return (
         <StyledSection>
             {/* <NoResult/> */}
             <StyledHeader>Popular movies</StyledHeader>
             <StyledTiles>
-                <Content movieBrowserStatus={movieBrowserStatus} movieBrowser={movieBrowser} />
+                <Content
+                    movieBrowserStatus={movieBrowserStatus}
+                    movieBrowser={movieBrowser}
+                    genres={genres}
+                />
             </StyledTiles>
-            <Pagination />
+            <Pagination movieBrowserStatus={movieBrowserStatus} />
         </StyledSection>
     );
 };
