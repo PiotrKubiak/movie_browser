@@ -1,4 +1,4 @@
-import { StyledHeader, StyledSection, StyledTiles } from "../styledMovies";
+import { StyledHeader, StyledSection } from "../styledMovies";
 import { Pagination } from "../../../common/Pagination";
 // import NoResult from "../../../common/NoResult";
 
@@ -26,16 +26,14 @@ const MoviesList = () => {
     }, [dispatch]);
 
     return (
-        <StyledSection>
+        <StyledSection>    
             {/* <NoResult/> */}
             <StyledHeader>Popular movies</StyledHeader>
-            <StyledTiles>
                 <Content
                     movieBrowserStatus={movieBrowserStatus}
                     movieBrowser={movieBrowser}
                     genres={genres}
                 />
-            </StyledTiles>
             <Pagination movieBrowserStatus={movieBrowserStatus} />
         </StyledSection>
     );

@@ -1,13 +1,30 @@
 import styled from "styled-components";
 import { ReactComponent as StarIcon } from "../../images/star.svg";
 
+export const StyledTiles = styled.section`
+    /* margin: 0px; */
+    /* display: grid;
+    grid-template-columns: repeat(4, auto) ;
+    grid-gap: 24px; */
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content:center;
+    justify-content: center;
+
+    /* @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+         grid-template-columns: 1fr;
+        grid-gap: 16px; 
+    } */
+`;
+
 export const Container = styled.div`
-    max-width: 324px;
+    width: 324px;
     background-color: ${({ theme }) => theme.color.white};
     box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
     border-radius: 5px;
     padding: 16px;
-
+    margin: 0 12px 24px 12px;
     display: grid;
     grid-template-rows: auto 1fr;
     grid-gap: 16px;
