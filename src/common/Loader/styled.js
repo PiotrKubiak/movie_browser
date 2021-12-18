@@ -12,7 +12,7 @@ export const Spinner = styled(loading)`
   width: 91px;
   height: 91px;
   animation-name: rotate;
-  animation-duration: 3s;
+  animation-duration: 0.5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 
