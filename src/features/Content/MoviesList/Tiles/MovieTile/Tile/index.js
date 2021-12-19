@@ -1,13 +1,13 @@
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
 const Tile = () => {
-    const { id } = useParams();
-
-
+    const {id} = useParams();
     return (
         <>
-            {id}
+<p>k</p>
+{id}
         </>
-    )
+    );
 };
+
 export default Tile;
