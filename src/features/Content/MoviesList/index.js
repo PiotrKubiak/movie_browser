@@ -6,17 +6,20 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchMovies, selectMovies, selectMovieBrowserStatus } from "../moviesBrowserSlice";
 import { useEffect } from "react";
 import { Content } from "./content";
-
+import { startPage } from "../../../common/Pagination/startPage";
 import { fetchGenres, selectGenres, selectGenresStatus } from "./genresSlice";
+import { useUrlParameter } from "../../useUrlParameters";
 
 const MoviesList = () => {
     const dispatch = useDispatch();
+    const urlPageNumber = +useUrlParameter("page");
+    const page = startPage(urlPageNumber);
     const movieBrowserStatus = useSelector(selectMovieBrowserStatus);
     const movieBrowser = useSelector(selectMovies);
 
     useEffect(() => {
-        dispatch(fetchMovies());
-    }, [dispatch]);
+        dispatch(fetchMovies({ page }));
+    }, [dispatch, page]);
 
     const genresStatus = useSelector(selectGenresStatus);
     const genres = useSelector(selectGenres);

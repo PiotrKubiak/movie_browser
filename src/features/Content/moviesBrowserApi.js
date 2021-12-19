@@ -19,3 +19,7 @@ export const getGenres = () =>
 export const getPeople = () =>
     axios.get(popular_person_api)
         .then(response => response.data.results);
+
+export const getPage = () =>
+    axios.get(api_key)
+        .then(response => response.data.page);
