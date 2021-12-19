@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
-    margin: 16px auto 16px;
+    margin: 32px auto 32px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
 export const Button = styled.button`
   cursor: pointer;
   margin: 0 6px;
-  padding: 4px 8px;
+  padding: 8px 16px;
   background: ${({ theme }) => theme.color.pattensBlue};
   color: ${({ theme }) => theme.color.woodsmoke};
   border-radius: 5px;
@@ -33,7 +33,7 @@ export const Button = styled.button`
     filter: brightness(100%);
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
-    padding: 8px 16px;
+    padding: 8px 12px;
     margin: 0px 8px;
     display: flex;
     flex-direction: row;
@@ -68,15 +68,13 @@ export const PaginationText = styled.span`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}) {
     font-size: 10px;
     margin: 0 2px;
-    font-weight: 600;
   }
 `;
 export const PaginationNumber = styled.span`
   font-size: 16px;
   color: ${({ theme }) => theme.color.woodsmoke};
-  font-weight: 600;
   align-self: center;
-  margin: 0px 4px;
+  margin: 0px 8px;
   font-size: 16px;
   @media (max-width: ${({ theme }) => theme.breakpoint.tableMax}) {
     font-size: 14px;
@@ -89,6 +87,5 @@ export const PaginationNumber = styled.span`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}) {
     font-size: 10px;
     margin: 0 auto;
-    font-weight: 600;
   }
 `;
