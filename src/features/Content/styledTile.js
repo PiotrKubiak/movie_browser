@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ReactComponent as StarIcon } from "../../images/star.svg";
 
@@ -16,6 +17,9 @@ export const StyledTiles = styled.section`
          grid-template-columns: 1fr;
         grid-gap: 16px; 
     } */
+`;
+
+export const StyledLink = styled(Link)`
 `;
 
 export const Container = styled.div`
