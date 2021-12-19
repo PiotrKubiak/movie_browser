@@ -1,17 +1,4 @@
-import {
-  Container,
-  Description,
-  Image,
-  Information,
-  Rate,
-  Rating,
-  Star,
-  Tag,
-  Tags,
-  Title,
-  Votes,
-  Year,
-} from "../../styledTile";
+import { Container, Description, Image, Information, Rate, Rating, Star, Tag, Tags, Title, Votes } from "../../styledTile";
 import { img_base_url } from "../../moviesBrowserApi";
 import { StyledTiles } from "../../styledMovies";
 
@@ -23,7 +10,7 @@ const Tiles = ({ movieBrowser }) => {
           id,
           poster_path,
           original_title,
-          release_date,
+          // release_date,
           genre_ids,
           vote_average,
           vote_count,
