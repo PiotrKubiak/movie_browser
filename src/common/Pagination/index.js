@@ -26,7 +26,7 @@ export const Pagination = () => {
         <ButtonText> First</ButtonText>
       </Button>
 
-      <Button disabled={page === 1} ocClick={() => changePageNumber(page - 1)}>
+      <Button disabled={page === 1} onClick={() => changePageNumber(page - 1)}>
         <PreviousArrow disabled={page === 1} />
         <ButtonText> Previous</ButtonText>
       </Button>
