@@ -6,7 +6,7 @@ const Tile = ({ movieBrowser }) => {
 
     return (
         <>
-            {movieBrowser.map(({ id, name, profile_path }) => (
+            {movieBrowser && movieBrowser.map(({ id, name, profile_path }) => (
                 <Container key={id}>
                     <Image src={img_base_url + profile_path} alt={name} />
                     <Description>
