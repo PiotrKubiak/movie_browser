@@ -1,10 +1,26 @@
-import { BackdropImage, Container, Image, MainInfo, Off, Rate, Rating, Shadows, Star, Title, Votes } from "./styled";
-import posterBig from "../../../../images/posterBig.png"
+import { BackdropImage, Container, Image, MainInfo, Off, Rate, Rating, Star, Title, Votes } from "./styled";
+import posterBig2 from "./posterBig2.png";
 
-const Backdrop = ({title, rate, votes}) => {
+const Backdrop = ({ image, title, rate, votes }) => {
     return (
         <Container>
-            <BackdropImage>
+            
+                <BackdropImage>
+                    <Image src={posterBig2} alt="" />
+                    <MainInfo>
+                        <p> asda asd asd a dad asd asd </p>
+                    </MainInfo>
+                </BackdropImage>
+            
+        </Container>
+    );
+};
+
+export default Backdrop;
+
+
+{/* <img src={posterBig2}/>
+            <BackdropImage style={{backgroundImage:posterBig2}}>
                 <MainInfo>
                     <Title>{title}</Title>
                     <Rating>
@@ -14,9 +30,4 @@ const Backdrop = ({title, rate, votes}) => {
                         <Votes>{votes} votes</Votes>
                     </Rating>
                 </MainInfo>
-            </BackdropImage>
-        </Container>
-    );
-};
-
-export default Backdrop;
+            </BackdropImage> */}
