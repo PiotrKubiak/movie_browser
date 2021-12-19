@@ -1,98 +1,53 @@
-import { useDispatch, useSelector } from "react-redux";
-import { useReplaceQueryParameter } from "../../features/useQueryParameters";
+import { useUrlParameter, useReplaceUrlParameter } from "../../features/useUrlParameters";
+import { startPage } from "./startPage";
 import { NextArrow } from "./NextArrow";
 import { PreviousArrow } from "./PreviousArrow";
-import {
-  Wrapper,
-  Button,
-  PaginationText,
-  PaginationNumber,
-  ButtonText,
-} from "./styled";
-import { toMovieList, toPeopleList, toSearch } from "../../features/paths";
-import {
-  selectPage,
-  selectSearchQuery,
-  selectAllPages,
-  selectType,
-  setPage,
-} from "../../features/Content/moviesBrowserSlice";
-import {
-  searchQueryParameterName,
-  pageQueryParameterName,
-  typeQueryParameterName,
-} from "../../features/queryParameterNames";
+import { Wrapper, Button, PaginationText, PaginationNumber, ButtonText } from "./styled";
 
-export const Pagination = ({ movieBrowserStatus }) => {
-  if (movieBrowserStatus === "success") {
-    const dispatch = useDispatch();
-    const page = useSelector(selectPage);
-    const allPages = useSelector(selectAllPages);
-    const query = useSelector(selectSearchQuery);
-    const type = useSelector(selectType);
-    const replaceParameter = useReplaceQueryParameter();
+export const Pagination = () => {
+  const allPages = 500;
+  const urlPageNumber = +useUrlParameter("page");
+  const page = startPage(urlPageNumber);
+  const changeUrlParameters = useReplaceUrlParameter();
 
-    const onSetPage = (page) => {
-      dispatch(setPage(page));
-      if (query) {
-        const parameters = [
-          { key: searchQueryParameterName, value: query },
-          { key: pageQueryParameterName, value: page },
-          { key: typeQueryParameterName, value: type },
-        ];
-        replaceParameter(parameters, toSearch());
-      } else {
-        const parameters = [
-          { key: searchQueryParameterName, value: undefined },
-          { key: pageQueryParameterName, value: page },
-          { key: typeQueryParameterName, value: undefined },
-        ];
-        if (type === "person") {
-          replaceParameter(parameters, toPeopleList());
-        } else {
-          replaceParameter(parameters, toMovieList());
-        }
-      }
-    };
+  const changePageNumber = (page) => {
+    changeUrlParameters([
+      {
+        key: "page",
+        value: page,
+      },
+    ]);
+  };
+  return (
+    <Wrapper>
+      <Button
+        disabled={page === 1} onClick={() => changePageNumber(1)}>
+        <PreviousArrow disabled={page === 1} />
+        <ButtonText> First</ButtonText>
+      </Button>
 
-    return (
-      <Wrapper>
-        <Button
-          disabled={page === "1" || page === 1}
-          onClick={() => onSetPage("1")}
-        >
-          <PreviousArrow />
-          <PreviousArrow />
-          <ButtonText>First</ButtonText>
-        </Button>
-        <Button
-          disabled={page === "1" || page === 1}
-          ocClick={() => onSetPage((Number(page) - 1).toString())}
-        >
-          <PreviousArrow />
-          <ButtonText>Previous</ButtonText>
-        </Button>
-        <PaginationText>
-          <ButtonText>Page</ButtonText>
-          <PaginationNumber>{page}</PaginationNumber> of{" "}
-          <PaginationNumber>{allPages}</PaginationNumber>
-        </PaginationText>
-        <Button
-          disabled={page === allPages}
-          onClick={() => onSetPage((Number(page) + 1).toString())}
-        >
-          <ButtonText>Next</ButtonText>
-          <NextArrow />
-        </Button>
-        <Button
-          disabled={page === allPages}
-          onClick={() => onSetPage(allPages)}
-        >
-          <ButtonText>Last</ButtonText>
-          <NextArrow />
-          <NextArrow />
-        </Button>
-      </Wrapper>
-    );
-  } else return null;
+      <Button disabled={page === 1} ocClick={() => changePageNumber(page - 1)}>
+        <PreviousArrow disabled={page === 1} />
+        <ButtonText> Previous</ButtonText>
+      </Button>
+
+      <PaginationText>Page</PaginationText>
+      <PaginationNumber>{page}</PaginationNumber>
+      <PaginationText>of</PaginationText>
+      <PaginationNumber>{allPages}</PaginationNumber>
+
+      <Button
+        disabled={page === allPages} onClick={() => changePageNumber(page + 1)}>
+        <ButtonText>Next</ButtonText>
+        <NextArrow disabled={page === allPages} />
+      </Button>
+
+      <Button
+        disabled={page === allPages} onClick={() => changePageNumber(allPages)}>
+        <ButtonText>Last</ButtonText>
+        <NextArrow disabled={page === allPages} />
+      </Button>
+
+    </Wrapper>
+  );
 };
