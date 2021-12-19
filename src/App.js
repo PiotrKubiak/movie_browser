@@ -1,19 +1,8 @@
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import MoviePeople from "./features/Content/MoviePeople";
 import MoviesList from "./features/Content/MoviesList";
-import Tile from "./features/Content/MoviesList/Tiles/Tile";
-import {
-  ButtonsGroup,
-  Camera,
-  Container,
-  StyledInput,
-  StyledItem,
-  StyledList,
-  StyledNav,
-  StyledNavLink,
-  StyledSearch,
-  Title,
-} from "./styled";
+import MovieTile from "./features/Content/MoviesList/Tiles/MovieTile";
+import { ButtonsGroup, Camera, Container, StyledInput, StyledItem, StyledList, StyledNav, StyledNavLink, StyledSearch, Title, } from "./styled";
 
 function App() {
   return (
@@ -44,8 +33,8 @@ function App() {
         </Container>
       </StyledNav>
       <Switch>
-      <Route path="/movies/:id">
-          <Tile />
+        <Route path="/movies/:id">
+          <MovieTile />
         </Route>
         <Route path="/movies">
           <MoviesList />
