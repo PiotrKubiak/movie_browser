@@ -31,6 +31,18 @@ const moviesBrowserSlice = createSlice({
       status: "error",
       data: null,
     }),
+    fetchOneMovie: () => ({
+      status: "loading",
+      data: null,
+    }),
+    fetchOneMovieSuccess: (_, { payload: data }) => ({
+      status: "success",
+      data,
+    }),
+    fetchOneMovieError: () => ({
+      status: "error",
+      data: null,
+    }),
   },
 });
 
@@ -41,6 +53,9 @@ export const {
   fetchPeople,
   fetchPeopleSuccess,
   fetchPeopleError,
+  fetchOneMovie,
+  fetchOneMovieSuccess,
+  fetchOneMovieError,
 } = moviesBrowserSlice.actions;
 
 const selectMoviesBrowserState = state => state.moviesBrowser;
