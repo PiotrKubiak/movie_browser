@@ -15,6 +15,6 @@ export const theme = {
     mobileMin: "480px",
     mobileMax: "767px",
     tabletMax: "992px",
-    navMax: "1050px",
+    navMax: "1055px",
   },
 };

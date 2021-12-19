@@ -47,27 +47,32 @@ export const StyledItem = styled.li`
 `;
 
 export const Title = styled.header`
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.66;
-  padding-right: 88px;
-  letter-spacing: -1.5px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.66;
+    padding-right: 80px;
+    letter-spacing: -1.5px;
 
-  display: inline-flex;
-  align-items: center;
-  flex-wrap: wrap;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.navMax}) {
-    font-size: 13px;
-    line-height: 1.3;
-    letter-spacing: -0.5px;
-    padding-right: 0px;
-  }
+    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}px) {
+        font-size: 13px;
+        line-height: 1.3;
+        letter-spacing: -0.5px;
+        padding-right: 0px;
+    }
 `;
 
 export const Camera = styled(CameraIcon)`
-  padding-right: 16px;
-  font-size: 24px;
+    margin-right: 16px;
+    width: 30px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}px) {
+        margin-right: 8px;
+        width: 20px;
+    }
 `;
 
 export const StyledNavLink = styled(NavLink)`
@@ -81,13 +86,13 @@ export const StyledNavLink = styled(NavLink)`
     border-radius: 24px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.navMax}) {
-    font-size: 12px;
+    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}px) {
+        font-size: 12px;
+        padding: 8px 12px;
 
-    &.active {
-      border: 1px solid ${({ theme }) => theme.color.white};
-      box-sizing: border-box;
-      border-radius: 24px;
+        &.active{
+            border-radius: 29px;
+        }
     }
   }
 `;
