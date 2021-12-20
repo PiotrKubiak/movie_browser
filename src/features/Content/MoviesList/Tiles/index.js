@@ -14,7 +14,7 @@ const Tile = ({ genres, movieBrowser }) => {
             <Information>
               <Description>
                 <Title> {original_title} </Title>
-                {/* <Year>{release_date.substring(4, -1)}</Year> */}
+                <Year>{release_date && release_date.slice(0, 4)}</Year>
                 <Tags>
                   {genre_ids.map((id, index) => {
                     return <Tag key={index}>{foundName(id, genres)}</Tag>
