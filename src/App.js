@@ -1,19 +1,9 @@
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import MoviePeople from "./features/Content/MoviePeople";
-import { Actress } from "./features/Content/MoviePeople/Tile/Actress";
 import MoviesList from "./features/Content/MoviesList";
-import {
-  ButtonsGroup,
-  Camera,
-  Container,
-  StyledInput,
-  StyledItem,
-  StyledList,
-  StyledNav,
-  StyledNavLink,
-  StyledSearch,
-  Title,
-} from "./styled";
+import { Actress } from "./features/Content/MoviePeople/Tile/Actress";
+import { OneMovie } from "./features/Content/MoviesList/Tiles/OneMovie";
+import { ButtonsGroup, Camera, Container, StyledInput, StyledItem, StyledList, StyledNav, StyledNavLink, StyledSearch, Title, } from "./styled";
 
 function App() {
   return (
@@ -44,6 +34,9 @@ function App() {
         </Container>
       </StyledNav>
       <Switch>
+        <Route path={`/movies/:id`}>
+          <OneMovie />
+        </Route>
         <Route path={`/people/:id`}>
           <Actress />
         </Route>
