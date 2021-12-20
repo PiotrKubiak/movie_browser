@@ -6,14 +6,14 @@ import { Loader } from "../../../../../common/Loader";
 import { img_base_url } from "../../../moviesBrowserApi";
 import { Image } from "../../../styledTile";
 
-export function Actress() {
+export function OneMovie() {
 
   const { id } = useParams();
   const [api, setApi] = useState({ state: "loading", });
   useEffect(() => {
     const axiosApi = () => {
       try {
-        axios.get(`https://api.themoviedb.org/3/person/${id}?api_key=eb6efa05b2b8136a07d256a13fbb4f15&language=en-US`)
+        axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=eb6efa05b2b8136a07d256a13fbb4f15&language=en-US`)
           .then(({ data }) => {
             setApi({ state: "success", data });
             console.log(data)
@@ -41,8 +41,8 @@ export function Actress() {
             </p>
           ) : (
             <p>
-              <Image src={img_base_url + api.data.profile_path} alt='' />
-              {api.data.name}
+              <Image src={img_base_url + api.data.poster_path} alt='' />
+              {api.data.original_title}
 
             </p>))}
     </p>
