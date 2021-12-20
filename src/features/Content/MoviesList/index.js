@@ -7,8 +7,7 @@ import { fetchMovies, selectMovies, selectMovieBrowserStatus } from "../moviesBr
 import { useEffect } from "react";
 import { Content } from "./content";
 
-import { fetchGenres, selectGenres, selectGenresStatus } from "./genresSlice";
-import MoviePage from "../MoviePage";
+import { fetchGenres, selectGenres } from "./genresSlice";
 
 const MoviesList = () => {
     const dispatch = useDispatch();
@@ -19,7 +18,6 @@ const MoviesList = () => {
         dispatch(fetchMovies());
     }, [dispatch]);
 
-    const genresStatus = useSelector(selectGenresStatus);
     const genres = useSelector(selectGenres);
 
     useEffect(() => {
