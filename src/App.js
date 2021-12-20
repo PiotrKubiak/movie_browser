@@ -1,5 +1,6 @@
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import MoviePeople from "./features/Content/MoviePeople";
+import { Actress } from "./features/Content/MoviePeople/Tile/Actress";
 import MoviesList from "./features/Content/MoviesList";
 import {
   ButtonsGroup,
@@ -43,6 +44,9 @@ function App() {
         </Container>
       </StyledNav>
       <Switch>
+        <Route path={`/people/:id`}>
+          <Actress />
+        </Route>
         <Route path="/movies">
           <MoviesList />
         </Route>
