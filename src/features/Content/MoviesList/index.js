@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { Content } from "./content";
 
 import { fetchGenres, selectGenres } from "./genresSlice";
+import { StyledTiles } from "../styledTile";
 
 const MoviesList = () => {
     const dispatch = useDispatch();
@@ -25,20 +26,18 @@ const MoviesList = () => {
     }, [dispatch]);
 
     return (
-        // <StyledSection>
-        //     {/* <NoResult/> */}
-        //     <StyledHeader>Popular movies</StyledHeader>
-        //     <StyledTiles>
-        //         <Content
-        //             movieBrowserStatus={movieBrowserStatus}
-        //             movieBrowser={movieBrowser}
-        //             genres={genres}
-        //         />
-        //     </StyledTiles>
-        //     <Pagination movieBrowserStatus={movieBrowserStatus} />
-        // </StyledSection>
-
-        <MoviePage/>
+        <StyledSection>
+            {/* <NoResult/> */}
+            <StyledHeader>Popular movies</StyledHeader>
+            <StyledTiles>
+                <Content
+                    movieBrowserStatus={movieBrowserStatus}
+                    movieBrowser={movieBrowser}
+                    genres={genres}
+                />
+            </StyledTiles>
+            <Pagination movieBrowserStatus={movieBrowserStatus} />
+        </StyledSection>
     );
 };
 
