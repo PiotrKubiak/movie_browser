@@ -3,10 +3,10 @@ import { img_base_url } from "../../moviesBrowserApi";
 import { foundName } from "../getGenres";
 
 const Tile = ({ genres, movieBrowser }) => {
-
+    console.log(movieBrowser)
     return (
         <StyledTiles>
-            {movieBrowser.map(({ id, poster_path, original_title, release_date, genre_ids = [], vote_average, vote_count }) => (
+            {movieBrowser.results.map(({ id, poster_path, original_title, release_date, genre_ids = [], vote_average, vote_count }) => (
                 <Container key={id}>
                     <Image src={img_base_url + poster_path} alt={original_title} />
                     <Information>
