@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom"
 import { Error } from "../../../../../common/Error";
 import { Loader } from "../../../../../common/Loader";
 import { img_base_url } from "../../../moviesBrowserApi";
-import { Image } from "../../../styledTile";
+import { ImageMovie } from "../../../styledTile";
 
 export function OneMovie() {
 
@@ -41,7 +41,7 @@ export function OneMovie() {
             </p>
           ) : (
             <p>
-              <ImagePeople src={img_base_url + api.data.poster_path} alt='' />
+              <ImageMovie src={img_base_url + api.data.poster_path} alt='' />
               {api.data.original_title}
 
             </p>))}
