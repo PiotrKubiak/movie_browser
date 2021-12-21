@@ -41,7 +41,7 @@ export function OneMovie() {
             </p>
           ) : (
             <p>
-              <Image src={img_base_url + api.data.poster_path} alt='' />
+              <ImagePeople src={img_base_url + api.data.poster_path} alt='' />
               {api.data.original_title}
 
             </p>))}

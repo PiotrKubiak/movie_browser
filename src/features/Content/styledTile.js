@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ReactComponent as StarIcon } from "../../images/star.svg";
 
@@ -12,14 +13,15 @@ export const StyledTiles = styled.section`
     align-content:center;
     justify-content: center;
 
-    /* @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-         grid-template-columns: 1fr;
-        grid-gap: 16px; 
-    } */
-`;
-
-export const Container = styled.div`
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        justify-content: space-between;
+    }
+    `;
+    
+export const StyledLinkMovie = styled(Link)`
+    text-decoration: none;
     width: 324px;
+    color: ${({ theme }) => theme.color.woodsmoke};
     background-color: ${({ theme }) => theme.color.white};
     box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
     border-radius: 5px;
@@ -30,6 +32,7 @@ export const Container = styled.div`
     grid-gap: 16px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        margin: 0px 0px 16px 0px;
         max-width: 288px;
         grid-template-columns: auto 1fr; */
         grid-template-rows: auto;
@@ -37,7 +40,30 @@ export const Container = styled.div`
     }
 `;
 
-export const Image = styled.img`
+export const StyledLinkPeople = styled(Link)`
+    text-decoration: none;
+    width: 208px;
+    color: ${({ theme }) => theme.color.woodsmoke};
+    background-color: ${({ theme }) => theme.color.white};
+    box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
+    border-radius: 5px;
+    padding: 16px;
+    margin: 0 12px 24px 12px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 16px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        width: 136px;
+        height: 245px;
+        margin: 0 0px 16px 0px;
+        padding: 9px;
+        grid-template-rows: auto;        
+        grid-gap: 8px;        
+    }
+`;
+
+export const ImageMovie = styled.img`
     max-width: 292px;
     max-height: 434px;
     border-radius: 5px;
@@ -45,6 +71,17 @@ export const Image = styled.img`
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         max-width: 114px;
         max-height: 168px;
+    }
+`;
+
+export const ImagePeople = styled.img`
+    max-width: 177px;
+    max-height: 264px;
+    border-radius: 5px;
+    
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        max-width: 120px;
+        max-height: 178px;
     }
 `;
 
