@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom"
 import { Error } from "../../../../../common/Error";
 import { Loader } from "../../../../../common/Loader";
 import { img_base_url } from "../../../moviesBrowserApi";
-import { Image } from "../../../styledTile";
+import { Image, ImagePeople } from "../../../styledTile";
 
 export function Actress() {
 
@@ -41,7 +41,7 @@ export function Actress() {
             </p>
           ) : (
             <p>
-              <Image src={img_base_url + api.data.profile_path} alt='' />
+              <ImagePeople src={img_base_url + api.data.profile_path} alt='' />
               {api.data.name}
 
             </p>))}
