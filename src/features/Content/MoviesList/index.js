@@ -14,11 +14,12 @@ const MoviesList = () => {
     const dispatch = useDispatch();
     const movieBrowserStatus = useSelector(selectMovieBrowserStatus);
     const movieBrowser = useSelector(selectMovies);
+
     const [number, setNumber] = useState(1);
     useEffect(() => {
         document.title = `Kliknięto ${number} razy`;
         dispatch(fetchMovies());
-    }, []);
+    }, [dispatch, number]);
 
     const genres = useSelector(selectGenres);
 
