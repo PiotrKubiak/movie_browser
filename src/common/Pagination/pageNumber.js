@@ -1,7 +1,8 @@
-export const number = 1;
+export let pageNumb;
 
-export function changeNumber(number) {
-    if (number) {
-        return (number + number)
-    }
+export function setPage(number) {
+    console.log(pageNumb);
+    console.log(number);
+    pageNumb = number;
+    console.log(pageNumb);
 };

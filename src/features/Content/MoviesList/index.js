@@ -10,12 +10,16 @@ import { Content } from "./content";
 import { fetchGenres, selectGenres } from "./genresSlice";
 import { StyledTiles } from "../styledTile";
 
+import { setPage } from "../../../common/Pagination/pageNumber";
+
 const MoviesList = () => {
     const dispatch = useDispatch();
+    const [number, setNumber] = useState(1);
+    setPage(number);
     const movieBrowserStatus = useSelector(selectMovieBrowserStatus);
     const movieBrowser = useSelector(selectMovies);
 
-    const [number, setNumber] = useState(1);
+
     useEffect(() => {
         console.log(`Kliknięto ${number} razy`);
         dispatch(fetchMovies());
