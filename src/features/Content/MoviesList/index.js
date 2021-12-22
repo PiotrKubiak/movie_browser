@@ -4,7 +4,7 @@ import { Pagination } from "../../../common/Pagination";
 
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMovies, selectMovies, selectMovieBrowserStatus } from "../moviesBrowserSlice";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Content } from "./content";
 
 import { fetchGenres, selectGenres } from "./genresSlice";
@@ -14,10 +14,11 @@ const MoviesList = () => {
     const dispatch = useDispatch();
     const movieBrowserStatus = useSelector(selectMovieBrowserStatus);
     const movieBrowser = useSelector(selectMovies);
-
+    const [number, setNumber] = useState(1);
     useEffect(() => {
+        document.title = `Kliknięto ${number} razy`;
         dispatch(fetchMovies());
-    }, [dispatch]);
+    }, []);
 
     const genres = useSelector(selectGenres);
 
@@ -36,7 +37,7 @@ const MoviesList = () => {
                     genres={genres}
                 />
             </StyledTiles>
-            <Pagination movieBrowserStatus={movieBrowserStatus} />
+            <Pagination movieBrowserStatus={movieBrowserStatus} number={number} setNumber={setNumber} />
         </StyledSection>
     );
 };

@@ -1,8 +1,7 @@
-export const number = 3;
+export const number = 1;
 
-export function changeNumber(num) {
-    if (num) {
-        return (number + num)
+export function changeNumber(number) {
+    if (number) {
+        return (number + number)
     }
 };
-
