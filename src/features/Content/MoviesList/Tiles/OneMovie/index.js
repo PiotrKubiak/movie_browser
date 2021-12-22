@@ -5,6 +5,7 @@ import { Error } from "../../../../../common/Error";
 import { Loader } from "../../../../../common/Loader";
 import { img_base_url } from "../../../moviesBrowserApi";
 import { ImageMovie } from "../../../styledTile";
+import Backdrop from "./Backdrop";
 
 export function OneMovie() {
 
@@ -27,7 +28,7 @@ export function OneMovie() {
   console.log(api);
 
   return (
-    <p>
+    <>
       {api.state === "loading"
         ? (
           <p>
@@ -40,11 +41,17 @@ export function OneMovie() {
               <Error />
             </p>
           ) : (
-            <p>
+            <>
+              <Backdrop 
+                backdropPath={img_base_url + api.data.backdrop_path}
+                title={api.data.title}
+                vote_avg={api.data.vote_average}
+                num_vote={api.data.vote_count}
+              />
               <ImageMovie src={img_base_url + api.data.poster_path} alt='' />
               {api.data.original_title}
-
-            </p>))}
-    </p>
+            </>
+          ))}
+    </>
   )
 };
