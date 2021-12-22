@@ -17,7 +17,7 @@ const MoviesList = () => {
 
     const [number, setNumber] = useState(1);
     useEffect(() => {
-        document.title = `Kliknięto ${number} razy`;
+        console.log(`Kliknięto ${number} razy`);
         dispatch(fetchMovies());
     }, [dispatch, number]);
 
