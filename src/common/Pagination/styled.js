@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   padding-bottom: 103px;
   display: flex;
   justify-content: center;
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     margin: 32px auto 32px;
     display: flex;
     flex-direction: row;
@@ -32,7 +32,7 @@ export const Button = styled.button`
     cursor: not-allowed;
     filter: brightness(100%);
   }
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     padding: 8px 12px;
     margin: 0px 8px;
     display: flex;
@@ -49,7 +49,7 @@ export const Button = styled.button`
 `;
 
 export const ButtonText = styled.span`
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     display: none;
   }
 `;
@@ -62,7 +62,7 @@ export const PaginationText = styled.span`
   @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}) {
     font-size: 14px;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     font-size: 12px;
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}) {
@@ -80,7 +80,7 @@ export const PaginationNumber = styled.span`
     font-size: 14px;
     margin: 0 6px;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     font-size: 12px;
     margin: 0 2px;
   }
