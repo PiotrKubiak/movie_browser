@@ -14,16 +14,15 @@ import { setPage } from "../../../common/Pagination/pageNumber";
 
 const MoviesList = () => {
     const dispatch = useDispatch();
-    const [number, setNumber] = useState(1);
-    setPage(number);
+    const [page, setNumber] = useState(1);
+    setPage(page);
     const movieBrowserStatus = useSelector(selectMovieBrowserStatus);
     const movieBrowser = useSelector(selectMovies);
 
 
     useEffect(() => {
-        console.log(`Kliknięto ${number} razy`);
         dispatch(fetchMovies());
-    }, [dispatch, number]);
+    }, [dispatch, page]);
 
     const genres = useSelector(selectGenres);
 
@@ -42,7 +41,7 @@ const MoviesList = () => {
                     genres={genres}
                 />
             </StyledTiles>
-            <Pagination movieBrowserStatus={movieBrowserStatus} number={number} setNumber={setNumber} />
+            <Pagination movieBrowserStatus={movieBrowserStatus} page={page} setNumber={setNumber} />
         </StyledSection>
     );
 };
