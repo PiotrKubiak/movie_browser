@@ -59,24 +59,25 @@ export const PaginationText = styled.span`
   color: ${({ theme }) => theme.color.waterloo};
   align-self: center;
   margin: 0px 4px;
-  @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
     font-size: 14px;
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     font-size: 12px;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
     font-size: 10px;
     margin: 0 2px;
   }
 `;
+
 export const PaginationNumber = styled.span`
   font-size: 16px;
   color: ${({ theme }) => theme.color.woodsmoke};
   align-self: center;
   margin: 0px 8px;
   font-size: 16px;
-  @media (max-width: ${({ theme }) => theme.breakpoint.tableMax}) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.tableMax}px) {
     font-size: 14px;
     margin: 0 6px;
   }
@@ -84,7 +85,7 @@ export const PaginationNumber = styled.span`
     font-size: 12px;
     margin: 0 2px;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
     font-size: 10px;
     margin: 0 auto;
   }

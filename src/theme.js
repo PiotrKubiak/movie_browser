@@ -12,7 +12,9 @@ export const theme = {
     pattensBlue: "#D6E4FF",
   },
   breakpoint: {
+    mobileMin: 480,
     mobileMax: 767,
+    tabletMax: 992,
     navMax: 1055,
   },
 };
