@@ -1,5 +1,8 @@
 import { NextArrow } from "./NextArrow";
 import { PreviousArrow } from "./PreviousArrow";
+import { ExtraNextArrow } from "./NextArrow/styled";
+import { ExtraPreviousArrow } from "./PreviousArrow/styled";
+
 import { Wrapper, Button, PaginationText, PaginationNumber, ButtonText } from "./styled";
 
 export const Pagination = ({ movieBrowserStatus, setNumber, page }) => {
@@ -10,21 +13,14 @@ export const Pagination = ({ movieBrowserStatus, setNumber, page }) => {
     return (
       <Wrapper>
 
-        <Button
-          disabled={page === 1}
-          onClick={() => setNumber(1)}>
-          <PreviousArrow
-            disabled={page === 1}
-          />
+        <Button disabled={page === 1} onClick={() => setNumber(1)}>
+          <PreviousArrow disabled={page === 1} />
+          <ExtraPreviousArrow />
           <ButtonText> First</ButtonText>
         </Button>
 
-        <Button
-          disabled={page === 1}
-          onClick={() => setNumber(page - 1)}>
-          <PreviousArrow
-            disabled={page === 1}
-          />
+        <Button disabled={page === 1} onClick={() => setNumber(page - 1)}>
+          <PreviousArrow disabled={page === 1} />
           <ButtonText> Previous</ButtonText>
         </Button>
 
@@ -33,22 +29,15 @@ export const Pagination = ({ movieBrowserStatus, setNumber, page }) => {
         <PaginationText>of</PaginationText>
         <PaginationNumber>{allPages}</PaginationNumber>
 
-        <Button
-          disabled={page === allPages}
-          onClick={() => setNumber(page + 1)}>
+        <Button disabled={page === allPages} onClick={() => setNumber(page + 1)}>
           <ButtonText>Next</ButtonText>
-          <NextArrow
-            disabled={page === allPages}
-          />
+          <NextArrow disabled={page === allPages} />
         </Button>
 
-        <Button
-          disabled={page === allPages}
-          onClick={() => setNumber(allPages)}>
+        <Button disabled={page === allPages} onClick={() => setNumber(allPages)}>
           <ButtonText>Last</ButtonText>
-          <NextArrow
-            disabled={page === allPages}
-          />
+          <NextArrow disabled={page === allPages} />
+          <ExtraNextArrow />
         </Button>
 
       </Wrapper >

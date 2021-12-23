@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
-import { ReactComponent as LeftArrow } from "./../images/vectorLeft.svg";
+import { ReactComponent as PreviousArrow } from "./../images/vectorLeft.svg";
 
-export const Arrow = styled(LeftArrow)`
+export const Arrow = styled(PreviousArrow)`
   margin: 0 0 0 8px;
   height: 11px;
   width: 7px;
@@ -16,4 +16,11 @@ export const Arrow = styled(LeftArrow)`
     width: 5px;
     height: 8px;
   }
+`;
+
+export const ExtraPreviousArrow = styled(Arrow)` 
+    display: none;
+  @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+    display: block;
+  };
 `;
