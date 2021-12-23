@@ -1,8 +1,5 @@
-export let pageNumb;
+export let pageNumber;
 
 export function setPage(number) {
-    console.log(pageNumb);
-    console.log(number);
-    pageNumb = number;
-    console.log(pageNumb);
+    pageNumber = number;
 };

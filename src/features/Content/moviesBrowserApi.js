@@ -1,5 +1,5 @@
 import axios from "axios";
-import { pageNumb } from "../../common/Pagination/pageNumber";
+import { pageNumber } from "../../common/Pagination/pageNumber";
 
 
 
@@ -13,7 +13,7 @@ const genres_url = "https://api.themoviedb.org/3/genre/movie/list?api_key=eb6efa
 
 
 export const getMovies = () =>
-    axios.get(popular_movies_api + pageNumb)
+    axios.get(popular_movies_api + pageNumber)
         .then(response => response.data.results);
 
 export const getGenres = () =>
