@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   padding-bottom: 103px;
   display: flex;
   justify-content: center;
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
     margin: 32px auto 32px;
     display: flex;
     flex-direction: row;
@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
 
 export const Button = styled.button`
   cursor: pointer;
-  margin: 0 6px;
+  margin: 0px 6px;
   padding: 8px 16px;
   background: ${({ theme }) => theme.color.pattensBlue};
   color: ${({ theme }) => theme.color.woodsmoke};
@@ -24,7 +24,10 @@ export const Button = styled.button`
   border: none;
   font-size: 14px;
   &:hover {
-    filter: brihtness(80%);
+  background: ${({ theme }) => theme.color.periwinkleGray};
+  }
+  &:active {
+    background: ${({ theme }) => theme.color.waterloo};
   }
   &:disabled {
     background: ${({ theme }) => theme.color.mystic};
@@ -32,9 +35,9 @@ export const Button = styled.button`
     cursor: not-allowed;
     filter: brightness(100%);
   }
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-    padding: 8px 12px;
-    margin: 0px 8px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+    padding: 8px 8px;
+    margin: 0px 4px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -49,7 +52,7 @@ export const Button = styled.button`
 `;
 
 export const ButtonText = styled.span`
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
     display: none;
   }
 `;
@@ -59,15 +62,15 @@ export const PaginationText = styled.span`
   color: ${({ theme }) => theme.color.waterloo};
   align-self: center;
   margin: 0px 4px;
-  @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}) {
     font-size: 14px;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
     font-size: 12px;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}) {
     font-size: 10px;
-    margin: 0 2px;
+    margin: 0px 2px;
   }
 `;
 
@@ -77,16 +80,20 @@ export const PaginationNumber = styled.span`
   align-self: center;
   margin: 0px 8px;
   font-size: 16px;
-  @media (max-width: ${({ theme }) => theme.breakpoint.tableMax}px) {
+  font-weight: bold;
+  @media (max-width: ${({ theme }) => theme.breakpoint.tableMax}) {
     font-size: 14px;
-    margin: 0 6px;
+    margin: 0px 6px;
+    font-weight: bold;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
     font-size: 12px;
-    margin: 0 2px;
+    margin: 0px 2px;
+    font-weight: bold;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}) {
     font-size: 10px;
     margin: 0 auto;
+    font-weight: bold;
   }
 `;

@@ -10,11 +10,12 @@ export const theme = {
     blue: "#0044CC",
     blueHover: "#0255C5",
     pattensBlue: "#D6E4FF",
+    periwinkleGray:"#B0B8E3",
   },
   breakpoint: {
-    mobileMin: 480,
-    mobileMax: 767,
-    tabletMax: 992,
-    navMax: 1055,
+    mobileMin: "480px",
+    mobileMax: "767px",
+    tabletMax: "992px",
+    navMax: "1055px",
   },
 };
