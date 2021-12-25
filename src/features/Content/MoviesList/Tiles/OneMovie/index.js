@@ -6,6 +6,7 @@ import { Loader } from "../../../../../common/Loader";
 import { img_base_url } from "../../../moviesBrowserApi";
 import { ImageMovie } from "../../../styledTile";
 import Backdrop from "./Backdrop";
+import CastCrew from "./CastCrew";
 
 export function OneMovie() {
 
@@ -17,7 +18,7 @@ export function OneMovie() {
         axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=eb6efa05b2b8136a07d256a13fbb4f15&language=en-US`)
           .then(({ data }) => {
             setApi({ state: "success", data });
-            console.log(data)
+            // console.log(data)
           })
       } catch (error) {
         (setApi({ state: "error", }));
@@ -25,33 +26,30 @@ export function OneMovie() {
     }
     setTimeout(axiosApi, 500)
   }, [id]);
-  console.log(api);
+  // console.log(api);
 
   return (
     <>
       {api.state === "loading"
-        ? (
-          <p>
-            <Loader />
-          </p>
-        )
+        ? (<Loader />)
         : (api.state === "error"
-          ? (
-            <p>
-              <Error />
-            </p>
-          ) : (
-            <>
-              <Backdrop 
-                backdropPath={img_base_url + api.data.backdrop_path}
-                title={api.data.title}
-                vote_avg={api.data.vote_average}
-                num_vote={api.data.vote_count}
-              />
-              <ImageMovie src={img_base_url + api.data.poster_path} alt='' />
-              {api.data.original_title}
-            </>
-          ))}
+          ? (<Error />)
+          : (
+              <>
+                <Backdrop
+                  backdropPath={img_base_url + api.data.backdrop_path}
+                  title={api.data.title}
+                  vote_avg={api.data.vote_average}
+                  num_vote={api.data.vote_count}
+                />
+                <ImageMovie src={img_base_url + api.data.poster_path} alt='' />
+                {api.data.original_title}
+
+
+                <CastCrew id={id} header="Cast" credits="cast" />
+                <CastCrew id={id} header="Crew" credits="crew" />
+              </>
+        ))}
     </>
   )
 };
