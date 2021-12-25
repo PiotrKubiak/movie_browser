@@ -10,6 +10,7 @@ export const theme = {
     blue: "#0044CC",
     blueHover: "#0255C5",
     pattensBlue: "#D6E4FF",
+    silver: "#C4C4C4",
   },
   breakpoint: {
     mobileMax: 767,
