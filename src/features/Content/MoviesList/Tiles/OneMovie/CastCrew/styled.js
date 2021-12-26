@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { StyledTiles } from "../../../../styledTile";
-
 
 export const Section = styled.section`
     max-width: 70%;
