@@ -28,7 +28,6 @@ if (movieBrowser && !credits) {
 if (credits === "cast") {
   return (
     <>
-      {/* {console.log(movieBrowser.data)} */}
       {castDisplay.map(({ id, name, profile_path, character }) => (
         <>
           <StyledLinkPeople key={id} to={`/people/${id}`}>

@@ -17,7 +17,6 @@ export function Actress() {
         axios.get(`https://api.themoviedb.org/3/person/${id}?api_key=eb6efa05b2b8136a07d256a13fbb4f15&language=en-US`)
           .then(({ data }) => {
             setApi({ state: "success", data });
-            console.log(data)
           })
       } catch (error) {
         (setApi({ state: "error", }));
@@ -25,7 +24,6 @@ export function Actress() {
     }
     setTimeout(axiosApi, 500)
   }, [id]);
-  console.log(api);
 
   return (
     <>

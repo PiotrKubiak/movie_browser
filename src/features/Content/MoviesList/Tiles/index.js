@@ -42,7 +42,6 @@ const Tile = ({ genres, movieBrowser, credits }) => {
     )
   };
   if (movieBrowser && credits === "cast") {
-    // console.log(movieCastDisplay)
     return (
       <>
         {movieCastDisplay.map(({ id, poster_path, original_title, character, genre_ids = [], vote_average, vote_count }) => (
@@ -71,7 +70,6 @@ const Tile = ({ genres, movieBrowser, credits }) => {
   }
 
   if (movieBrowser && credits === "crew") {
-    console.log(movieCrewDisplay)
     return (
       <>
         {movieCrewDisplay.map(({ id, poster_path, original_title, job, genre_ids = [], vote_average, vote_count }) => (

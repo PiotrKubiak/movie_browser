@@ -36,7 +36,6 @@ const MovieCastCrew = ({ id, header, credits }) => {
         }
         setTimeout(axiosApi, 500)
     }, [id]);
-    console.log("ala")
 
     return (
         <Section>
