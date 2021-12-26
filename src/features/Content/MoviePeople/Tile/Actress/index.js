@@ -29,22 +29,18 @@ export function Actress() {
   return (
     <p>
       {api.state === "loading"
-        ? (
-          <p>
-            <Loader />
-          </p>
-        )
+        ? (<Loader />)
         : (api.state === "error"
-          ? (
-            <p>
-              <Error />
-            </p>
-          ) : (
-            <p>
+          ? (<Error />)
+          : (
+            <>
               <ImagePeople src={img_base_url + api.data.profile_path} alt='' />
               {api.data.name}
 
-            </p>))}
+
+              
+            </>
+          ))}
     </p>
   )
 };
