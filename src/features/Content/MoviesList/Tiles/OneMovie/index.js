@@ -4,9 +4,9 @@ import { useParams } from "react-router-dom"
 import { Error } from "../../../../../common/Error";
 import { Loader } from "../../../../../common/Loader";
 import { img_base_url } from "../../../moviesBrowserApi";
-import { ImageMovie } from "../../../styledTile";
 import Backdrop from "./Backdrop";
 import CastCrew from "./CastCrew";
+import MovieDetails from "./MovieDetails";
 
 export function OneMovie() {
 
@@ -35,21 +35,18 @@ export function OneMovie() {
         : (api.state === "error"
           ? (<Error />)
           : (
-              <>
-                <Backdrop
-                  backdropPath={img_base_url + api.data.backdrop_path}
-                  title={api.data.title}
-                  vote_avg={api.data.vote_average}
-                  num_vote={api.data.vote_count}
-                />
-                <ImageMovie src={img_base_url + api.data.poster_path} alt='' />
-                {api.data.original_title}
-
-
-                <CastCrew id={id} header="Cast" credits="cast" />
-                <CastCrew id={id} header="Crew" credits="crew" />
-              </>
-        ))}
+            <>
+              <Backdrop
+                backdropPath={img_base_url + api.data.backdrop_path}
+                title={api.data.title}
+                vote_avg={api.data.vote_average}
+                num_vote={api.data.vote_count}
+              />
+              <MovieDetails img_base_url={img_base_url} api={api} />
+              <CastCrew id={id} header="Cast" credits="cast" />
+              <CastCrew id={id} header="Crew" credits="crew" />
+            </>
+          ))}
     </>
   )
 };
