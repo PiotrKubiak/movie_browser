@@ -18,7 +18,7 @@ if (movieBrowser && !credits) {
         <StyledLinkPeople key={id} to={`/people/${id}`}>
           <ImagePeople src={img_base_url + profile_path} alt={name} />
           <Description>
-            <Title> {name} </Title>
+            <Title align="center"> {name} </Title>
           </Description>
         </StyledLinkPeople>
       ))}
@@ -39,7 +39,7 @@ if (credits === "cast") {
               }
             </ImageContainer>
             <Description>
-              <Title>{name}</Title>
+              <Title align="center">{name}</Title>
               <Character>{character}</Character>
             </Description>
           </StyledLinkPeople>
@@ -61,7 +61,7 @@ if (credits === "crew") {
               }
             </ImageContainer>
             <Description>
-              <Title>{name}</Title>
+              <Title align="center">{name}</Title>
               <Character>{department}</Character>
             </Description>
           </StyledLinkPeople>
