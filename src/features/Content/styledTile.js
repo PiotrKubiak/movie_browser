@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ReactComponent as StarIcon } from "../../images/star.svg";
 import {ReactComponent as Profile} from "../../images/profile.svg";
+import {ReactComponent as Video} from "../../images/video.svg";
 
 export const StyledTiles = styled.section`
     /* margin: 0px; */
@@ -63,8 +64,8 @@ export const StyledLinkPeople = styled(Link)`
     }
 `;
 export const ImageContainer = styled.div`
-    max-width: 176px;
-    height: 264px;
+    max-width:  ${({width}) => width};
+    height: ${({height}) => height};
     color: ${({ theme }) => theme.color.white};
     background-color: ${({ theme }) => theme.color.silver};
     border-radius: 5px;
@@ -73,14 +74,19 @@ export const ImageContainer = styled.div`
     justify-content: center;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
-        max-width: 120px;
-        max-height: 178px;
+        width:  ${({mobileWidth}) => mobileWidth};
+        height: ${({mobileHeight}) => mobileHeight};
     }
 `;
 
 export const ProfileIcon = styled(Profile)`
-    max-width: 72px;
-    max-height: 72px;
+    width: 72px;
+    height: 72px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+        max-width: 40px;
+        max-height: 40px;
+    }
 `;
 export const ImageMovie = styled.img`
     max-width: 292px;
@@ -90,6 +96,16 @@ export const ImageMovie = styled.img`
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         max-width: 114px;
         max-height: 168px;
+    }
+`;
+
+export const VideoIcon = styled(Video)`
+    width: 80px;
+    height: 80px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+        max-width: 37px;
+        max-height: 28px;
     }
 `;
 
