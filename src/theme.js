@@ -11,6 +11,7 @@ export const theme = {
     blueHover: "#0255C5",
     pattensBlue: "#D6E4FF",
     periwinkleGray:"#B0B8E3",
+    stormGray: "#74788B",
   },
   breakpoint: {
     mobileMin: "480px",
