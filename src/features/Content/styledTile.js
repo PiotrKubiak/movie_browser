@@ -14,7 +14,7 @@ export const StyledTiles = styled.section`
     align-content:center;
     justify-content: center;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         justify-content: space-between;
     }
 `;
@@ -32,7 +32,7 @@ export const StyledLinkMovie = styled(Link)`
     grid-template-rows: auto 1fr;
     grid-gap: 16px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         margin: 0px 0px 16px 0px;
         max-width: 288px;
         grid-template-columns: auto 1fr; */
@@ -54,7 +54,7 @@ export const StyledLinkPeople = styled(Link)`
     grid-template-rows: auto;
     grid-gap: 16px;  
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         width: 136px;
         margin: 0 0px 16px 0px;
         padding: 9px;
@@ -72,7 +72,7 @@ export const ImageContainer = styled.div`
     align-items: center;
     justify-content: center;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         max-width: 120px;
         max-height: 178px;
     }
@@ -87,7 +87,7 @@ export const ImageMovie = styled.img`
     max-height: 434px;
     border-radius: 5px;
     
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         max-width: 114px;
         max-height: 168px;
     }
@@ -98,7 +98,7 @@ export const ImagePeople = styled.img`
     min-height: 264px;
     border-radius: 5px;
     
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         max-width: 120px;
         min-height: 178px;
     }
@@ -109,7 +109,7 @@ export const Information = styled.div`
     flex-direction: column;
     justify-content: space-between;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         justify-content: flex-start;
         margin-left: 16px;
     }
@@ -118,8 +118,8 @@ export const Information = styled.div`
 export const Description = styled.div`
     margin-bottom: 10px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        margin-bottom: 0;
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+        margin-bottom: 12px ;
     }
 `;
 
@@ -130,9 +130,8 @@ export const Title = styled.header`
     line-height: 1.3;
     text-align: ${({align}) => align};
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-        font-size: 14px;
-        padding: 0;
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+        font-size: 16px;
     }
 `;
 
@@ -142,7 +141,7 @@ export const SubTitle = styled.div`
     line-height: 1.5;
     padding-top: 8px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         font-size: 13px;
         padding-top: 4px;
     }
@@ -153,7 +152,7 @@ export const Character = styled.div`
     line-height: 1.5;
     text-align: center;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         font-size: 13px;
     }
 `;
@@ -165,7 +164,7 @@ export const Tags = styled.ul`
     flex-wrap: wrap;
     margin: -8px -8px -8px -4px;   
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         margin: -4px -4px -4px -2px;  
     }
 `;
@@ -178,7 +177,7 @@ export const Tag = styled.li`
     margin: 16px 4px 4px 4px;
     border-radius: 5px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         font-size: 10px;
         line-height: 1.1;
         margin: 8px 2px 2px 2px;
@@ -196,7 +195,7 @@ export const Rating = styled.div`
 export const Star = styled(StarIcon)`
     color: ${({ theme }) => theme.color.candlelight};
     align-content: center;
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         max-width: 16px;
         max-height: 16px;
     }
@@ -209,7 +208,7 @@ export const Rate = styled.div`
     margin-left: 12px;
     color: ${({ theme }) => theme.color.woodsmoke};
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         font-size: 13px;
         line-height: 1.3;
         margin-left: 8px;
@@ -222,7 +221,7 @@ export const Votes = styled.div`
     margin-left: 12px;
     color: ${({ theme }) => theme.color.waterloo};
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         font-size: 13px;
         line-height: 1.3;
         margin-left: 8px;

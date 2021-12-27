@@ -1,6 +1,5 @@
 import { ButtonLink, DangerIcon, Description, Title, Wrapper } from "./styled";
 
-
 export const Error = () => {
     return (
         <Wrapper>
