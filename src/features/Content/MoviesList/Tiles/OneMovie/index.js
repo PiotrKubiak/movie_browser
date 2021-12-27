@@ -35,7 +35,7 @@ export function OneMovie() {
           : (
             <>
               <Backdrop
-                backdropPath={img_base_url + api.data.backdrop_path}
+                backdropPath={api.data.backdrop_path}
                 title={api.data.title}
                 vote_avg={api.data.vote_average}
                 num_vote={api.data.vote_count}
