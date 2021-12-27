@@ -2,74 +2,36 @@ import { Character, Description, ImageContainer, ImagePeople, ProfileIcon, Style
 import { img_base_url } from "../../moviesBrowserApi";
 
 const Tile = ({ movieBrowser, credits }) => {
+  let creditsDisplay;
+  let cast;
 
-  let castDisplay;
-  let crewDisplay;
-
-  if (credits) { 
-    castDisplay = movieBrowser.data.cast.slice(0, 12);
-    crewDisplay = movieBrowser.data.crew.slice(0, 12);
+  if (credits === "cast") {
+    creditsDisplay = movieBrowser.data.cast.slice(0, 12);
+    cast = true;
+  } else if (credits === "crew") {
+    creditsDisplay = movieBrowser.data.crew.slice(0, 12);
+    cast = false;
+  } else if (!credits) {
+    creditsDisplay = movieBrowser;
   }
 
-if (movieBrowser && !credits) {
   return (
     <>
-      {movieBrowser.map(({ id, name, profile_path }) => (
+      {creditsDisplay.map(({ id, name, profile_path, character, job }) => (
         <StyledLinkPeople key={id} to={`/people/${id}`}>
+
           <ImagePeople src={img_base_url + profile_path} alt={name} />
           <Description>
             <Title> {name} </Title>
+            {(character || job) ?
+              <Character>{cast ? character : job}</Character>
+              : null
+            }
           </Description>
         </StyledLinkPeople>
       ))}
     </>
   );
-}
-if (credits === "cast") {
-  return (
-    <>
-      {/* {console.log(movieBrowser.data)} */}
-      {castDisplay.map(({ id, name, profile_path, character }) => (
-        <>
-          <StyledLinkPeople key={id} to={`/people/${id}`}>
-            <ImageContainer>
-              {profile_path ?
-                <ImagePeople src={img_base_url + profile_path} alt="" />
-                : <ProfileIcon />
-              }
-            </ImageContainer>
-            <Description>
-              <Title>{name}</Title>
-              <Character>{character}</Character>
-            </Description>
-          </StyledLinkPeople>
-        </>
-      ))}
-    </>
-  );
-}
-if (credits === "crew") {
-  return (
-    <>
-      {crewDisplay.map(({ id, name, profile_path, department }) => (
-        <>
-          <StyledLinkPeople key={id} to={`/people/${id}`}>
-            <ImageContainer>
-              {profile_path ?
-                <ImagePeople src={img_base_url + profile_path} alt="" />
-                : <ProfileIcon />
-              }
-            </ImageContainer>
-            <Description>
-              <Title>{name}</Title>
-              <Character>{department}</Character>
-            </Description>
-          </StyledLinkPeople>
-        </>
-      ))}
-    </>
-  );
-}
 };
 
 export default Tile;
