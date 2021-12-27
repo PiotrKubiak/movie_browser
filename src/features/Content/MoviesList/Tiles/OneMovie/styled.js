@@ -12,7 +12,7 @@ export const StyledTiles = styled.section`
     align-content:center;
     justify-content: center;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         justify-content: space-between;
     }
     `;
@@ -30,7 +30,7 @@ export const Container = styled.div`
     grid-template-rows: auto;
     grid-gap: 16px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         margin: 16px 16px 21px 16px;
         padding: 16px;
         grid-gap: 0;        
@@ -42,7 +42,7 @@ export const ImageMovie = styled.img`
     max-height: 464px;
     border-radius: 5px;
     
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         max-width: 114px;
         max-height: 168px;
     }
@@ -52,7 +52,7 @@ export const Information = styled.div`
     display: flex;
     flex-direction: column;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         justify-content: flex-start;
         margin-left: 16px;
     }
@@ -61,7 +61,7 @@ export const Information = styled.div`
 export const StyledInfo = styled.div`
     margin-bottom: 24px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         margin-bottom: 0px;
     }
 `;
@@ -72,7 +72,7 @@ export const Title = styled.header`
     font-size: 36px;
     line-height: 120%;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         font-size: 16px;
     }
 `;
@@ -83,7 +83,7 @@ export const Year = styled.div`
     line-height: 120%;
     padding: 24px 0px 24px 0px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         color: ${({ theme }) => theme.color.waterloo};
         font-size: 13px;
         padding: 8px 0px 8px 0px;
@@ -95,7 +95,7 @@ export const BasicInfo = styled.div`
     font-size: 18px;
     line-height: 120%;
     
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         font-size: 12px;
     }
 `;
@@ -107,7 +107,7 @@ export const Tags = styled.ul`
     flex-wrap: wrap;
     margin: -8px -8px -8px -4px;   
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         margin: -4px -4px -4px -2px;  
     }
 `;
@@ -120,7 +120,7 @@ export const Tag = styled.li`
     margin: 8px 12px 8px 4px;
     border-radius: 5px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         font-size: 10px;
         line-height: 1.1;
         margin: 8px 2px 2px 2px;
@@ -138,7 +138,7 @@ export const Rating = styled.div`
 export const Star = styled(StarIcon)`
     color: ${({ theme }) => theme.color.candlelight};
     align-content: center;
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         max-width: 16px;
         max-height: 16px;
     }
@@ -152,7 +152,7 @@ export const Rate = styled.div`
     margin-left: 12px;
     color: ${({ theme }) => theme.color.woodsmoke};
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         margin: 6px 0px 4px 0px;
         padding: 12px 0px 12px 0px;
         font-size: 13px;
@@ -165,7 +165,7 @@ export const OtherInfo = styled.div`
     font-size: 14px;
     line-height: 120%;
 
-        @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         display: none;
     }
 `;
@@ -176,7 +176,7 @@ export const Votes = styled.div`
     margin-left: 12px;
     color: ${({ theme }) => theme.color.waterloo};
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         font-size: 13px;
         line-height: 1.3;
         margin-left: 8px;
@@ -187,7 +187,7 @@ export const Overview = styled.div`
     font-size: 20px;
     line-height: 160%;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         margin-left: -128px;
         font-size: 14px;
     }
@@ -195,7 +195,7 @@ export const Overview = styled.div`
 export const SgColor = styled.a`
     color: ${({ theme }) => theme.color.stormGray};
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         display: none;
     }
 `;
