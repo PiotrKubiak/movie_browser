@@ -11,7 +11,7 @@ export const Container = styled.div`
     margin: auto;
     padding: 26px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}) {
         padding: 0;
     }
 `;
@@ -26,7 +26,7 @@ export const StyledList = styled.ul`
     flex-wrap: wrap;
     justify-content: space-between; 
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}) {
         flex-direction: column;
     }
 `;
@@ -36,7 +36,7 @@ export const ButtonsGroup = styled.div`
     grid-template-columns: auto auto auto;
     grid-gap: 16px;
     
-    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}) {
         margin: 16px auto 8px auto;
     }
 `;
@@ -56,7 +56,7 @@ export const Title = styled.header`
     align-items: center;
     flex-wrap: wrap;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}) {
         font-size: 13px;
         line-height: 1.3;
         letter-spacing: -0.5px;
@@ -68,7 +68,7 @@ export const Camera = styled(CameraIcon)`
     margin-right: 16px;
     width: 30px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}) {
         margin-right: 8px;
         width: 20px;
     }
@@ -85,7 +85,7 @@ export const StyledNavLink = styled(NavLink)`
         border-radius: 24px;
     }
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}) {
         font-size: 12px;
         padding: 8px 12px;
 
@@ -96,7 +96,7 @@ export const StyledNavLink = styled(NavLink)`
 `;
 
 export const StyledSearch = styled.form`
-    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}) {
         margin: 8px auto 16px auto;
     }
 `;
@@ -111,7 +111,7 @@ export const StyledInput = styled.input`
     border-radius: 33px;
     color: ${({ theme }) => theme.color.waterloo};
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}) {
         font-size: 13px;
         line-height: 1.3;
         min-width: 288px;

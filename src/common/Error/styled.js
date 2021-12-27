@@ -10,7 +10,7 @@ export const Wrapper = styled.article`
   color: ${({ theme }) => theme.color.textPrimary};
   padding: 0 10px;
 
-  @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+  @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}){
     grid-gap: 24px;
   }
 `;
@@ -19,7 +19,7 @@ export const DangerIcon = styled(ErrorIcon)`
   width: 100px;
   padding: 0px;
   margin: 0;
-  @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+  @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}){
     width: 80px;
   }
 `;
@@ -29,7 +29,7 @@ export const Title = styled.header`
   font-size: 36px;
   margin-top: 38px;
 
-  @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+  @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}){
     margin-top: 0px;
     font-size: 30px;
   }
@@ -42,7 +42,7 @@ export const Description = styled.p`
   margin: 0;
   font-weight: 500;
 
-  @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+  @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}){
     font-size: 18px;
   }
 `;
@@ -62,7 +62,7 @@ export const ButtonLink = styled.a`
     background: ${({ theme }) => theme.color.blueHover};
   }
 
-  @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+  @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
     font-size: 10px;
   }
 `;
