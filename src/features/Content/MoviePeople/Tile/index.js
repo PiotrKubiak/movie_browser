@@ -1,7 +1,6 @@
 import { Description, ImagePeople, StyledLinkPeople, Title } from "../../styledTile";
 import { img_base_url } from "../../moviesBrowserApi";
 
-
 const Tile = ({ movieBrowser }) => {
   return (
     <>

@@ -22,7 +22,7 @@ export const Gradient = styled.div`
 export const MainInfo = styled.div`
     margin: 30% 0 0 15%;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         margin: 30% 0 0 12%;
     }
 `;
@@ -33,7 +33,7 @@ export const Title = styled.header`
     line-height: 1.2;
     margin-bottom: 24px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         font-size: 24px;
         margin-bottom: 4px;
     }
@@ -46,7 +46,7 @@ export const Rating = styled.div`
     flex-wrap: wrap;
     max-width: 140px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         margin-bottom: 8px;
     }
 `;
@@ -59,7 +59,7 @@ export const Star = styled(StarIcon)`
     margin-right: 8px;
     margin-bottom: 16px;
     
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         width: 16px;
         height: 16px;
         margin-right: 4px;
@@ -74,7 +74,7 @@ export const Rate = styled.div`
     margin-right: 8px;
     margin-bottom: 16px;
     
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         font-size: 14px;
         margin-right: 2px;
         margin-bottom: 0;
@@ -87,7 +87,7 @@ export const OtherInfo = styled.div`
     margin-right: 8px;
     margin-bottom: 16px;
     
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         font-size: 10px;
         margin-right: 8px;
         margin-bottom: 0;

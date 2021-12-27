@@ -11,7 +11,7 @@ export const Header = styled.header`
     font-size: 36px;
     line-height: 1.2;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}){
         font-weight: 600;
         font-size: 32px;
     }
@@ -23,7 +23,7 @@ export const Image = styled.img`
     max-width: 668px;
     padding: 0;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}){
         margin: 10px auto;
         max-width: 468px;
     }
