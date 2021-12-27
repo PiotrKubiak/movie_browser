@@ -1,7 +1,7 @@
-import { NextArrow } from "./NextArrow";
-import { PreviousArrow } from "./PreviousArrow";
-import { ExtraNextArrow } from "./NextArrow/styled";
-import { ExtraPreviousArrow } from "./PreviousArrow/styled";
+import { NextArrow } from "./Arrow/nextArrow";
+import { PreviousArrow } from "./Arrow/previousArrow";
+import { ExtraNextArrow } from "./Arrow/styled";
+import { ExtraPreviousArrow } from "./Arrow/styled";
 
 import { Wrapper, Button, PaginationText, PaginationNumber, ButtonText } from "./styled";
 
