@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import { Error } from "../../../../../common/Error";
 import { Loader } from "../../../../../common/Loader";
-import { img_base_url } from "../../../moviesBrowserApi";
-import { Image, ImagePeople } from "../../../styledTile";
+import { img_base_url, tileImageSize } from "../../../moviesBrowserApi";
+import { ImagePeople } from "../../../styledTile";
 import MovieCastCrew from "./MovieCastCrew";
 
 export function Actress() {
@@ -33,7 +33,7 @@ export function Actress() {
           ? (<Error />)
           : (
             <>
-              <ImagePeople src={img_base_url + api.data.profile_path} alt='' />
+              <ImagePeople src={img_base_url + tileImageSize + api.data.profile_path} alt='' />
               {api.data.name}
 
               <MovieCastCrew id={id} header="Movies - cast" credits="cast"/>

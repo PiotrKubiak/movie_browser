@@ -1,5 +1,5 @@
 import { Character, Description, ImageContainer, ImagePeople, ProfileIcon, StyledLinkPeople, Title } from "../../styledTile";
-import { img_base_url } from "../../moviesBrowserApi";
+import { img_base_url, personImageSize } from "../../moviesBrowserApi";
 
 const Tile = ({ movieBrowser, credits }) => {
   let creditsDisplay;
@@ -21,7 +21,7 @@ const Tile = ({ movieBrowser, credits }) => {
         <StyledLinkPeople key={id} to={`/people/${id}`}>
           <ImageContainer  width="176px" height="264px" mobileWidth="120px" mobileHeight="178px">
             {profile_path ?
-              <ImagePeople src={img_base_url + profile_path} alt="" />
+              <ImagePeople src={img_base_url + personImageSize + profile_path} alt="" />
               : <ProfileIcon />
             }
           </ImageContainer>

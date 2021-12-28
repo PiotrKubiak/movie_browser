@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import { Error } from "../../../../../common/Error";
 import { Loader } from "../../../../../common/Loader";
-import { img_base_url } from "../../../moviesBrowserApi";
+import { img_base_url, tileImageSize } from "../../../moviesBrowserApi";
 import Backdrop from "./Backdrop";
 import CastCrew from "./CastCrew";
 import MovieDetails from "./MovieDetails";
@@ -40,7 +40,7 @@ export function OneMovie() {
                 vote_avg={api.data.vote_average}
                 num_vote={api.data.vote_count}
               />
-              <MovieDetails img_base_url={img_base_url} api={api} />
+              <MovieDetails img_base_url={img_base_url + tileImageSize} api={api} />
               <CastCrew id={id} header="Cast" credits="cast" />
               <CastCrew id={id} header="Crew" credits="crew" />
             </>

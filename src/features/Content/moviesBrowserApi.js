@@ -1,7 +1,11 @@
 import axios from "axios";
 import { pageNumber } from "../../common/Pagination/pageNumber";
 
-export const img_base_url = "https://image.tmdb.org/t/p/w1280";
+export const img_base_url = "https://image.tmdb.org/t/p/";
+export const backdropImageSize = "original";
+export const tileImageSize = "w342";
+export const personImageSize = "h632";
+
 const base_url = "https://api.themoviedb.org/3";
 const api_key = "?api_key=eb6efa05b2b8136a07d256a13fbb4f15&language=en-US&page=";
 const most_popular_url = "/movie/popular"

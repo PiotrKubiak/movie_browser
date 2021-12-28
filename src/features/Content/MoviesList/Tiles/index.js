@@ -1,5 +1,5 @@
 import { Description, Information, Rate, Rating, Star, Tag, Tags, Title, Votes, SubTitle, StyledLinkMovie, ImageMovie, ImageContainer, VideoIcon } from "../../styledTile";
-import { img_base_url } from "../../moviesBrowserApi";
+import { img_base_url, tileImageSize } from "../../moviesBrowserApi";
 import { foundName } from "../getGenres";
 
 const Tile = ({ genres, movieBrowser, credits }) => {
@@ -22,7 +22,7 @@ const Tile = ({ genres, movieBrowser, credits }) => {
         <StyledLinkMovie key={id} to={`/movies/${id}`}>
           <ImageContainer width="292px" height="434px" mobileWidth="114px" mobileHeight="170px">
             {poster_path ? 
-             <ImageMovie src={img_base_url + poster_path} alt={original_title} />
+             <ImageMovie src={img_base_url + tileImageSize + poster_path} alt={original_title} />
               : <VideoIcon />
             }
           </ImageContainer>
