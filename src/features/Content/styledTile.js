@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ReactComponent as StarIcon } from "../../images/star.svg";
+import {ReactComponent as Profile} from "../../images/profile.svg";
 
 export const StyledTiles = styled.section`
     /* margin: 0px; */
@@ -16,7 +17,7 @@ export const StyledTiles = styled.section`
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         justify-content: space-between;
     }
-    `;
+`;
     
 export const StyledLinkMovie = styled(Link)`
     text-decoration: none;
@@ -51,18 +52,36 @@ export const StyledLinkPeople = styled(Link)`
     margin: 0 12px 24px 12px;
     display: grid;
     grid-template-rows: auto;
-    grid-gap: 16px;
+    grid-gap: 16px;  
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         width: 136px;
-        height: 245px;
         margin: 0 0px 16px 0px;
         padding: 9px;
         grid-template-rows: auto;        
         grid-gap: 8px;        
     }
 `;
+export const ImageContainer = styled.div`
+    max-width: 176px;
+    height: 264px;
+    color: ${({ theme }) => theme.color.white};
+    background-color: ${({ theme }) => theme.color.silver};
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+        max-width: 120px;
+        max-height: 178px;
+    }
+`;
+
+export const ProfileIcon = styled(Profile)`
+    max-width: 72px;
+    max-height: 72px;
+`;
 export const ImageMovie = styled.img`
     max-width: 292px;
     max-height: 434px;
@@ -76,12 +95,12 @@ export const ImageMovie = styled.img`
 
 export const ImagePeople = styled.img`
     max-width: 177px;
-    max-height: 264px;
+    min-height: 264px;
     border-radius: 5px;
     
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         max-width: 120px;
-        max-height: 178px;
+        min-height: 178px;
     }
 `;
 
@@ -109,11 +128,13 @@ export const Title = styled.header`
     font-weight: 500;
     font-size: 22px;
     line-height: 1.3;
+    text-align: center;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         font-size: 16px;
     }
 `;
+
 export const Year = styled.div`
     color: ${({ theme }) => theme.color.waterloo};
     font-size: 16px;
@@ -123,6 +144,16 @@ export const Year = styled.div`
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         font-size: 13px;
         padding-top: 4px;
+    }
+`;
+
+export const Character = styled.div`
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+        font-size: 13px;
     }
 `;
 
