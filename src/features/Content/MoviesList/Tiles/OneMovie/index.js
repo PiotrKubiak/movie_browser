@@ -18,7 +18,6 @@ export function OneMovie() {
         axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=eb6efa05b2b8136a07d256a13fbb4f15&language=en-US`)
           .then(({ data }) => {
             setApi({ state: "success", data });
-            // console.log(data)
           })
       } catch (error) {
         (setApi({ state: "error", }));
@@ -26,7 +25,6 @@ export function OneMovie() {
     }
     setTimeout(axiosApi, 500)
   }, [id]);
-  // console.log(api);
 
   return (
     <>
@@ -37,7 +35,7 @@ export function OneMovie() {
           : (
             <>
               <Backdrop
-                backdropPath={img_base_url + api.data.backdrop_path}
+                backdropPath={api.data.backdrop_path}
                 title={api.data.title}
                 vote_avg={api.data.vote_average}
                 num_vote={api.data.vote_count}

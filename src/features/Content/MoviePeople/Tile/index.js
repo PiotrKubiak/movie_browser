@@ -19,10 +19,14 @@ const Tile = ({ movieBrowser, credits }) => {
     <>
       {creditsDisplay.map(({ id, name, profile_path, character, job }) => (
         <StyledLinkPeople key={id} to={`/people/${id}`}>
-
-          <ImagePeople src={img_base_url + profile_path} alt={name} />
+          <ImageContainer  width="176px" height="264px" mobileWidth="120px" mobileHeight="178px">
+            {profile_path ?
+              <ImagePeople src={img_base_url + profile_path} alt="" />
+              : <ProfileIcon />
+            }
+          </ImageContainer>
           <Description>
-            <Title> {name} </Title>
+            <Title align="center"> {name} </Title>
             {(character || job) ?
               <Character>{cast ? character : job}</Character>
               : null

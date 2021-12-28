@@ -5,6 +5,7 @@ import { Error } from "../../../../../common/Error";
 import { Loader } from "../../../../../common/Loader";
 import { img_base_url } from "../../../moviesBrowserApi";
 import { Image, ImagePeople } from "../../../styledTile";
+import MovieCastCrew from "./MovieCastCrew";
 
 export function Actress() {
 
@@ -16,7 +17,6 @@ export function Actress() {
         axios.get(`https://api.themoviedb.org/3/person/${id}?api_key=eb6efa05b2b8136a07d256a13fbb4f15&language=en-US`)
           .then(({ data }) => {
             setApi({ state: "success", data });
-            console.log(data)
           })
       } catch (error) {
         (setApi({ state: "error", }));
@@ -24,10 +24,9 @@ export function Actress() {
     }
     setTimeout(axiosApi, 500)
   }, [id]);
-  console.log(api);
 
   return (
-    <p>
+    <>
       {api.state === "loading"
         ? (<Loader />)
         : (api.state === "error"
@@ -37,10 +36,11 @@ export function Actress() {
               <ImagePeople src={img_base_url + api.data.profile_path} alt='' />
               {api.data.name}
 
-
+              <MovieCastCrew id={id} header="Movies - cast" credits="cast"/>
+              <MovieCastCrew id={id} header="Movies - crew" credits="crew"/>
               
             </>
           ))}
-    </p>
+    </>
   )
 };
