@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ReactComponent as StarIcon } from "../../images/star.svg";
-import {ReactComponent as Profile} from "../../images/profile.svg";
-import {ReactComponent as Video} from "../../images/video.svg";
+import { ReactComponent as Profile } from "../../images/profile.svg";
+import { ReactComponent as Video } from "../../images/Video.svg";
 
 export const StyledTiles = styled.section`
     /* margin: 0px; */
@@ -19,7 +19,7 @@ export const StyledTiles = styled.section`
         justify-content: space-between;
     }
 `;
-    
+
 export const StyledLinkMovie = styled(Link)`
     text-decoration: none;
     width: 324px;
@@ -64,8 +64,8 @@ export const StyledLinkPeople = styled(Link)`
     }
 `;
 export const ImageContainer = styled.div`
-    max-width:  ${({width}) => width};
-    height: ${({height}) => height};
+    max-width:  ${({ width }) => width};
+    height: ${({ height }) => height};
     color: ${({ theme }) => theme.color.white};
     background-color: ${({ theme }) => theme.color.silver};
     border-radius: 5px;
@@ -74,8 +74,8 @@ export const ImageContainer = styled.div`
     justify-content: center;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
-        width:  ${({mobileWidth}) => mobileWidth};
-        height: ${({mobileHeight}) => mobileHeight};
+        width:  ${({ mobileWidth }) => mobileWidth};
+        height: ${({ mobileHeight }) => mobileHeight};
     }
 `;
 
@@ -144,7 +144,7 @@ export const Title = styled.header`
     font-weight: 500;
     font-size: 22px;
     line-height: 1.3;
-    text-align: ${({align}) => align};
+    text-align: ${({ align }) => align};
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         font-size: 16px;
