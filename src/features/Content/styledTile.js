@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ReactComponent as StarIcon } from "../../images/star.svg";
 import { ReactComponent as Profile } from "../../images/profile.svg";
-import { ReactComponent as Video } from "../../images/Video.svg";
+import { ReactComponent as Video } from "../../images/video.svg";
 
 export const StyledTiles = styled.section`
     /* margin: 0px; */
