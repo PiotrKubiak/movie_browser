@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom"
 import { Error } from "../../../../../common/Error";
 import { Loader } from "../../../../../common/Loader";
 import { img_base_url } from "../../../moviesBrowserApi";
-import { Image, ImagePeople } from "../../../styledTile";
 import MovieCastCrew from "./MovieCastCrew";
+import { Container, ImagePeople, Information, Title, StyledInfo, BasicInfo, SgColor, Biography, StyledTiles } from "../styled";
 
 export function Actress() {
 
@@ -33,12 +33,22 @@ export function Actress() {
           ? (<Error />)
           : (
             <>
-              <ImagePeople src={img_base_url + api.data.profile_path} alt='' />
-              {api.data.name}
+              <StyledTiles>
+                <Container>
+                  <ImagePeople src={img_base_url + api.data.profile_path} alt='' />
+                  <Information>
+                    <Title> {api.data.name} </Title>
+                    <StyledInfo>
+                      <BasicInfo><SgColor>Date of birth: </SgColor>{api.data.birthday}</BasicInfo>
+                      <BasicInfo><SgColor>Place of birth: </SgColor>{api.data.place_of_birth}</BasicInfo>
+                      <Biography>{api.data.biography}</Biography>
+                    </StyledInfo>
+                  </Information>
+                </Container>
+              </StyledTiles>
+              <MovieCastCrew id={id} header="Movies - cast" credits="cast" />
+              <MovieCastCrew id={id} header="Movies - crew" credits="crew" />
 
-              <MovieCastCrew id={id} header="Movies - cast" credits="cast"/>
-              <MovieCastCrew id={id} header="Movies - crew" credits="crew"/>
-              
             </>
           ))}
     </>
