@@ -5,7 +5,7 @@ export const StyledTiles = styled.section`
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-
+    
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         justify-content: space-between;
     }
@@ -24,7 +24,6 @@ export const Container = styled.div`
     grid-template-rows: auto;
     grid-gap: 16px;
     
-
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         margin: 16px 16px 21px 16px;
         padding: 16px;
@@ -33,6 +32,7 @@ export const Container = styled.div`
 `;
 
 export const ImagePeople = styled.img`
+    
     max-width: 312px;
     max-height: 464px;
     border-radius: 5px;
