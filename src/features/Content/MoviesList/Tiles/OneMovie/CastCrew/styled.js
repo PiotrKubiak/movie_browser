@@ -7,7 +7,6 @@ export const Section = styled.section`
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         max-width: 90%;      
     }
-    
 `;
 
 export const Header = styled.header`
@@ -19,6 +18,5 @@ export const Header = styled.header`
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         font-size: 20px;
     margin-bottom: 12px;
-
     }
 `;

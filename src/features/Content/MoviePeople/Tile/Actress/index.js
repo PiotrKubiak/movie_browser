@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom"
 import { Error } from "../../../../../common/Error";
 import { Loader } from "../../../../../common/Loader";
 import { img_base_url } from "../../../moviesBrowserApi";
-import { Image, ImagePeople } from "../../../styledTile";
 import MovieCastCrew from "./MovieCastCrew";
+import { Container, ImagePeople, Information, Title, StyledInfo, BasicInfo, SgColor, Biography, StyledTiles, DesktopInscription, MobileInscription } from "../styled";
 
 export function Actress() {
 
@@ -33,12 +33,29 @@ export function Actress() {
           ? (<Error />)
           : (
             <>
-              <ImagePeople src={img_base_url + api.data.profile_path} alt='' />
-              {api.data.name}
-
-              <MovieCastCrew id={id} header="Movies - cast" credits="cast"/>
-              <MovieCastCrew id={id} header="Movies - crew" credits="crew"/>
-              
+              <StyledTiles>
+                <Container>
+                  <ImagePeople src={img_base_url + api.data.profile_path} alt='' />
+                  <Information>
+                    <Title> {api.data.name} </Title>
+                    <StyledInfo>
+                      <BasicInfo>
+                        <SgColor>
+                          <DesktopInscription>Date of birth: </DesktopInscription>
+                          <MobileInscription>Birth: </MobileInscription>
+                        </SgColor>
+                        {api.data.birthday.slice(8, 10)}.
+                        {api.data.birthday.slice(5, 7)}.
+                        {api.data.birthday.slice(0, 4)}
+                      </BasicInfo>
+                      <BasicInfo><SgColor>Place of birth: </SgColor>{api.data.place_of_birth}</BasicInfo>
+                    </StyledInfo>
+                    <Biography>{api.data.biography}</Biography>
+                  </Information>
+                </Container>
+              </StyledTiles>
+              <MovieCastCrew id={id} header="Movies - cast" credits="cast" />
+              <MovieCastCrew id={id} header="Movies - crew" credits="crew" />
             </>
           ))}
     </>

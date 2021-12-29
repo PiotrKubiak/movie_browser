@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-    width: 70%;
+    max-width: 80%;
     margin: 64px auto;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
@@ -14,6 +14,7 @@ export const Header = styled.header`
     font-size: 36px;
     line-height: 1.2;
     margin-bottom: 32px;
+    margin-left: 4px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         font-size: 20px;
