@@ -5,7 +5,7 @@ import { Error } from "../../../../../common/Error";
 import { Loader } from "../../../../../common/Loader";
 import { img_base_url } from "../../../moviesBrowserApi";
 import MovieCastCrew from "./MovieCastCrew";
-import { Container, ImagePeople, Information, Title, StyledInfo, BasicInfo, SgColor, Biography, StyledTiles } from "../styled";
+import { Container, ImagePeople, Information, Title, StyledInfo, BasicInfo, SgColor, Biography, StyledTiles, DesktopInscription, MobileInscription } from "../styled";
 
 export function Actress() {
 
@@ -39,16 +39,23 @@ export function Actress() {
                   <Information>
                     <Title> {api.data.name} </Title>
                     <StyledInfo>
-                      <BasicInfo><SgColor>Date of birth: </SgColor>{api.data.birthday}</BasicInfo>
+                      <BasicInfo>
+                        <SgColor>
+                          <DesktopInscription>Date of birth: </DesktopInscription>
+                          <MobileInscription>Birth: </MobileInscription>
+                        </SgColor>
+                        {api.data.birthday.slice(8, 10)}.
+                        {api.data.birthday.slice(5, 7)}.
+                        {api.data.birthday.slice(0, 4)}
+                      </BasicInfo>
                       <BasicInfo><SgColor>Place of birth: </SgColor>{api.data.place_of_birth}</BasicInfo>
-                      <Biography>{api.data.biography}</Biography>
                     </StyledInfo>
+                    <Biography>{api.data.biography}</Biography>
                   </Information>
                 </Container>
               </StyledTiles>
               <MovieCastCrew id={id} header="Movies - cast" credits="cast" />
               <MovieCastCrew id={id} header="Movies - crew" credits="crew" />
-
             </>
           ))}
     </>

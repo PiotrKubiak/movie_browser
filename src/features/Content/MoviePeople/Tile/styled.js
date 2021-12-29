@@ -20,9 +20,10 @@ export const Container = styled.div`
     padding: 40px;
     margin: 64px 16px 24px 16px;
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto auto;
     grid-template-rows: auto;
     grid-gap: 16px;
+    
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         margin: 16px 16px 21px 16px;
@@ -45,7 +46,7 @@ export const ImagePeople = styled.img`
 export const Information = styled.div`
     display: flex;
     flex-direction: column;
-
+    margin-left: 40px;
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         justify-content: flex-start;
         margin-left: 16px;
@@ -59,13 +60,13 @@ export const Title = styled.header`
     line-height: 120%;
    
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
-        font-size: 16px;
+        font-size: 14px;
     }
 `;
 
 export const StyledInfo = styled.div`
-    margin-bottom: 24px;
-    padding: 24px 0px;
+    margin-bottom: 8px;
+    padding: 24px 0px 0px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         margin-bottom: 0px;
@@ -94,11 +95,25 @@ export const SgColor = styled.a`
 export const Biography = styled.div`
     font-size: 20px;
     line-height: 160%;
-    padding: 24px 0px;
+    padding: 4px 0px;
     
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         margin-left: -128px;
         font-size: 14px;
-        padding-top: 60px;
+        padding-top: 48px;
+    }
+`;
+
+export const DesktopInscription = styled.div`
+        display: inline;
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+        display: none;
+    }
+`;
+
+export const MobileInscription = styled.div`
+        display: none;
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+        display: inline;
     }
 `;
