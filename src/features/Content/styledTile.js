@@ -23,7 +23,7 @@ export const StyledTiles = styled.section`
 export const StyledLinkMovie = styled(Link)`
     text-decoration: none;
     width: 324px;
-    color: ${({ theme }) => theme.color.woodsmoke};
+    color: ${({ theme }) => theme.color.black};
     background-color: ${({ theme }) => theme.color.white};
     box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
     border-radius: 5px;
@@ -32,6 +32,10 @@ export const StyledLinkMovie = styled(Link)`
     display: grid;
     grid-template-rows: auto 1fr;
     grid-gap: 16px;
+    :hover {
+        transform: scale(1.03);
+        transition: 0.5s;
+    }
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         margin: 0px 0px 16px 0px;
@@ -45,7 +49,7 @@ export const StyledLinkMovie = styled(Link)`
 export const StyledLinkPeople = styled(Link)`
     text-decoration: none;
     width: 208px;
-    color: ${({ theme }) => theme.color.woodsmoke};
+    color: ${({ theme }) => theme.color.black};
     background-color: ${({ theme }) => theme.color.white};
     box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
     border-radius: 5px;
@@ -53,7 +57,11 @@ export const StyledLinkPeople = styled(Link)`
     margin: 0 12px 24px 12px;
     display: grid;
     grid-template-rows: auto;
-    grid-gap: 16px;  
+    grid-gap: 16px; 
+    :hover {
+        transform: scale(1.03);
+        transition: 0.5s;
+    } 
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         width: 136px;
@@ -222,7 +230,7 @@ export const Rate = styled.div`
     font-size: 16px;
     line-height: 1.5;
     margin-left: 12px;
-    color: ${({ theme }) => theme.color.woodsmoke};
+    color: ${({ theme }) => theme.color.black};
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         font-size: 13px;
