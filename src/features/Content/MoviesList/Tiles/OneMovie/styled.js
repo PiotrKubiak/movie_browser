@@ -19,7 +19,7 @@ export const StyledTiles = styled.section`
 
 export const Container = styled.div`
     width: 1368px;
-    color: ${({ theme }) => theme.color.woodsmoke};
+    color: ${({ theme }) => theme.color.black};
     background-color: ${({ theme }) => theme.color.white};
     box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
     border-radius: 5px;
@@ -150,7 +150,7 @@ export const Rate = styled.div`
     font-size: 22px;
     line-height: 130%;
     margin-left: 12px;
-    color: ${({ theme }) => theme.color.woodsmoke};
+    color: ${({ theme }) => theme.color.black};
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         margin: 6px 0px 4px 0px;

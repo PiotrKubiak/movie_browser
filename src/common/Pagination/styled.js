@@ -19,7 +19,7 @@ export const Button = styled.button`
   margin: 0px 6px;
   padding: 8px 16px;
   background: ${({ theme }) => theme.color.pattensBlue};
-  color: ${({ theme }) => theme.color.woodsmoke};
+  color: ${({ theme }) => theme.color.black};
   border-radius: 5px;
   border: none;
   font-size: 14px;
@@ -31,7 +31,7 @@ export const Button = styled.button`
   }
   &:disabled {
     background: ${({ theme }) => theme.color.mystic};
-    color: ${({ theme }) => theme.color.woodsmoke};
+    color: ${({ theme }) => theme.color.black};
     cursor: not-allowed;
     filter: brightness(100%);
   }
@@ -44,7 +44,7 @@ export const Button = styled.button`
     justify-content: center;
     & disabled {
       background: ${({ theme }) => theme.color.mystic};
-      color: ${({ theme }) => theme.color.woodsmoke};
+      color: ${({ theme }) => theme.color.black};
       filter: brightness(100%);
       cursor: not-allowed;
     }
@@ -76,7 +76,7 @@ export const PaginationText = styled.span`
 
 export const PaginationNumber = styled.span`
   font-size: 16px;
-  color: ${({ theme }) => theme.color.woodsmoke};
+  color: ${({ theme }) => theme.color.black};
   align-self: center;
   margin: 0px 8px;
   font-size: 16px;
