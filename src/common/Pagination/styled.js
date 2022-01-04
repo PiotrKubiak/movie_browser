@@ -24,10 +24,10 @@ export const Button = styled.button`
   border: none;
   font-size: 14px;
   &:hover {
-  background: ${({ theme }) => theme.color.periwinkleGray};
+  background: ${({ theme }) => theme.color.periwinkle};
   }
   &:active {
-    background: ${({ theme }) => theme.color.waterloo};
+    background: ${({ theme }) => theme.color.periwinkleDarker};
   }
   &:disabled {
     background: ${({ theme }) => theme.color.mystic};
@@ -42,12 +42,6 @@ export const Button = styled.button`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    & disabled {
-      background: ${({ theme }) => theme.color.mystic};
-      color: ${({ theme }) => theme.color.black};
-      filter: brightness(100%);
-      cursor: not-allowed;
-    }
   }
 `;
 
