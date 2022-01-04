@@ -10,7 +10,8 @@ export const theme = {
     blueHover: "#0255C5",
     pattensBlue: "#D6E4FF",
     silver: "#C4C4C4",
-    periwinkleGray:"#B0B8E3",
+    periwinkle:"#D0DDFF",
+    periwinkleDarker:"#C4D3FF",
     stormGray: "#74788B",
   },
   breakpoint: {
