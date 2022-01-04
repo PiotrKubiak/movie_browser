@@ -27,8 +27,7 @@ const MovieDetails = ({ img_base_url, api }) => {
                     <Rating>
                         <Star />
                         <Rate>{api.data.vote_average}</Rate>
-                        <OtherInfo> /10</OtherInfo>
-                        <Votes>{api.data.vote_count} votes</Votes>
+                        <Votes><OtherInfo>/ 10 </OtherInfo> {api.data.vote_count} votes</Votes>
                     </Rating>
                     <Overview>{api.data.overview}</Overview>
                 </Information>

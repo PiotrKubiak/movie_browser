@@ -22,21 +22,18 @@ export const Container = styled.div`
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto;
-    grid-gap: 16px;
-    
+
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         margin: 16px 16px 21px 16px;
-        padding: 16px;
-        grid-gap: 0;        
+        padding: 16px;       
     }
 `;
 
-export const ImagePeople = styled.img`
-    
+export const ImagePeople = styled.img`   
     max-width: 312px;
     max-height: 464px;
     border-radius: 5px;
-    
+
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         max-width: 114px;
         max-height: 168px;
@@ -47,6 +44,7 @@ export const Information = styled.div`
     display: flex;
     flex-direction: column;
     margin-left: 40px;
+
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         justify-content: flex-start;
         margin-left: 16px;
@@ -95,10 +93,10 @@ export const SgColor = styled.a`
 export const Biography = styled.div`
     font-size: 20px;
     line-height: 160%;
-    padding: 4px 0px;
     
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         margin-left: -128px;
+        margin-top: 10px;
         font-size: 14px;
         padding-top: 48px;
     }
@@ -112,7 +110,8 @@ export const DesktopInscription = styled.div`
 `;
 
 export const MobileInscription = styled.div`
-        display: none;
+    display: none;
+
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         display: inline;
     }

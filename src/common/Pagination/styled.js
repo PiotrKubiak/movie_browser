@@ -62,7 +62,7 @@ export const PaginationText = styled.span`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
     font-size: 12px;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMid}) {
     font-size: 10px;
     margin: 0px 2px;
   }
@@ -85,7 +85,7 @@ export const PaginationNumber = styled.span`
     margin: 0px 2px;
     font-weight: bold;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMid}) {
     font-size: 10px;
     margin: 0 auto;
     font-weight: bold;
