@@ -19,19 +19,19 @@ export const Button = styled.button`
   margin: 0px 6px;
   padding: 8px 16px;
   background: ${({ theme }) => theme.color.pattensBlue};
-  color: ${({ theme }) => theme.color.woodsmoke};
+  color: ${({ theme }) => theme.color.black};
   border-radius: 5px;
   border: none;
   font-size: 14px;
   &:hover {
-  background: ${({ theme }) => theme.color.periwinkleGray};
+  background: ${({ theme }) => theme.color.periwinkle};
   }
   &:active {
-    background: ${({ theme }) => theme.color.waterloo};
+    background: ${({ theme }) => theme.color.periwinkleDarker};
   }
   &:disabled {
     background: ${({ theme }) => theme.color.mystic};
-    color: ${({ theme }) => theme.color.woodsmoke};
+    color: ${({ theme }) => theme.color.black};
     cursor: not-allowed;
     filter: brightness(100%);
   }
@@ -42,12 +42,6 @@ export const Button = styled.button`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    & disabled {
-      background: ${({ theme }) => theme.color.mystic};
-      color: ${({ theme }) => theme.color.woodsmoke};
-      filter: brightness(100%);
-      cursor: not-allowed;
-    }
   }
 `;
 
@@ -68,7 +62,7 @@ export const PaginationText = styled.span`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
     font-size: 12px;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMid}) {
     font-size: 10px;
     margin: 0px 2px;
   }
@@ -76,7 +70,7 @@ export const PaginationText = styled.span`
 
 export const PaginationNumber = styled.span`
   font-size: 16px;
-  color: ${({ theme }) => theme.color.woodsmoke};
+  color: ${({ theme }) => theme.color.black};
   align-self: center;
   margin: 0px 8px;
   font-size: 16px;
@@ -91,7 +85,7 @@ export const PaginationNumber = styled.span`
     margin: 0px 2px;
     font-weight: bold;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMin}) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMid}) {
     font-size: 10px;
     margin: 0 auto;
     font-weight: bold;
