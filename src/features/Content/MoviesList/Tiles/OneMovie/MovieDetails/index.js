@@ -1,7 +1,7 @@
 import { ImageMovie, Information, Rate, Rating, Star, Tag, Tags, Title, Votes, Year, Container, StyledTiles, OtherInfo, BasicInfo, Overview, SgColor, StyledInfo } from "../styled";
 
 
-const MovieDetails = ({ img_base_url, api}) => {
+const MovieDetails = ({ img_base_url, api }) => {
 
     return (
         <StyledTiles>
@@ -11,8 +11,15 @@ const MovieDetails = ({ img_base_url, api}) => {
                     <Title> {api.data.original_title} </Title>
                     <Year>{api.data.release_date.slice(0, 4)}</Year>
                     <StyledInfo>
-                        {api.data.production_countries.map(({ name }) => { return <BasicInfo><SgColor>Production: </SgColor>{name}</BasicInfo> })}
-                        <BasicInfo><SgColor>Release date: </SgColor>{api.data.release_date}</BasicInfo>
+                        <BasicInfo><SgColor>Production: </SgColor>
+                        {api.data.production_countries.map(({ name }) => { return <a>{name}, </a> })}
+                        </BasicInfo>
+                        <BasicInfo>
+                            <SgColor>Release date: </SgColor>
+                            {api.data.release_date.slice(8, 10)}.
+                            {api.data.release_date.slice(5, 7)}.
+                            {api.data.release_date.slice(0, 4)}
+                        </BasicInfo>
                     </StyledInfo>
                     <Tags>
                         {api.data.genres.map(({ name }) => { return <Tag>{name}</Tag> })}
