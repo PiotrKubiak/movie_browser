@@ -10,7 +10,7 @@ const MovieDetails = ({ img_base_url, api }) => {
             <Container>
 
                 <ImageContainer width="310px" height="464px" mobileWidth="114px" mobileHeight="170px">
-                    {! api.data.poster_path ?
+                    {api.data.poster_path ?
                         <ImageMovie src={img_base_url + results.poster_path} alt='' />
                         : <VideoIcon />
                     }
