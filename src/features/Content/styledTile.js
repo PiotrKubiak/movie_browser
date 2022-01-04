@@ -210,10 +210,10 @@ export const Tag = styled.li`
 `;
 
 export const Rating = styled.div`
-
     display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
+    padding-top: 10px;
 `;
 
 export const Star = styled(StarIcon)`
