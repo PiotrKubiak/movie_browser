@@ -7,7 +7,7 @@ export const Container = styled.div`
 
 export const BackdropImage = styled.div`
     color: ${({ theme }) => theme.color.white};
-    background-image: url(${({bcg}) => bcg});
+    background-image: url(${({ bcg }) => bcg});
     background-color: ${({ theme }) => theme.color.black};
     background-repeat: no-repeat;
     background-size: 100%;
@@ -29,12 +29,14 @@ export const MainInfo = styled.div`
 `;
 
 export const Title = styled.header`
+    max-width:1000px;   
     font-weight: 600;
     font-size: 64px;
     line-height: 1.2;
     margin-bottom: 24px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+        max-width: 400px;   
         font-size: 24px;
         margin-bottom: 4px;
     }

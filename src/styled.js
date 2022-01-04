@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { ReactComponent as CameraIcon } from "./images/Video.svg";
+import { ReactComponent as CameraIcon } from "./images/video.svg";
 
 export const StyledNav = styled.nav`
     background-color: ${({ theme }) => theme.color.woodsmoke};
