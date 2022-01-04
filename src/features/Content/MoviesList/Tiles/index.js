@@ -29,7 +29,7 @@ const Tile = ({ genres, movieBrowser, credits }) => {
           <Information>
             <Description>
               <Title align="left"> {original_title} </Title>
-              <SubTitle>{(character || job) ? (cast ? character : job) 
+              <SubTitle>{(character || job) ? (cast ? character : job)
                 : (release_date && release_date.slice(0, 4))}</SubTitle>
               <Tags>
                 {genre_ids.map((id, index) => {
