@@ -15,7 +15,8 @@ export const theme = {
     stormGray: "#74788B",
   },
   breakpoint: {
-    mobileMin: "480px",
+    mobileMin: "380px",
+    mobileMid: "480px",
     mobileMax: "767px",
     tabletMax: "992px",
     navMax: "1055px",
