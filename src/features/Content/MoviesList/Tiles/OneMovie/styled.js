@@ -32,12 +32,13 @@ export const Container = styled.div`
 `;
 
 export const ImageMovie = styled.img`
-    padding-right:40px;
+    margin-right:40px;
     max-width: 312px;
     max-height: 464px;
     border-radius: 5px;
     
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+        margin-right: 0px;
         max-width: 114px;
         max-height: 168px;
     }
