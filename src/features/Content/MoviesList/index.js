@@ -9,7 +9,7 @@ import { fetchGenres, selectGenres } from "./genresSlice";
 import { StyledTiles } from "../styledTile";
 import { setPage } from "../../../common/Pagination/pageNumber";
 
-const MoviesList = () => {
+const MoviesList = (results) => {
     const dispatch = useDispatch();
     const [page, setNumber] = useState(1);
     setPage(page);

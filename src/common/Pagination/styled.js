@@ -42,12 +42,6 @@ export const Button = styled.button`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    & disabled {
-      background: ${({ theme }) => theme.color.mystic};
-      color: ${({ theme }) => theme.color.woodsmoke};
-      filter: brightness(100%);
-      cursor: not-allowed;
-    }
   }
 `;
 
