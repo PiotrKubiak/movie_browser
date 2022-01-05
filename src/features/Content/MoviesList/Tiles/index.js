@@ -21,13 +21,11 @@ const Tile = ({ genres, movieBrowser, credits, movieList }) => {
   return (
     <>
       {movieDisplay.map(({ id, poster_path, original_title, release_date, character, job, genre_ids = [], vote_average, vote_count }) => (
-        <StyledLinkMovie key={id} to={`/movies/${id}`} movieDisplay={movieList}>
-          <ImageContainer width="292px" height="434px" mobileWidth="114px" mobileHeight="170px">
-            {poster_path ?
-              <ImageMovie src={img_base_url + poster_path} alt={original_title} />
-              : <VideoIcon />
-            }
-          </ImageContainer>
+        <StyledLinkMovie key={id} to={`/movies/${id}`}>
+          {poster_path
+            ? <ImageMovie src={img_base_url + poster_path} alt={original_title} />
+            : <ImageContainer width="292px" height="434px" mobileWidth="114px" mobileHeight="170px"> <VideoIcon /> </ImageContainer>
+          }
           <Information>
             <Description>
               <Title align="left"> {original_title} </Title>

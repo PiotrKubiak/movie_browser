@@ -1,13 +1,15 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { ReactComponent as CameraIcon } from "./images/Video.svg";
+import { ReactComponent as SearchIcon } from "./images/Search.svg";
+
 
 export const StyledNav = styled.nav`
-    background-color: ${({ theme }) => theme.color.woodsmoke};
+    background-color: ${({ theme }) => theme.color.black};
 `;
 
 export const Container = styled.div`
-    max-width: 1336px;
+    max-width: 1392px;
     margin: auto;
     padding: 26px;
 
@@ -52,7 +54,7 @@ export const Title = styled.header`
     padding-right: 80px;
     letter-spacing: -1.5px;
 
-    display: inline-flex;
+    display: flex;
     align-items: center;
     flex-wrap: wrap;
 
@@ -101,19 +103,41 @@ export const StyledSearch = styled.form`
     }
 `;
 
-export const StyledInput = styled.input`
+export const StyledBox = styled.div`
+    display:flex;
+    min-width: 432px;
+    background-color: ${({ theme }) => theme.color.white};
+    border-radius: 33px;
+    border: 1px solid ${({ theme }) => theme.color.white};
     font-size: 16px;
     line-height: 1.5;
-    min-width: 432px;
     padding: 8px 24px;
-    border: 1px solid ${({ theme }) => theme.color.mystic};
-    box-sizing: border-box;
-    border-radius: 33px;
-    color: ${({ theme }) => theme.color.waterloo};
-
     @media(max-width: ${({ theme }) => theme.breakpoint.navMax}) {
+        min-width: 288px;
+        padding: 8px 16px;
+    }
+
+`;
+
+
+export const StyledInput = styled.input`
+    border:none;
+    outline:none;
+    min-width: 355px;
+    color: ${({ theme }) => theme.color.waterloo};
+    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}) {
+        min-width: 220px;
         font-size: 13px;
         line-height: 1.3;
-        min-width: 288px;
+    }
+`;
+
+export const Loupe = styled(SearchIcon)`
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    @media(max-width: ${({ theme }) => theme.breakpoint.navMax}) {
+        width: 16px;
+        height: 16px;
     }
 `;

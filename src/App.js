@@ -3,7 +3,7 @@ import MoviePeople from "./features/Content/MoviePeople";
 import MoviesList from "./features/Content/MoviesList";
 import { Actress } from "./features/Content/MoviePeople/Tile/Actress";
 import { OneMovie } from "./features/Content/MoviesList/Tiles/OneMovie";
-import { ButtonsGroup, Camera, Container, StyledInput, StyledItem, StyledList, StyledNav, StyledNavLink, StyledSearch, Title, } from "./styled";
+import { ButtonsGroup, Camera, Container, Loupe, StyledBox, StyledInput, StyledItem, StyledList, StyledNav, StyledNavLink, StyledSearch, Title, } from "./styled";
 import { useState } from "react";
 import axios from "axios";
 
@@ -44,7 +44,10 @@ function App() {
             </ButtonsGroup>
             <StyledItem>
               <StyledSearch>
-                <StyledInput placeholder="🔍︎ Search for movies..." value={query} onChange={onTextChange} />
+                <StyledBox>
+                  <Loupe />
+                <StyledInput placeholder="Search for movies..." value={query} onChange={onTextChange} />
+                </StyledBox>
               </StyledSearch>
             </StyledItem>
           </StyledList>
