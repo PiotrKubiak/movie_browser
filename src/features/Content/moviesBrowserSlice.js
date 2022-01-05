@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const moviesBrowserSlice = createSlice({
   name: "moviesBrowser",
@@ -7,7 +7,10 @@ const moviesBrowserSlice = createSlice({
     status: "initial",
   },
   reducers: {
-    fetchMovies: () => ({
+    fetchMoviesByQuery: () => ({
+      status: "loading",
+    }),
+    fetchPopularMovies: () => ({
       status: "loading",
       data: null,
     }),
@@ -35,17 +38,19 @@ const moviesBrowserSlice = createSlice({
 });
 
 export const {
-  fetchMovies,
+  fetchPopularMovies,
   fetchMoviesSuccess,
   fetchMoviesError,
   fetchPeople,
   fetchPeopleSuccess,
   fetchPeopleError,
+  fetchMoviesByQuery,
 } = moviesBrowserSlice.actions;
 
-const selectMoviesBrowserState = state => state.moviesBrowser;
+const selectMoviesBrowserState = (state) => state.moviesBrowser;
 
-export const selectMovies = state => selectMoviesBrowserState(state).data;
-export const selectMovieBrowserStatus = state => selectMoviesBrowserState(state).status;
+export const selectMovies = (state) => selectMoviesBrowserState(state).data;
+export const selectMovieBrowserStatus = (state) =>
+  selectMoviesBrowserState(state).status;
 
 export default moviesBrowserSlice.reducer;
