@@ -9,7 +9,7 @@ import { fetchGenres, selectGenres } from "./genresSlice";
 import { StyledTiles } from "../styledTile";
 import { setPage } from "../../../common/Pagination/pageNumber";
 
-const MoviesList = (results) => {
+const MoviesList = (movieList) => {
     const dispatch = useDispatch();
     const [page, setNumber] = useState(1);
     setPage(page);
@@ -25,7 +25,7 @@ const MoviesList = (results) => {
     useEffect(() => {
         dispatch(fetchGenres());
     }, [dispatch]);
-
+    // console.log(movieList);
     return (
         <StyledSection>
             {/* <NoResult/> */}
@@ -35,6 +35,7 @@ const MoviesList = (results) => {
                     movieBrowserStatus={movieBrowserStatus}
                     movieBrowser={movieBrowser}
                     genres={genres}
+                    movieList={movieList}
                 />
             </StyledTiles>
             <Pagination movieBrowserStatus={movieBrowserStatus} page={page} setNumber={setNumber} />

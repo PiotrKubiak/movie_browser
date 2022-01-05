@@ -2,7 +2,7 @@ import { Description, Information, Rate, Rating, Star, Tag, Tags, Title, Votes, 
 import { img_base_url } from "../../moviesBrowserApi";
 import { foundName } from "../getGenres";
 
-const Tile = ({ genres, movieBrowser, credits }) => {
+const Tile = ({ genres, movieBrowser, credits, movieList }) => {
   let movieDisplay;
   let cast;
 
@@ -14,22 +14,24 @@ const Tile = ({ genres, movieBrowser, credits }) => {
     cast = false;
   } else if (!credits) {
     movieDisplay = movieBrowser;
+  } else if (movieList) {
+    movieDisplay = movieList;
   }
-
+  console.log(movieList);
   return (
     <>
       {movieDisplay.map(({ id, poster_path, original_title, release_date, character, job, genre_ids = [], vote_average, vote_count }) => (
-        <StyledLinkMovie key={id} to={`/movies/${id}`}>
+        <StyledLinkMovie key={id} to={`/movies/${id}`} movieDisplay={movieList}>
           <ImageContainer width="292px" height="434px" mobileWidth="114px" mobileHeight="170px">
-            {poster_path ? 
-             <ImageMovie src={img_base_url + poster_path} alt={original_title} />
+            {poster_path ?
+              <ImageMovie src={img_base_url + poster_path} alt={original_title} />
               : <VideoIcon />
             }
           </ImageContainer>
           <Information>
             <Description>
               <Title align="left"> {original_title} </Title>
-              <SubTitle>{(character || job) ? (cast ? character : job) 
+              <SubTitle>{(character || job) ? (cast ? character : job)
                 : (release_date && release_date.slice(0, 4))}</SubTitle>
               <Tags>
                 {genre_ids.map((id, index) => {

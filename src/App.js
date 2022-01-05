@@ -8,17 +8,14 @@ import { useState } from "react";
 import axios from "axios";
 
 function App() {
-
   const [query, updateQuery] = useState();
   const [timeoutId, updateTimeoutId] = useState();
   const [movieList, updateMovieList] = useState([]);
 
   const fetchData = async (query) => {
-    const response = axios.get(`https://api.themoviedb.org/3/search/movie?api_key=eb6efa05b2b8136a07d256a13fbb4f15&language=en-US&query=${query}&page=1&include_adult=false`)
-    console.log(response);
-    updateMovieList((await response).data.results)
+    const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=eb6efa05b2b8136a07d256a13fbb4f15&language=en-US&query=${query}&page=1&include_adult=false`)
+    updateMovieList(response.data.results)
   };
-
   const onTextChange = (event) => {
     clearTimeout(timeoutId);
     updateQuery(event.target.value);
@@ -61,7 +58,7 @@ function App() {
           <Actress />
         </Route>
         <Route path="/movies">
-        {movieList?.length ? movieList.map((movie, index) => <MoviesList key={index} movie={movie} />) : <MoviesList />}
+          {movieList.length > 0 ? <MoviesList movieList={movieList} /> : <MoviesList />}
         </Route>
         <Route path="/people">
           <MoviePeople />
