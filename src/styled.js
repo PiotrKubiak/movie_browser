@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { ReactComponent as CameraIcon } from "./images/Video.svg";
 import { ReactComponent as SearchIcon } from "./images/Search.svg";
 
-
 export const StyledNav = styled.nav`
     background-color: ${({ theme }) => theme.color.black};
 `;
@@ -53,7 +52,6 @@ export const Title = styled.header`
     line-height: 1.66;
     padding-right: 80px;
     letter-spacing: -1.5px;
-
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -80,7 +78,13 @@ export const StyledNavLink = styled(NavLink)`
     padding: 8px 24px;
     text-decoration: none;
     color: ${({ theme }) => theme.color.white};
-    
+    font-size: 14px;
+    font-weight: 600;
+
+    &:hover{
+        font-weight: 700;
+    }
+
     &.active{
         border: 1px solid ${({ theme }) => theme.color.white};
         box-sizing: border-box;
@@ -118,7 +122,6 @@ export const StyledBox = styled.div`
     }
 
 `;
-
 
 export const StyledInput = styled.input`
     border:none;

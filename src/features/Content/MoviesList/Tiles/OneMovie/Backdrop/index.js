@@ -1,9 +1,7 @@
-import { BackdropImage, Container, Gradient, Image, MainInfo, OtherInfo, Rate, RateScale, Rating, Star, Title } from "./styled";
+import { BackdropImage, Container, Gradient, MainInfo, OtherInfo, Rate, Rating, Star, Title } from "./styled";
 import { img_base_url, backdropImageSize } from "../../../../moviesBrowserApi";
 
-
 const Backdrop = ({ backdropPath, title, vote_avg, num_vote }) => {
-
     if (backdropPath) {
         return (
             <Container>
