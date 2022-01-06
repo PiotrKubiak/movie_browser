@@ -1,7 +1,25 @@
 import { put, takeLatest, delay, call, debounce } from "redux-saga/effects";
-import { getGenres, getMovies, getPeople, getMoviesByQuery } from "./moviesBrowserApi";
-import { fetchPopularMovies, fetchMoviesByQuery, fetchMoviesByQuerySuccess,
-    fetchMoviesByQueryError, fetchMoviesError, fetchMoviesSuccess, fetchPeople, fetchPeopleError, fetchPeopleSuccess } from "./moviesBrowserSlice";
+import { 
+    getGenres, 
+    getMovies, 
+    getPeople, 
+    getMoviesByQuery, 
+    getPeopleByQuery 
+} from "./moviesBrowserApi";
+import { 
+    fetchPopularMovies, 
+    fetchMoviesByQuery, 
+    fetchMoviesByQuerySuccess,
+    fetchMoviesByQueryError, 
+    fetchMoviesError, 
+    fetchMoviesSuccess, 
+    fetchPeople, 
+    fetchPeopleError, 
+    fetchPeopleSuccess, 
+    fetchPeopleByQuerySuccess, 
+    fetchPeopleByQueryError, 
+    fetchPeopleByQuery 
+} from "./moviesBrowserSlice";
 import { fetchGenres, fetchGenresError, fetchGenresSuccess } from "./MoviesList/genresSlice";
 
 const loadingDelay = 500;
@@ -18,14 +36,21 @@ function* fetchPopularMoviesHandler() {
 
 function* fetchMoviesByQueryHandler({ payload: query}) {
     try {
-    //   const { query } = param;
-    //   console.log(parameters);
       const movies = yield call(getMoviesByQuery, query);
       yield put(fetchMoviesByQuerySuccess(movies));
     } catch (error) {
       yield put(fetchMoviesByQueryError());
     }
-  }
+};
+
+function* fetchPeopleByQueryHandler({ payload: query}) {
+    try {
+      const movies = yield call(getPeopleByQuery, query);
+      yield put(fetchPeopleByQuerySuccess(movies));
+    } catch (error) {
+      yield put(fetchPeopleByQueryError());
+    }
+};
 
 function* fetchGenresHandler() {
     try {
@@ -52,5 +77,6 @@ export function* moviesBrowserSaga() {
     yield takeLatest(fetchGenres.type, fetchGenresHandler);
     yield takeLatest(fetchPeople.type, fetchPeopleHandler);
     yield debounce(500, fetchMoviesByQuery.type, fetchMoviesByQueryHandler);
+    yield debounce(500, fetchPeopleByQuery.type, fetchPeopleByQueryHandler);
 };
 
