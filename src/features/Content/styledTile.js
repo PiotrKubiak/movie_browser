@@ -8,6 +8,7 @@ export const StyledTiles = styled.section`
     display: flex;
     flex-wrap: wrap;
     align-content:center;
+    justify-content:center;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         justify-content: space-between;
