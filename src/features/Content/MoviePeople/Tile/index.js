@@ -1,5 +1,13 @@
-import { Character, Description, ImageContainer, ImagePeople, ProfileIcon, StyledLinkPeople, Title } from "../../styledTile";
-import { img_base_url } from "../../moviesBrowserApi";
+import { 
+  Character, 
+  Description, 
+  ImageContainer, 
+  ImagePeople, 
+  ProfileIcon, 
+  StyledLinkPeople, 
+  Title 
+} from "../../styledTile";
+import { img_base_url, personImageSize } from "../../moviesBrowserApi";
 
 const Tile = ({ movieBrowser, credits }) => {
   let creditsDisplay;
@@ -19,9 +27,12 @@ const Tile = ({ movieBrowser, credits }) => {
     <>
       {creditsDisplay.map(({ id, name, profile_path, character, job }) => (
         <StyledLinkPeople key={id} to={`/people/${id}`}>
-          {profile_path
-            ? <ImagePeople src={img_base_url + profile_path} alt="" />
-            : <ImageContainer width="176px" height="264px" mobileWidth="120px" mobileHeight="178px"> <ProfileIcon /> </ImageContainer>
+          {profile_path ?
+            <ImagePeople src={img_base_url + personImageSize + profile_path} alt="" />
+            :
+            <ImageContainer width="176px" height="264px" mobileWidth="120px" mobileHeight="178px">
+              <ProfileIcon />
+            </ImageContainer>
           }
           <Description>
             <Title align="center"> {name} </Title>

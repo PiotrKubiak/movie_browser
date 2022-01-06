@@ -1,6 +1,5 @@
 import { StyledHeader, StyledSection } from "../styledMovies";
 import { Pagination } from "../../../common/Pagination";
-// import NoResult from "../../../common/NoResult";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPopularMovies, selectMovies, selectMovieBrowserStatus } from "../moviesBrowserSlice";
 import { useEffect, useState } from "react";
@@ -28,7 +27,6 @@ const MoviesList = () => {
 
     return (
         <StyledSection>
-            {/* <NoResult/> */}
             <StyledHeader>Popular movies</StyledHeader>
             <StyledTiles>
                 <Content

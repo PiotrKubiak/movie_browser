@@ -23,6 +23,7 @@ export const Container = styled.div`
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto;
+    grid-gap: 40px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         margin: 16px 16px 21px 16px;
@@ -32,7 +33,6 @@ export const Container = styled.div`
 `;
 
 export const ImageMovie = styled.img`
-    margin-right:40px;
     max-width: 312px;
     max-height: 464px;
     border-radius: 5px;
