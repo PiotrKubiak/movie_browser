@@ -18,6 +18,17 @@ const moviesBrowserSlice = createSlice({
       status: "error",
       data: null,
     }),
+    fetchPeopleByQuery: () => ({
+      status: "loading",
+    }),
+    fetchPeopleByQuerySuccess: (_, { payload: data }) => ({
+      status: "success",
+      data,
+    }),
+    fetchPeopleByQueryError: () => ({
+      status: "error",
+      data: null,
+    }),
     fetchPopularMovies: () => ({
       status: "loading",
       data: null,
@@ -55,6 +66,9 @@ export const {
   fetchMoviesByQuery,
   fetchMoviesByQuerySuccess,
   fetchMoviesByQueryError,
+  fetchPeopleByQuery,
+  fetchPeopleByQuerySuccess,
+  fetchPeopleByQueryError,
 } = moviesBrowserSlice.actions;
 
 const selectMoviesBrowserState = state => state.moviesBrowser;
