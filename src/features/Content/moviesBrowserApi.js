@@ -11,7 +11,7 @@ const moviesByQuery = base_url + "/search/movie" + api_key;
 const peopleByQuery = base_url + "/search/person" + api_key;
 
 export const getMovies = () =>
-    axios.get(popular_movies_api + "&page=" +pageNumber)
+    axios.get(popular_movies_api + "&page=" + pageNumber)
         .then(response => response.data.results);
 
 export const getGenres = () =>
@@ -23,7 +23,7 @@ export const getPeople = () =>
         .then(response => response.data.results);
 
 export const getMoviesByQuery = (query) =>
-    axios.get( moviesByQuery + `&query=${query}`)
+    axios.get(moviesByQuery + `&query=${query}`)
         .then(response => response.data.results);
 
 export const getPeopleByQuery = (query) =>

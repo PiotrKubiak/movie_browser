@@ -3,31 +3,11 @@ import MoviePeople from "./features/Content/MoviePeople";
 import MoviesList from "./features/Content/MoviesList";
 import { Actress } from "./features/Content/MoviePeople/Tile/Actress";
 import { OneMovie } from "./features/Content/MoviesList/Tiles/OneMovie";
-import { ButtonsGroup, Camera, Container, Loupe, StyledBox, StyledInput, StyledItem, StyledList, StyledNav, StyledNavLink, StyledSearch, Title, } from "./styled";
-import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { fetchMoviesByQuery, fetchPeople, fetchPeopleByQuery, fetchPopularMovies } from "./features/Content/moviesBrowserSlice";
+import { ButtonsGroup, Camera, Container, Loupe, StyledBox, StyledItem, StyledList, StyledNav, StyledNavLink, StyledSearch, Title, } from "./styled";
+import Search from "./features/Content/Search";
 
 function App() {
-  const [query, setQuery] = useState("");
 
-  const dispatch = useDispatch();
-  useEffect(() => {
-    if (window.location.hash.slice(2,) === "movies") {
-      if (query.trim() === "") {
-        dispatch(fetchPopularMovies());
-      } else {
-        dispatch(fetchMoviesByQuery(query));
-      }
-    } else if (window.location.hash.slice(2,) === "people") {
-      if (query.trim() === "") {
-        dispatch(fetchPeople());
-      } else {
-        dispatch(fetchPeopleByQuery(query));
-      }
-    }
-
-  }, [dispatch, query]);
   return (
     <HashRouter>
       <StyledNav>
@@ -51,12 +31,7 @@ function App() {
               <StyledSearch>
                 <StyledBox>
                   <Loupe />
-                  <StyledInput
-                    placeholder="Search for movies..."
-                    value={query}
-                    onChange={(e) => {
-                      setQuery(e.target.value);
-                    }} />
+                  <Search />
                 </StyledBox>
               </StyledSearch>
             </StyledItem>
