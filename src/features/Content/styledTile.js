@@ -122,7 +122,6 @@ export const Information = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 40px;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         justify-content: flex-start;
