@@ -4,7 +4,7 @@
 
 # 👨🏽‍💼 Authors of this work 👨🏽‍💼
 ## [Olaf Tarkowski](https://github.com/Olaf-Tarkowski)
-## [Paweł Urbanowski](https://github.com/)
+## [Paweł Urbanowski](https://github.com/PawelUrbanowski074)
 ## [Piotr Kubiak](https://github.com/PiotrKubiak) 
 
 # 📝 Description 📝
