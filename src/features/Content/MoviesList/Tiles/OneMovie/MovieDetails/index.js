@@ -1,6 +1,23 @@
 import { ImageContainer, VideoIcon } from "../../../../styledTile";
-import { ImageMovie, Information, Rate, Rating, Star, Tag, Tags, Title, Votes, Year, Container, StyledTiles, OtherInfo, BasicInfo, Overview, SgColor, StyledInfo } from "../styled";
-
+import { 
+    ImageMovie, 
+    Information, 
+    Rate, 
+    Rating, 
+    Star, 
+    Tag, 
+    Tags, 
+    Title, 
+    Votes, 
+    Year, 
+    Container, 
+    StyledTiles, 
+    OtherInfo, 
+    BasicInfo, 
+    Overview, 
+    SgColor, 
+    StyledInfo 
+} from "../styled";
 
 const MovieDetails = ({ img_base_url, api }) => {
     const results = api.data;
@@ -8,13 +25,13 @@ const MovieDetails = ({ img_base_url, api }) => {
     return (
         <StyledTiles>
             <Container>
-
-                <ImageContainer width="310px" height="464px" mobileWidth="114px" mobileHeight="170px">
-                    {api.data.poster_path ?
-                        <ImageMovie src={img_base_url + results.poster_path} alt='' />
-                        : <VideoIcon />
-                    }
-                </ImageContainer>
+                {results.poster_path ?
+                    <ImageMovie src={img_base_url + results.poster_path} alt='' />
+                    :
+                    <ImageContainer width="310px" height="464px" mobileWidth="114px" mobileHeight="170px">
+                        <VideoIcon />
+                    </ImageContainer>
+                }
 
                 <Information>
                     <Title> {results.original_title} </Title>
@@ -43,7 +60,6 @@ const MovieDetails = ({ img_base_url, api }) => {
             </Container>
         </StyledTiles>
     );
-
 };
 
 export default MovieDetails;

@@ -9,12 +9,14 @@ const ActorDetails = ({ api }) => {
     return (
         <StyledTiles>
             <Container>
-                <ImageContainer width="290px" height="434px" mobileWidth="114px" mobileHeight="170px">
-                    {results.profile_path ?
-                        <ImageMovie src={img_base_url + tileImageSize + api.data.profile_path} alt='' />
-                        : <ProfileIcon />
-                    }
-                </ImageContainer>
+                {results.profile_path ?
+                    <ImageMovie src={img_base_url + tileImageSize + api.data.profile_path} alt='' />
+                    :
+                    <ImageContainer width="290px" height="434px" mobileWidth="114px" mobileHeight="170px">
+                        <ProfileIcon />
+                    </ImageContainer>
+
+                }
 
                 <Information>
                     <Title> {results.name} </Title>
