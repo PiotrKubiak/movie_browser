@@ -23,19 +23,16 @@ import { fetchMoviesByQuery, fetchPeople, fetchPeopleByQuery, fetchPopularMovies
 
 function App() {
   const [query, setQuery] = useState("");
-  console.log(window.location.hash.slice(2,));
 
   const dispatch = useDispatch();
   useEffect(() => {
     if (window.location.hash.slice(2,) === "movies") {
-      console.log(" jest w movies");
       if (query.trim() === "") {
         dispatch(fetchPopularMovies());
       } else {
         dispatch(fetchMoviesByQuery(query));
       }
     } else if (window.location.hash.slice(2,) === "people") {
-      console.log(" jest w people");
       if (query.trim() === "") {
         dispatch(fetchPeople());
       } else {
