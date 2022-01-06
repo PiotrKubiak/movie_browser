@@ -20,7 +20,7 @@ export const Container = styled.div`
     padding: 40px;
     margin: 64px 16px 24px 16px;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto 1fr;
     grid-template-rows: auto;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {

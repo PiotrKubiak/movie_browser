@@ -72,7 +72,7 @@ export const StyledLinkPeople = styled(Link)`
     }
 `;
 export const ImageContainer = styled.div`
-    max-width:  ${({ width }) => width};
+    width:  ${({ width }) => width};
     height: ${({ height }) => height};
     color: ${({ theme }) => theme.color.white};
     background-color: ${({ theme }) => theme.color.silver};
@@ -88,13 +88,8 @@ export const ImageContainer = styled.div`
 `;
 
 export const ProfileIcon = styled(Profile)`
-    width: 72px;
-    height: 72px;
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
-        max-width: 40px;
-        max-height: 40px;
-    }
+    width: 40%;
+    height: 40%;
 `;
 export const ImageMovie = styled.img`
     max-width: 292px;
@@ -108,13 +103,8 @@ export const ImageMovie = styled.img`
 `;
 
 export const VideoIcon = styled(Video)`
-    width: 80px;
-    height: 80px;
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
-        max-width: 37px;
-        max-height: 28px;
-    }
+    width: 40%;
+    height: 40%;
 `;
 
 export const ImagePeople = styled.img`
