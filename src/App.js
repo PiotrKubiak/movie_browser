@@ -3,9 +3,11 @@ import MoviePeople from "./features/Content/MoviePeople";
 import MoviesList from "./features/Content/MoviesList";
 import { Actress } from "./features/Content/MoviePeople/Tile/Actress";
 import { OneMovie } from "./features/Content/MoviesList/Tiles/OneMovie";
-import { ButtonsGroup, Camera, Container, Loupe, StyledBox, StyledInput, StyledItem, StyledList, StyledNav, StyledNavLink, StyledSearch, Title, } from "./styled";
+import { ButtonsGroup, Camera, Container, Loupe, StyledBox, StyledItem, StyledList, StyledNav, StyledNavLink, StyledSearch, Title, } from "./styled";
+import Search from "./features/Content/Search";
 
 function App() {
+
   return (
     <HashRouter>
       <StyledNav>
@@ -29,7 +31,7 @@ function App() {
               <StyledSearch>
                 <StyledBox>
                   <Loupe />
-                <StyledInput placeholder="Search for movies..." />
+                  <Search />
                 </StyledBox>
               </StyledSearch>
             </StyledItem>

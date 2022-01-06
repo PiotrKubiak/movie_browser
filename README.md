@@ -1,6 +1,26 @@
-# DEMO
+# 🎥 This is a group project called: "Movie Browser" 🎥
 
-https://piotrkubiak.github.io/movie_browser/
+# 👉 [**DEMO**](https://piotrkubiak.github.io/movie_browser/) 👈
+
+# 👨🏽‍💼 Authors of this work 👨🏽‍💼
+## [Olaf Tarkowski](https://github.com/Olaf-Tarkowski)
+## [Paweł Urbanowski](https://github.com/PawelUrbanowski074)
+## [Piotr Kubiak](https://github.com/PiotrKubiak) 
+
+# 📝 Description 📝
+### It is an application for viewing movies and actors, as well as people who worked on a given movie. At the top of the menu, there are two buttons that you can use to switch between movies and people. Next to it there is a search engine that we can find a given movie or person. You can click on a given result and various information will be displayed, such as for example: poster or photo, year, species, rating, date of birth, place of birth and description. 
+### In the details of the film below the description, we have information about the people who appeared in the film and who worked on its creation. 
+### In the details of the person, we have information where the person played or who they were in the production of the film. All data used in this application comes from The Movie Data Base API.
+### 📱 *This application is also designed for mobile phones and tablets.*
+
+# Technology for creating this applications
+- HTML
+- CSS (FLEX, GRID, Media queries)
+- JavaScript (React, React - Redux, Redux - Saga, Redux - Router) 
+- Axios
+- Custom Hook's
+- GitHub
+- Scrum
 
 # Getting Started with Create React App
 
@@ -42,33 +62,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

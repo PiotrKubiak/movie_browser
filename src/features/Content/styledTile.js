@@ -117,7 +117,8 @@ export const Information = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+
+
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         justify-content: flex-start;
         margin-left: 16px;
