@@ -14,10 +14,9 @@ const Tile = ({ genres, movieBrowser, credits, movieList }) => {
     cast = false;
   } else if (!credits) {
     movieDisplay = movieBrowser;
-  } else if (movieList) {
-    movieDisplay = movieList;
+  // } else if (movieList) {
+  //   movieDisplay = movieList;
   }
-  console.log(movieList);
   return (
     <>
       {movieDisplay.map(({ id, poster_path, original_title, release_date, character, job, genre_ids = [], vote_average, vote_count }) => (

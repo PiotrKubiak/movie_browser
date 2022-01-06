@@ -1,11 +1,12 @@
-import { put, takeLatest, delay, call } from "redux-saga/effects";
-import { getGenres, getMovies, getPeople } from "./moviesBrowserApi";
-import { fetchMovies, fetchMoviesError, fetchMoviesSuccess, fetchPeople, fetchPeopleError, fetchPeopleSuccess } from "./moviesBrowserSlice";
+import { put, takeLatest, delay, call, debounce } from "redux-saga/effects";
+import { getGenres, getMovies, getPeople, getMoviesByQuery } from "./moviesBrowserApi";
+import { fetchPopularMovies, fetchMoviesByQuery, fetchMoviesByQuerySuccess,
+    fetchMoviesByQueryError, fetchMoviesError, fetchMoviesSuccess, fetchPeople, fetchPeopleError, fetchPeopleSuccess } from "./moviesBrowserSlice";
 import { fetchGenres, fetchGenresError, fetchGenresSuccess } from "./MoviesList/genresSlice";
 
 const loadingDelay = 500;
 
-function* fetchMoviesHandler() {
+function* fetchPopularMoviesHandler() {
     try {
         yield delay(loadingDelay);
         const movies = yield call(getMovies);
@@ -14,6 +15,17 @@ function* fetchMoviesHandler() {
         yield put(fetchMoviesError());
     }
 };
+
+function* fetchMoviesByQueryHandler({ payload: query}) {
+    try {
+    //   const { query } = param;
+    //   console.log(parameters);
+      const movies = yield call(getMoviesByQuery, query);
+      yield put(fetchMoviesByQuerySuccess(movies));
+    } catch (error) {
+      yield put(fetchMoviesByQueryError());
+    }
+  }
 
 function* fetchGenresHandler() {
     try {
@@ -36,8 +48,9 @@ function* fetchPeopleHandler() {
 };
 
 export function* moviesBrowserSaga() {
-    yield takeLatest(fetchMovies.type, fetchMoviesHandler);
+    yield takeLatest(fetchPopularMovies.type, fetchPopularMoviesHandler);
     yield takeLatest(fetchGenres.type, fetchGenresHandler);
     yield takeLatest(fetchPeople.type, fetchPeopleHandler);
+    yield debounce(500, fetchMoviesByQuery.type, fetchMoviesByQueryHandler);
 };
 

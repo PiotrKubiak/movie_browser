@@ -7,7 +7,18 @@ const moviesBrowserSlice = createSlice({
     status: "initial",
   },
   reducers: {
-    fetchMovies: () => ({
+    fetchMoviesByQuery: () => ({
+      status: "loading",
+    }),
+    fetchMoviesByQuerySuccess: (_, { payload: data }) => ({
+      status: "success",
+      data,
+    }),
+    fetchMoviesByQueryError: () => ({
+      status: "error",
+      data: null,
+    }),
+    fetchPopularMovies: () => ({
       status: "loading",
       data: null,
     }),
@@ -35,12 +46,15 @@ const moviesBrowserSlice = createSlice({
 });
 
 export const {
-  fetchMovies,
+  fetchPopularMovies,
   fetchMoviesSuccess,
   fetchMoviesError,
   fetchPeople,
   fetchPeopleSuccess,
   fetchPeopleError,
+  fetchMoviesByQuery,
+  fetchMoviesByQuerySuccess,
+  fetchMoviesByQueryError,
 } = moviesBrowserSlice.actions;
 
 const selectMoviesBrowserState = state => state.moviesBrowser;
