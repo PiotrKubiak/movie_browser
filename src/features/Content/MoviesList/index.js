@@ -2,7 +2,7 @@ import { StyledHeader, StyledSection } from "../styledMovies";
 import { Pagination } from "../../../common/Pagination";
 // import NoResult from "../../../common/NoResult";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchMovies, selectMovies, selectMovieBrowserStatus } from "../moviesBrowserSlice";
+import { fetchPopularMovies, selectMovies, selectMovieBrowserStatus } from "../moviesBrowserSlice";
 import { useEffect, useState } from "react";
 import { Content } from "./content";
 import { fetchGenres, selectGenres } from "./genresSlice";
@@ -17,7 +17,7 @@ const MoviesList = () => {
     const movieBrowser = useSelector(selectMovies);
 
     useEffect(() => {
-        dispatch(fetchMovies());
+        dispatch(fetchPopularMovies());
     }, [dispatch, page]);
 
     const genres = useSelector(selectGenres);
