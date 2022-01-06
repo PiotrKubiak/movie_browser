@@ -5,15 +5,9 @@ import { ReactComponent as Profile } from "../../images/profile.svg";
 import { ReactComponent as Video } from "../../images/Video.svg";
 
 export const StyledTiles = styled.section`
-    /* margin: 0px; */
-    /* display: grid;
-    grid-template-columns: repeat(4, auto) ;
-    grid-gap: 24px; */
-
     display: flex;
     flex-wrap: wrap;
     align-content:center;
-    justify-content: center;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         justify-content: space-between;
@@ -122,8 +116,7 @@ export const Information = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 40px;
-
+    
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         justify-content: flex-start;
         margin-left: 16px;
