@@ -7,6 +7,7 @@ import { Content } from "./content";
 import { fetchGenres, selectGenres } from "./genresSlice";
 import { StyledTiles } from "../styledTile";
 import { setPage } from "../../../common/Pagination/pageNumber";
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
 const MoviesList = () => {
     const dispatch = useDispatch();
@@ -25,10 +26,12 @@ const MoviesList = () => {
         dispatch(fetchGenres());
     }, [dispatch]);
 
+
     return (
         <StyledSection>
             <StyledHeader>Popular movies</StyledHeader>
             <StyledTiles>
+
                 <Content
                     movieBrowserStatus={movieBrowserStatus}
                     movieBrowser={movieBrowser}
