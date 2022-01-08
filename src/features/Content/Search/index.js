@@ -39,7 +39,7 @@ function Search() {
 
   return (
     <StyledInput
-      placeholder={"Search results for movies"}
+      placeholder={"Search for movies"}
       value={query || ""}
       onChange={onInputChange} />
   )
