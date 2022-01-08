@@ -38,7 +38,7 @@ const MovieDetails = ({ img_base_url, api }) => {
                     <Year>{results.release_date.slice(0, 4)}</Year>
                     <StyledInfo>
                         <BasicInfo><SgColor>Production: </SgColor>
-                            {results.production_countries.map(({ name }) => { return <a>{name}, </a> })}
+                            {results.production_countries.map(({ name }) => { return <>{name}, </> })}
                         </BasicInfo>
                         <BasicInfo>
                             <SgColor>Release date: </SgColor>

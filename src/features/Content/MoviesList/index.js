@@ -7,7 +7,6 @@ import { Content } from "./content";
 import { fetchGenres, selectGenres } from "./genresSlice";
 import { StyledTiles } from "../styledTile";
 import { setPage } from "../../../common/Pagination/pageNumber";
-import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
 const MoviesList = () => {
     const dispatch = useDispatch();
@@ -25,7 +24,6 @@ const MoviesList = () => {
     useEffect(() => {
         dispatch(fetchGenres());
     }, [dispatch]);
-
 
     return (
         <StyledSection>

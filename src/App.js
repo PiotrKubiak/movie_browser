@@ -3,7 +3,7 @@ import MoviePeople from "./features/Content/MoviePeople";
 import MoviesList from "./features/Content/MoviesList";
 import { Actress } from "./features/Content/MoviePeople/Tile/Actress";
 import { OneMovie } from "./features/Content/MoviesList/Tiles/OneMovie";
-import { ButtonsGroup, Camera, Container, Loupe, StyledBox, StyledItem, StyledList, StyledNav, StyledNavLink, StyledSearch, Title, } from "./styled";
+import { ButtonsGroup, Camera, Container, Loupe, StyledBox, StyledItem, StyledList, StyledNav, StyledNavLink, StyledSearch, Title } from "./styled";
 import Search from "./features/Content/Search";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Container>
           <StyledList>
             <ButtonsGroup>
-              <StyledItem>
+              <StyledItem >
                 <Title>
                   {" "}
                   <Camera /> Movies Browser

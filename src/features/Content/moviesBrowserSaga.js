@@ -69,7 +69,6 @@ export function* moviesBrowserSaga() {
     yield takeLatest(fetchPopularMovies.type, fetchPopularMoviesHandler);
     yield takeLatest(fetchGenres.type, fetchGenresHandler);
     yield takeLatest(fetchPeople.type, fetchPeopleHandler);
-    yield debounce(300, fetchMoviesByQuery.type, fetchMoviesByQueryHandler);
-    yield debounce(300, fetchPeopleByQuery.type, fetchPeopleByQueryHandler);
+    yield debounce(1000, fetchMoviesByQuery.type, fetchMoviesByQueryHandler);
+    yield debounce(1000, fetchPeopleByQuery.type, fetchPeopleByQueryHandler);
 };
-

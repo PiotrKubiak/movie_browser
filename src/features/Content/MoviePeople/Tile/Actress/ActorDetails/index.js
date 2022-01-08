@@ -1,5 +1,5 @@
 import { Container, Information, Title, StyledInfo, BasicInfo, SgColor, Biography, StyledTiles, DesktopInscription, MobileInscription } from "../../styled";
-import { ImagePeople, ImageMovie, ImageContainer, ProfileIcon } from "../../../../styledTile";
+import { ImageMovie, ImageContainer, ProfileIcon } from "../../../../styledTile";
 import { img_base_url, tileImageSize } from "../../../../moviesBrowserApi";
 
 
