@@ -3,10 +3,9 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Error } from "../../../../../../common/Error";
 import { Loader } from "../../../../../../common/Loader";
-import { Content } from "../../../../MoviesList/content";
 import { fetchGenres, selectGenres } from "../../../../MoviesList/genresSlice";
+import Tile from "../../../../MoviesList/Tiles";
 import { StyledTiles } from "../../../../styledTile";
-
 import { Header, Section } from "./styled";
 
 const MovieCastCrew = ({ id, header, credits }) => {
@@ -44,7 +43,7 @@ const MovieCastCrew = ({ id, header, credits }) => {
               </Header>
 
               <StyledTiles>
-                <Content movieBrowserStatus={creditsApi.state} movieBrowser={creditsApi} genres={genres} credits={credits} />
+                <Tile movieBrowserStatus={creditsApi.state} movieBrowser={creditsApi} genres={genres} credits={credits} />
               </StyledTiles>
             </>
           ))}
