@@ -26,7 +26,6 @@ export const Content = ({ movieBrowserStatus, movieBrowser, genres, credits, pag
         return (
           <>
             <StyledHeader>{searchQuery === "" ? "Popular movies" : `Search result for "${searchQuery}"`} </StyledHeader>
-
             <StyledTiles>
               <Tiles movieBrowser={movieBrowser} genres={genres} credits={credits} />
             </StyledTiles>

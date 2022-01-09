@@ -1,7 +1,4 @@
-import { StyledSection, 
-  // StyledHeader
- } from "../styledMovies";
-import { StyledTiles } from "../styledTile";
+import { StyledSection } from "../styledMovies";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPeople, selectMovies, selectMovieBrowserStatus } from "../moviesBrowserSlice";
 import { useEffect, useState } from "react";
@@ -19,18 +16,13 @@ const PeopleList = () => {
     dispatch(fetchPeople());
   }, [dispatch, page]);
 
-  // const searchQuery = window.location.hash.slice(16,);
-
   return (
     <StyledSection>
-      <StyledTiles>
-      {/* <StyledHeader>{searchQuery === "" ? "Popular people" : `Search result for "${searchQuery}"`} </StyledHeader> */}
         <Content
           movieBrowserStatus={movieBrowserStatus}
           movieBrowser={movieBrowser}
           page={page}
           setNumber={setNumber} />
-      </StyledTiles>
     </StyledSection>
   );
 };
