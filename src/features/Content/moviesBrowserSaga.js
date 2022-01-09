@@ -47,7 +47,6 @@ function* fetchPeopleByQueryHandler({ payload: query }) {
 };
 function* fetchGenresHandler() {
     try {
-        yield delay(loadingDelay - 1_000);
         const genres = yield call(getGenres);
         yield put(fetchGenresSuccess(genres));
     } catch (error) {
