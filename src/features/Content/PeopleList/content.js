@@ -25,7 +25,8 @@ export const Content = ({ movieBrowserStatus, movieBrowser, credits, page, setNu
       if (movieBrowser.length > 0) {
         return (
           <>
-          <StyledHeader>{searchQuery === "" ? "Popular people" : `Search result for "${searchQuery}"`} </StyledHeader>
+            <StyledHeader>{searchQuery === "" ? "Popular people" : `Search result for "${searchQuery}"`} </StyledHeader>
+
             <StyledTiles>
               <Tile movieBrowser={movieBrowser} credits={credits} />
             </StyledTiles>

@@ -1,4 +1,4 @@
-import { StyledSection, StyledHeader } from "../styledMovies";
+import { StyledSection } from "../styledMovies";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPopularMovies, selectMovies, selectMovieBrowserStatus } from "../moviesBrowserSlice";
 import { useEffect, useState } from "react";
@@ -23,11 +23,11 @@ const MoviesList = () => {
     dispatch(fetchGenres());
   }, [dispatch]);
 
-  const searchQuery = window.location.hash.slice(16,);
+
 
   return (
     <StyledSection>
-      <StyledHeader>{searchQuery === "" ? "Popular movies" : `Search result for "${searchQuery}"`} </StyledHeader>
+      
       <Content
         movieBrowserStatus={movieBrowserStatus}
         movieBrowser={movieBrowser}
