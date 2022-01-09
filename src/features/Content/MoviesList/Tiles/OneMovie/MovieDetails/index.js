@@ -1,22 +1,23 @@
+import { nanoid } from "@reduxjs/toolkit";
 import { ImageContainer, VideoIcon } from "../../../../styledTile";
-import { 
-    ImageMovie, 
-    Information, 
-    Rate, 
-    Rating, 
-    Star, 
-    Tag, 
-    Tags, 
-    Title, 
-    Votes, 
-    Year, 
-    Container, 
-    StyledTiles, 
-    OtherInfo, 
-    BasicInfo, 
-    Overview, 
-    SgColor, 
-    StyledInfo 
+import {
+    ImageMovie,
+    Information,
+    Rate,
+    Rating,
+    Star,
+    Tag,
+    Tags,
+    Title,
+    Votes,
+    Year,
+    Container,
+    StyledTiles,
+    OtherInfo,
+    BasicInfo,
+    Overview,
+    SgColor,
+    StyledInfo
 } from "../styled";
 
 const MovieDetails = ({ img_base_url, api, id }) => {
@@ -38,7 +39,7 @@ const MovieDetails = ({ img_base_url, api, id }) => {
                     <Year>{results.release_date.slice(0, 4)}</Year>
                     <StyledInfo>
                         <BasicInfo><SgColor>Production: </SgColor>
-                            {results.production_countries.map(({ name }) => { return <>{name}, </> })}
+                            {results.production_countries.map(({ name }) => { return <p key={nanoid()}> {name}, </p> })}
                         </BasicInfo>
                         <BasicInfo>
                             <SgColor>Release date: </SgColor>
@@ -48,7 +49,7 @@ const MovieDetails = ({ img_base_url, api, id }) => {
                         </BasicInfo>
                     </StyledInfo>
                     <Tags>
-                        {results.genres.map(({ name }) => { return <Tag>{name}</Tag> })}
+                        {results.genres.map(({ name }) => { return <Tag key={nanoid()}>{name}</Tag> })}
                     </Tags>
                     <Rating>
                         <Star />
