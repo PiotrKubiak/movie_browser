@@ -17,7 +17,7 @@ function App() {
               <StyledItem >
                 <Title>
                   {" "}
-                  <Camera /> Movies Browser
+                  <Camera />Movies Browser
                 </Title>
               </StyledItem>
               <StyledItem>
