@@ -23,11 +23,8 @@ const MoviesList = () => {
     dispatch(fetchGenres());
   }, [dispatch]);
 
-
-
   return (
     <StyledSection>
-      
       <Content
         movieBrowserStatus={movieBrowserStatus}
         movieBrowser={movieBrowser}

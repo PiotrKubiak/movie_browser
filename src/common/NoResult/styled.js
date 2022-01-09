@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Header = styled.header`
+    margin-left: 40px;
     font-weight: 600;
     font-size: 36px;
     line-height: 1.2;
