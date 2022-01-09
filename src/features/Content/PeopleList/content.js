@@ -12,8 +12,6 @@ export const Content = ({ movieBrowserStatus, movieBrowser, credits, page, setNu
   const location = useLocation();
   const searchParam = (new URLSearchParams(location.search)).get("search");
 
-  const searchQuery = window.location.hash.slice(16,);
-
   switch (movieBrowserStatus) {
     case "initial":
       return null;
@@ -25,7 +23,7 @@ export const Content = ({ movieBrowserStatus, movieBrowser, credits, page, setNu
       if (movieBrowser.length > 0) {
         return (
           <>
-            <StyledHeader>{searchQuery === "" ? "Popular people" : `Search result for "${searchQuery}"`} </StyledHeader>
+            <StyledHeader>{ !searchParam  ? "Popular people" : `Search result for "${searchParam}"`} </StyledHeader>
             <StyledTiles>
               <Tile movieBrowser={movieBrowser} credits={credits} />
             </StyledTiles>
