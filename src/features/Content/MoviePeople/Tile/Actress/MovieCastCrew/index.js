@@ -6,6 +6,7 @@ import { Loader } from "../../../../../../common/Loader";
 import { Content } from "../../../../MoviesList/content";
 import { fetchGenres, selectGenres } from "../../../../MoviesList/genresSlice";
 import { StyledTiles } from "../../../../styledTile";
+import Tiles from "../../../../MoviesList/Tiles"
 
 import { Header, Section } from "./styled";
 
@@ -47,7 +48,7 @@ const MovieCastCrew = ({ id, header, credits }) => {
                             </Header>
 
                             <StyledTiles>
-                                <Content movieBrowserStatus={creditsApi.state} movieBrowser={creditsApi} genres={genres} credits={credits} />
+                                <Tiles movieBrowser={creditsApi} genres={genres} credits={credits}/>;
                             </StyledTiles>
                         </>
                     ))}
