@@ -66,6 +66,7 @@ export const StyledLinkPeople = styled(Link)`
         grid-gap: 8px;        
     }
 `;
+
 export const ImageContainer = styled.div`
     width:  ${({ width }) => width};
     height: ${({ height }) => height};

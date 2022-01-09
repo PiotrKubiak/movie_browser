@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { Content } from "./content";
 import { setPage } from "../../../common/Pagination/pageNumber";
 
-const MoviesPeople = () => {
+const PeopleList = () => {
     const dispatch = useDispatch();
     const [page, setNumber] = useState(1);
     setPage(page);
@@ -23,10 +23,12 @@ const MoviesPeople = () => {
         dispatch(fetchPeople());
     }, [dispatch]);
 
+    const searchQuery = window.location.hash.slice(16,);
+
     return (
         <StyledSection>
+            <StyledHeader>{searchQuery === "" ? "Popular people" : `Search result for "${searchQuery}"`} </StyledHeader>
             {/* <NoResult/> */}
-            <StyledHeader>Popular people</StyledHeader>
             <StyledTiles>
                 <Content movieBrowserStatus={movieBrowserStatus} movieBrowser={movieBrowser} />
             </StyledTiles>
@@ -35,4 +37,4 @@ const MoviesPeople = () => {
     );
 };
 
-export default MoviesPeople;
+export default PeopleList;

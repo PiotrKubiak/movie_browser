@@ -47,7 +47,6 @@ function* fetchPeopleByQueryHandler({ payload: query }) {
 };
 function* fetchGenresHandler() {
     try {
-        yield delay(loadingDelay - 1_000);
         const genres = yield call(getGenres);
         yield put(fetchGenresSuccess(genres));
     } catch (error) {
@@ -72,4 +71,3 @@ export function* moviesBrowserSaga() {
     yield debounce(1000, fetchMoviesByQuery.type, fetchMoviesByQueryHandler);
     yield debounce(1000, fetchPeopleByQuery.type, fetchPeopleByQueryHandler);
 };
-

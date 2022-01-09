@@ -40,7 +40,7 @@ export function OneMovie() {
                 vote_avg={api.data.vote_average}
                 num_vote={api.data.vote_count}
               />
-              <MovieDetails img_base_url={img_base_url + tileImageSize} api={api} />
+              <MovieDetails id={id} img_base_url={img_base_url + tileImageSize} api={api} />
               <CastCrew id={id} header="Cast" credits="cast" />
               <CastCrew id={id} header="Crew" credits="crew" />
             </>

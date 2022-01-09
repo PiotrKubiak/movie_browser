@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Error } from "../../../../../../common/Error";
 import { Loader } from "../../../../../../common/Loader";
-import { Content } from "../../../../MoviePeople/content";
+import { Content } from "../../../../PeopleList/content";
 import { StyledTiles } from "../../../../styledTile";
 import { Header, Section } from "./styled";
 

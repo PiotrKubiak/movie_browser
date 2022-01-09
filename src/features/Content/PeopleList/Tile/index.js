@@ -1,13 +1,14 @@
-import { 
-  Character, 
-  Description, 
-  ImageContainer, 
-  ImagePeople, 
-  ProfileIcon, 
-  StyledLinkPeople, 
-  Title 
+import {
+  Character,
+  Description,
+  ImageContainer,
+  ImagePeople,
+  ProfileIcon,
+  StyledLinkPeople,
+  Title
 } from "../../styledTile";
 import { img_base_url, personImageSize } from "../../moviesBrowserApi";
+import { nanoid } from "@reduxjs/toolkit";
 
 const Tile = ({ movieBrowser, credits }) => {
   let creditsDisplay;
@@ -26,7 +27,7 @@ const Tile = ({ movieBrowser, credits }) => {
   return (
     <>
       {creditsDisplay.map(({ id, name, profile_path, character, job }) => (
-        <StyledLinkPeople key={id} to={`/people/${id}`}>
+        <StyledLinkPeople key={nanoid()} to={`/people/${id}`}>
           {profile_path ?
             <ImagePeople src={img_base_url + personImageSize + profile_path} alt="" />
             :

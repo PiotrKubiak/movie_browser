@@ -1,6 +1,7 @@
 import { Description, Information, Rate, Rating, Star, Tag, Tags, Title, Votes, SubTitle, StyledLinkMovie, ImageMovie, ImageContainer, VideoIcon } from "../../styledTile";
 import { img_base_url, tileImageSize } from "../../moviesBrowserApi";
 import { foundName } from "../getGenres";
+import { nanoid } from "@reduxjs/toolkit";
 
 const Tile = ({ genres, movieBrowser, credits }) => {
   let movieDisplay;
@@ -19,7 +20,7 @@ const Tile = ({ genres, movieBrowser, credits }) => {
   return (
     <>
       {movieDisplay.map(({ id, poster_path, original_title, release_date, character, job, genre_ids = [], vote_average, vote_count }) => (
-        <StyledLinkMovie key={id} to={`/movies/${id}`}>
+        <StyledLinkMovie key={nanoid()} to={`/movies/${id}`}>
           {poster_path ?
             <ImageMovie src={img_base_url + tileImageSize + poster_path} alt={original_title} />
             :
