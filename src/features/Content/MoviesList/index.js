@@ -25,9 +25,11 @@ const MoviesList = () => {
         dispatch(fetchGenres());
     }, [dispatch]);
 
+    const searchQuery = window.location.hash.slice(16,);
+
     return (
         <StyledSection>
-            <StyledHeader>Popular movies</StyledHeader>
+            <StyledHeader>{searchQuery === "" ? "Popular movies" : `Search result for "${searchQuery}"`} </StyledHeader>
             <StyledTiles>
 
                 <Content

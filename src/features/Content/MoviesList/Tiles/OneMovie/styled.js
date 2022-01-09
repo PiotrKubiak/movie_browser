@@ -164,15 +164,16 @@ export const Rate = styled.div`
     }
 `;
 
-export const OtherInfo = styled.a`
-margin-right: 10px;
+export const OtherInfo = styled.div`
+    margin-right: 10px;
     color:${({ theme }) => theme.color.black};
         @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         display: none;
     }
 `;
 
-export const Votes = styled.a`
+export const Votes = styled.div`
+    display: inline;
     font-size: 14px;
     line-height: 120%;
     margin-left: 5px;

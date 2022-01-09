@@ -19,12 +19,12 @@ import {
     StyledInfo 
 } from "../styled";
 
-const MovieDetails = ({ img_base_url, api }) => {
+const MovieDetails = ({ img_base_url, api, id }) => {
     const results = api.data;
 
     return (
         <StyledTiles>
-            <Container>
+            <Container key={id} >
                 {results.poster_path ?
                     <ImageMovie src={img_base_url + results.poster_path} alt='' />
                     :

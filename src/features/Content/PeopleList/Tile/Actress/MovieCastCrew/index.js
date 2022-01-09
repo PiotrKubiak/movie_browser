@@ -10,48 +10,45 @@ import { StyledTiles } from "../../../../styledTile";
 import { Header, Section } from "./styled";
 
 const MovieCastCrew = ({ id, header, credits }) => {
-    const dispatch = useDispatch();
-    const genres = useSelector(selectGenres);
+  const dispatch = useDispatch();
+  const genres = useSelector(selectGenres);
 
+  useEffect(() => {
+    dispatch(fetchGenres());
+  }, [dispatch]);
 
-    useEffect(() => {
-        dispatch(fetchGenres());
-    }, [dispatch]);
-
-
-
-    const [creditsApi, setCreditsApi] = useState({ state: "loading", });
-    useEffect(() => {
-        const axiosApi = () => {
-            try {
-                axios.get(`https://api.themoviedb.org/3/person/${id}/movie_credits?api_key=eb6efa05b2b8136a07d256a13fbb4f15&language=en-US`)
-                    .then(
-                        ({ data }) => {
-                            setCreditsApi({ state: "success", data });
-                        }
-                    )
-            } catch (error) {
-                (setCreditsApi({ state: "error", }));
+  const [creditsApi, setCreditsApi] = useState({ state: "loading", });
+  useEffect(() => {
+    const axiosApi = () => {
+      try {
+        axios.get(`https://api.themoviedb.org/3/person/${id}/movie_credits?api_key=eb6efa05b2b8136a07d256a13fbb4f15&language=en-US`)
+          .then(
+            ({ data }) => {
+              setCreditsApi({ state: "success", data });
             }
-        }
-        setTimeout(axiosApi, 500)
-    }, [id]);
+          )
+      } catch (error) {
+        (setCreditsApi({ state: "error", }));
+      }
+    }
+    setTimeout(axiosApi, 500)
+  }, [id]);
 
-    return (
-        <Section>
-            {creditsApi.state === "loading" ? (<Loader />) :
-                (creditsApi.state === "error" ? (<Error />) :
-                    (
-                        <>
-                            <Header> {header} ({credits === "cast" ? creditsApi.data.cast.length : creditsApi.data.crew.length})
-                            </Header>
+  return (
+    <Section>
+      {creditsApi.state === "loading" ? (<Loader />) :
+        (creditsApi.state === "error" ? (<Error />) :
+          (
+            <>
+              <Header> {header} ({credits === "cast" ? creditsApi.data.cast.length : creditsApi.data.crew.length})
+              </Header>
 
-                            <StyledTiles>
-                                <Content movieBrowserStatus={creditsApi.state} movieBrowser={creditsApi} genres={genres} credits={credits} />
-                            </StyledTiles>
-                        </>
-                    ))}
-        </Section>)
+              <StyledTiles>
+                <Content movieBrowserStatus={creditsApi.state} movieBrowser={creditsApi} genres={genres} credits={credits} />
+              </StyledTiles>
+            </>
+          ))}
+    </Section>)
 };
 
 export default MovieCastCrew;

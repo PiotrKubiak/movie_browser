@@ -76,5 +76,4 @@ const selectMoviesBrowserState = state => state.moviesBrowser;
 export const selectMovies = state => selectMoviesBrowserState(state).data;
 export const selectMovieBrowserStatus = state => selectMoviesBrowserState(state).status;
 
-
 export default moviesBrowserSlice.reducer;
