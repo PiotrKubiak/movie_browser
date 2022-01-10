@@ -23,7 +23,7 @@ export const Content = ({ movieBrowserStatus, movieBrowser, credits, page, setNu
       if (movieBrowser.length > 0) {
         return (
           <>
-            <StyledHeader>{!searchParam ? "Popular people" : `Search result for "${searchParam}"`} </StyledHeader>
+            <StyledHeader>{ !searchParam  ? "Popular people" : `Search result for "${searchParam}"`} </StyledHeader>
             <StyledTiles>
               <Tile movieBrowser={movieBrowser} credits={credits} />
             </StyledTiles>

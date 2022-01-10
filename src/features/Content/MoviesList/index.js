@@ -12,16 +12,12 @@ const MoviesList = () => {
   setPage(page);
   const movieBrowserStatus = useSelector(selectMovieBrowserStatus);
   const movieBrowser = useSelector(selectMovies);
-
-  useEffect(() => {
-    dispatch(fetchPopularMovies());
-  }, [dispatch, page]);
-
   const genres = useSelector(selectGenres);
 
   useEffect(() => {
+    dispatch(fetchPopularMovies());
     dispatch(fetchGenres());
-  }, [dispatch]);
+  }, [dispatch, page]);
 
   return (
     <StyledSection>

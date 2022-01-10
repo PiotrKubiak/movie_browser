@@ -8,7 +8,6 @@ import { StyledTiles } from "../styledTile";
 import { StyledHeader } from "../styledMovies";
 
 export const Content = ({ movieBrowserStatus, movieBrowser, genres, credits, page, setNumber }) => {
-
   const location = useLocation();
   const searchParam = (new URLSearchParams(location.search)).get("search");
 
