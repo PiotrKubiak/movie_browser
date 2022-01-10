@@ -38,11 +38,11 @@ const MovieDetails = ({ img_base_url, api, id }) => {
           <Title> {results.original_title} </Title>
           <Year>{results.release_date.slice(0, 4)}</Year>
           <StyledInfo>
-            <BasicInfo><SgColor>Production: </SgColor>
-              {results.production_countries.map(({ name }) => { return <p key={nanoid()}> {name}, </p> })}
+            <BasicInfo><SgColor>Production:&nbsp;</SgColor>
+              {results.production_countries.map(({ name }) => { return <div key={nanoid()}>{name},&nbsp;</div> })}
             </BasicInfo>
             <BasicInfo>
-              <SgColor>Release date: </SgColor>
+              <SgColor>Release date:&nbsp;</SgColor>
               {results.release_date.slice(8, 10)}.
               {results.release_date.slice(5, 7)}.
               {results.release_date.slice(0, 4)}

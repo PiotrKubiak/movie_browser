@@ -73,6 +73,8 @@ export const StyledInfo = styled.div`
 `;
 
 export const BasicInfo = styled.div`
+    display: flex;
+    flex-wrap:wrap;
     margin-bottom: 8px;
     font-size: 18px;
     line-height: 120%;
@@ -82,7 +84,7 @@ export const BasicInfo = styled.div`
     }
 `;
 
-export const SgColor = styled.a`
+export const SgColor = styled.div`
     color: ${({ theme }) => theme.color.stormGray};
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
@@ -98,7 +100,7 @@ export const Biography = styled.div`
         margin-left: -128px;
         margin-top: 10px;
         font-size: 14px;
-        padding-top: 48px;
+        padding-top: 65px;
     }
 `;
 

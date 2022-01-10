@@ -56,7 +56,6 @@ export const Information = styled.div`
 
 export const StyledInfo = styled.div`
     margin-bottom: 24px;
-
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
         margin-bottom: 0px;
     }
@@ -87,6 +86,8 @@ export const Year = styled.div`
 `;
 
 export const BasicInfo = styled.div`
+    display: flex;
+    flex-wrap:wrap;
     margin-bottom: 8px;
     font-size: 18px;
     line-height: 120%;
@@ -173,7 +174,7 @@ export const OtherInfo = styled.div`
 `;
 
 export const Votes = styled.div`
-    display: inline;
+    display: inline-flex;
     font-size: 14px;
     line-height: 120%;
     margin-left: 5px;
@@ -201,7 +202,7 @@ export const Overview = styled.div`
     }
 `;
 
-export const SgColor = styled.a`
+export const SgColor = styled.div`
     color: ${({ theme }) => theme.color.stormGray};
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
