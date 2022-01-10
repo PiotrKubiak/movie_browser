@@ -23,14 +23,14 @@ const ActorDetails = ({ api }) => {
           <StyledInfo>
             <BasicInfo>
               <SgColor>
-                <DesktopInscription>Date of birth: </DesktopInscription>
-                <MobileInscription>Birth: </MobileInscription>
+                <DesktopInscription>Date of birth:&nbsp;</DesktopInscription>
+                <MobileInscription>Birth:&nbsp;</MobileInscription>
               </SgColor>
               {results.birthday.slice(8, 10)}.
               {results.birthday.slice(5, 7)}.
               {results.birthday.slice(0, 4)}
             </BasicInfo>
-            <BasicInfo><SgColor>Place of birth: </SgColor>{results.place_of_birth}</BasicInfo>
+            <BasicInfo><SgColor>Place of birth:&nbsp;</SgColor>{results.place_of_birth}</BasicInfo>
           </StyledInfo>
           <Biography>{results.biography}</Biography>
         </Information>
