@@ -3,18 +3,19 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
     max-width: 1368px;
     margin: auto;
-    padding-top: 56px;
 `;
 
 export const Header = styled.header`
-    margin-left: 40px;
+    margin: 56px 0px 24px 12px;
     font-weight: 600;
     font-size: 36px;
     line-height: 1.2;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}){
-        font-weight: 600;
-        font-size: 32px;
+        margin: 24px 0px 12px 0px;
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
     }
 `;
 
@@ -25,7 +26,7 @@ export const Image = styled.img`
     padding: 0;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}){
-        margin: 10px auto;
-        max-width: 468px;
+        margin:auto;
+        max-width: 250px;
     }
 `;
