@@ -12,6 +12,7 @@ export const StyledSection = styled.div`
 `;
 
 export const StyledHeader = styled.h1`
+    display: flex;
     margin: 56px 0px 24px 12px ;
     font-size: 18px;
     font-weight: 600;
