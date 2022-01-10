@@ -31,8 +31,11 @@ const Tile = ({ genres, movieBrowser, credits }) => {
           <Information>
             <Description>
               <Title align="left"> {original_title} </Title>
-              <SubTitle>{(character || job) ? (cast ? character : job)
-                : (release_date && release_date.slice(0, 4))}</SubTitle>
+              <SubTitle>
+                {(character || job) ? (cast ? character : job) + " (" : null}
+                {(release_date && release_date.slice(0, 4))}
+                {(character || job) ? ")" : null}
+              </SubTitle>
               <Tags>
                 {genre_ids.map((id, index) => {
                   return <Tag key={index}>{foundName(id, genres)}</Tag>
